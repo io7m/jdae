@@ -8,7 +8,7 @@
   <parent>
     <groupId>com.io7m.jdae</groupId>
     <artifactId>io7m-jdae</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
   </parent>
   <artifactId>io7m-jdae-collada1_5</artifactId>
 

@@ -4,6 +4,16 @@
 
   <c:release c:ticket-system="com.github.io7m.jdae">
     <c:date>2015-12-14</c:date>
+    <c:version>0.1.1</c:version>
+    <c:item>
+      <c:date>2015-12-14</c:date>
+      <c:type-code-fix/>
+      <c:summary>Restrict to Java 7 and above.</c:summary>
+    </c:item>
+  </c:release>
+
+  <c:release c:ticket-system="com.github.io7m.jdae">
+    <c:date>2015-12-14</c:date>
     <c:version>0.1.0</c:version>
     <c:item>
       <c:date>2015-12-14</c:date>
