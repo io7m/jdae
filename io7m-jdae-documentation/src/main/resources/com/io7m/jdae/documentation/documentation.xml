@@ -31,8 +31,9 @@
       <s:subsection>
         <s:subsection-title>Overview</s:subsection-title>
         <s:paragraph>
-          The ${project.parent.name} provides a set of JAXB-generated
-          bindings for the COLLADA format.
+          The <s:term s:type="package">${project.parent.name}</s:term>
+          package provides a set of JAXB-generated bindings for the
+          COLLADA format.
         </s:paragraph>
       </s:subsection>
     </s:section>
