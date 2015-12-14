@@ -31,8 +31,9 @@
       <s:subsection>
         <s:subsection-title>Overview</s:subsection-title>
         <s:paragraph>
-          The io7m-jdae provides a set of JAXB-generated
-          bindings for the COLLADA format.
+          The <s:term s:type="package">io7m-jdae</s:term>
+          package provides a set of JAXB-generated bindings for the
+          COLLADA format.
         </s:paragraph>
       </s:subsection>
     </s:section>
