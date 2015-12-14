@@ -31,7 +31,8 @@
       <s:subsection>
         <s:subsection-title>Overview</s:subsection-title>
         <s:paragraph>
-          Overview.
+          The ${project.parent.name} provides a set of JAXB-generated
+          bindings for the COLLADA format.
         </s:paragraph>
       </s:subsection>
     </s:section>
@@ -55,12 +56,25 @@
           Regular releases are made to the
           <s:link-external s:target="http://search.maven.org/#search%7Cga%7C1%7C${project.parent.name}">Central Repository</s:link-external>,
           so it's possible to use the <s:term s:type="package">${project.parent.name}</s:term>
-          package in your projects with the following Maven dependency:
+          package in your projects by specifying Maven dependencies.
+        </s:paragraph>
+        <s:paragraph>
+          To access COLLADA 1.4 documents:
         </s:paragraph>
         <s:paragraph>
           <s:verbatim s:type="example"><![CDATA[<dependency>
   <groupId>${project.groupId}</groupId>
-  <artifactId>${project.parent.artifactId}-core</artifactId>
+  <artifactId>${project.parent.artifactId}-collada1_4</artifactId>
+  <version>${project.version}</version>
+</dependency>]]></s:verbatim>
+        </s:paragraph>
+        <s:paragraph>
+          To access COLLADA 1.5 documents:
+        </s:paragraph>
+        <s:paragraph>
+          <s:verbatim s:type="example"><![CDATA[<dependency>
+  <groupId>${project.groupId}</groupId>
+  <artifactId>${project.parent.artifactId}-collada1_5</artifactId>
   <version>${project.version}</version>
 </dependency>]]></s:verbatim>
         </s:paragraph>
