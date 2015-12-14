@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.io7m.jdae</groupId>
+    <artifactId>io7m-jdae</artifactId>
+    <version>0.1.0</version>
+  </parent>
+  <artifactId>io7m-jdae-collada1_4</artifactId>
+
+  <packaging>jar</packaging>
+  <name>io7m-jdae-collada1_4</name>
+  <description>COLLADA for Java (COLLADA 1.4)</description>
+  <url>http://io7m.github.io/jdae/</url>
+
+  <scm>
+    <url>${project.parent.scm.url}</url>
+    <connection>${project.parent.scm.connection}</connection>
+    <developerConnection>${project.parent.scm.developerConnection}</developerConnection>
+  </scm>
+
+  <dependencies>
+  </dependencies>
+
+  <!-- Disable javadoc linting on Java 8+ -->
+  <profiles>
+    <profile>
+      <id>java8-disable-strict-javadoc</id>
+      <activation>
+        <jdk>[1.8,)</jdk>
+      </activation>
+      <properties>
+        <javadoc.doclint.none>-Xdoclint:none</javadoc.doclint.none>
+      </properties>
+    </profile>
+  </profiles>
+
+  <build>
+    <!-- Disable javadoc linting -->
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <configuration>
+          <additionalparam>${javadoc.doclint.none}</additionalparam>
+          <quiet>true</quiet>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
