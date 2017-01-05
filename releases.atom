@@ -6,9 +6,23 @@
   </a:author>
   <a:id>http://github.com/io7m/jdae/releases.atom</a:id>
   <a:title>io7m-jdae Releases</a:title>
-  <a:updated>2015-12-14T00:00:00Z</a:updated>
+  <a:updated>2016-05-29T00:00:00Z</a:updated>
   <a:entry>
     <a:id>0</a:id>
+    <a:updated>2016-05-29T00:00:00Z</a:updated>
+    <a:published>2016-05-29T00:00:00Z</a:published>
+    <a:title>io7m-jdae 0.1.2 released</a:title>
+    <a:content type="text"> io7m-jdae 0.1.2 released </a:content>
+  </a:entry>
+  <a:entry>
+    <a:id>1</a:id>
+    <a:updated>2015-12-14T00:00:00Z</a:updated>
+    <a:published>2015-12-14T00:00:00Z</a:published>
+    <a:title>io7m-jdae 0.1.1 released</a:title>
+    <a:content type="text"> io7m-jdae 0.1.1 released </a:content>
+  </a:entry>
+  <a:entry>
+    <a:id>2</a:id>
     <a:updated>2015-12-14T00:00:00Z</a:updated>
     <a:published>2015-12-14T00:00:00Z</a:published>
     <a:title>io7m-jdae 0.1.0 released</a:title>
