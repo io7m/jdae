@@ -7,15 +7,19 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.io7m.jdae</groupId>
-    <artifactId>io7m-jdae</artifactId>
+    <artifactId>com.io7m.jdae</artifactId>
     <version>0.1.1</version>
   </parent>
-  <artifactId>io7m-jdae-examples</artifactId>
+  <artifactId>com.io7m.jdae.examples</artifactId>
 
   <packaging>jar</packaging>
-  <name>io7m-jdae-examples</name>
+  <name>com.io7m.jdae.examples</name>
   <description>COLLADA for Java (Examples)</description>
   <url>http://io7m.github.io/jdae/</url>
+
+  <properties>
+    <mdep.analyze.skip>true</mdep.analyze.skip>
+  </properties>
 
   <scm>
     <url>${project.parent.scm.url}</url>
@@ -26,12 +30,12 @@
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>io7m-jdae-collada1_4</artifactId>
+      <artifactId>com.io7m.jdae.collada1_4</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>io7m-jdae-collada1_5</artifactId>
+      <artifactId>com.io7m.jdae.collada1_5</artifactId>
       <version>${project.version}</version>
     </dependency>
   </dependencies>
