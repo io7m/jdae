@@ -19,7 +19,7 @@
 <s:document
   xmlns:s="http://schemas.io7m.com/structural/2.1.0"
   xmlns:xi="http://www.w3.org/2001/XInclude">
-  <s:document-title>io7m-jdae 0.1.1 Documentation</s:document-title>
+  <s:document-title>com.io7m.jdae 0.1.2 Documentation</s:document-title>
   <s:document-style>documentation.css</s:document-style>
   <s:document-contents/>
 
@@ -31,7 +31,7 @@
       <s:subsection>
         <s:subsection-title>Overview</s:subsection-title>
         <s:paragraph>
-          The <s:term s:type="package">io7m-jdae</s:term>
+          The <s:term s:type="package">com.io7m.jdae</s:term>
           package provides a set of JAXB-generated bindings for the
           COLLADA format.
         </s:paragraph>
@@ -55,8 +55,8 @@
         <s:subsection-title>Maven</s:subsection-title>
         <s:paragraph>
           Regular releases are made to the
-          <s:link-external s:target="http://search.maven.org/#search%7Cga%7C1%7Cio7m-jdae">Central Repository</s:link-external>,
-          so it's possible to use the <s:term s:type="package">io7m-jdae</s:term>
+          <s:link-external s:target="http://search.maven.org/#search%7Cga%7C1%7Ccom.io7m.jdae">Central Repository</s:link-external>,
+          so it's possible to use the <s:term s:type="package">com.io7m.jdae</s:term>
           package in your projects by specifying Maven dependencies.
         </s:paragraph>
         <s:paragraph>
@@ -65,8 +65,8 @@
         <s:paragraph>
           <s:verbatim s:type="example"><![CDATA[<dependency>
   <groupId>com.io7m.jdae</groupId>
-  <artifactId>io7m-jdae-collada1_4</artifactId>
-  <version>0.1.1</version>
+  <artifactId>com.io7m.jdae-collada1_4</artifactId>
+  <version>0.1.2</version>
 </dependency>]]></s:verbatim>
         </s:paragraph>
         <s:paragraph>
@@ -75,8 +75,8 @@
         <s:paragraph>
           <s:verbatim s:type="example"><![CDATA[<dependency>
   <groupId>com.io7m.jdae</groupId>
-  <artifactId>io7m-jdae-collada1_5</artifactId>
-  <version>0.1.1</version>
+  <artifactId>com.io7m.jdae-collada1_5</artifactId>
+  <version>0.1.2</version>
 </dependency>]]></s:verbatim>
         </s:paragraph>
         <s:paragraph>
@@ -102,7 +102,7 @@
     <s:section>
       <s:section-title>License</s:section-title>
       <s:paragraph>
-        All files distributed with the <s:term s:type="package">io7m-jdae</s:term>
+        All files distributed with the <s:term s:type="package">com.io7m.jdae</s:term>
         package are placed under the following license:
         <s:verbatim s:type="license"><![CDATA[
 Copyright © 2015 <code@io7m.com> http://io7m.com
