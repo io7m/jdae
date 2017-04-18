@@ -7,14 +7,14 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.io7m.jdae</groupId>
-    <artifactId>io7m-jdae</artifactId>
-    <version>0.1.1</version>
+    <artifactId>com.io7m.jdae</artifactId>
+    <version>0.1.2</version>
   </parent>
-  <artifactId>io7m-jdae-collada1_5</artifactId>
+  <artifactId>com.io7m.jdae.collada1_4</artifactId>
 
   <packaging>jar</packaging>
-  <name>io7m-jdae-collada1_5</name>
-  <description>COLLADA for Java (COLLADA 1.5)</description>
+  <name>com.io7m.jdae.collada1_4</name>
+  <description>COLLADA for Java (COLLADA 1.4)</description>
   <url>http://io7m.github.io/jdae/</url>
 
   <scm>
