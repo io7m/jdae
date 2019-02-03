@@ -27,21 +27,21 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="glsl_setparam">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;choice>
- *           &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}glsl_param_type"/>
- *           &lt;element name="array" type="{http://www.collada.org/2005/11/COLLADASchema}glsl_setarray_type"/>
- *         &lt;/choice>
- *       &lt;/sequence>
- *       &lt;attribute name="ref" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}glsl_identifier" />
- *       &lt;attribute name="program" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="glsl_setparam"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;choice&gt;
+ *           &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}glsl_param_type"/&gt;
+ *           &lt;element name="array" type="{http://www.collada.org/2005/11/COLLADASchema}glsl_setarray_type"/&gt;
+ *         &lt;/choice&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="ref" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}glsl_identifier" /&gt;
+ *       &lt;attribute name="program" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -156,7 +156,7 @@ public class GlslSetparam {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the annotate property.
+     * This is why there is not a {@code set} method for the annotate property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -209,7 +209,7 @@ public class GlslSetparam {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the bool2 property.
+     * This is why there is not a {@code set} method for the bool2 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -238,7 +238,7 @@ public class GlslSetparam {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the bool3 property.
+     * This is why there is not a {@code set} method for the bool3 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -267,7 +267,7 @@ public class GlslSetparam {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the bool4 property.
+     * This is why there is not a {@code set} method for the bool4 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -320,7 +320,7 @@ public class GlslSetparam {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float2 property.
+     * This is why there is not a {@code set} method for the float2 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -349,7 +349,7 @@ public class GlslSetparam {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float3 property.
+     * This is why there is not a {@code set} method for the float3 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -378,7 +378,7 @@ public class GlslSetparam {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float4 property.
+     * This is why there is not a {@code set} method for the float4 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -407,7 +407,7 @@ public class GlslSetparam {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float2X2 property.
+     * This is why there is not a {@code set} method for the float2X2 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -436,7 +436,7 @@ public class GlslSetparam {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float3X3 property.
+     * This is why there is not a {@code set} method for the float3X3 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -465,7 +465,7 @@ public class GlslSetparam {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float4X4 property.
+     * This is why there is not a {@code set} method for the float4X4 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -518,7 +518,7 @@ public class GlslSetparam {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the int2 property.
+     * This is why there is not a {@code set} method for the int2 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -547,7 +547,7 @@ public class GlslSetparam {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the int3 property.
+     * This is why there is not a {@code set} method for the int3 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -576,7 +576,7 @@ public class GlslSetparam {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the int4 property.
+     * This is why there is not a {@code set} method for the int4 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

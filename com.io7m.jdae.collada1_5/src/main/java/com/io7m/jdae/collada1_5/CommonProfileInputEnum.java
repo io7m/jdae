@@ -16,35 +16,35 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for common_profile_input_enum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="common_profile_input_enum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="BINORMAL"/>
- *     &lt;enumeration value="COLOR"/>
- *     &lt;enumeration value="CONTINUITY"/>
- *     &lt;enumeration value="IMAGE"/>
- *     &lt;enumeration value="IN_TANGENT"/>
- *     &lt;enumeration value="INPUT"/>
- *     &lt;enumeration value="INTERPOLATION"/>
- *     &lt;enumeration value="INV_BIND_MATRIX"/>
- *     &lt;enumeration value="JOINT"/>
- *     &lt;enumeration value="LINEAR_STEPS"/>
- *     &lt;enumeration value="MORPH_TARGET"/>
- *     &lt;enumeration value="MORPH_WEIGHT"/>
- *     &lt;enumeration value="NORMAL"/>
- *     &lt;enumeration value="OUTPUT"/>
- *     &lt;enumeration value="OUT_TANGENT"/>
- *     &lt;enumeration value="POSITION"/>
- *     &lt;enumeration value="TANGENT"/>
- *     &lt;enumeration value="TEXBINORMAL"/>
- *     &lt;enumeration value="TEXCOORD"/>
- *     &lt;enumeration value="TEXTANGENT"/>
- *     &lt;enumeration value="UV"/>
- *     &lt;enumeration value="VERTEX"/>
- *     &lt;enumeration value="WEIGHT"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="common_profile_input_enum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="BINORMAL"/&gt;
+ *     &lt;enumeration value="COLOR"/&gt;
+ *     &lt;enumeration value="CONTINUITY"/&gt;
+ *     &lt;enumeration value="IMAGE"/&gt;
+ *     &lt;enumeration value="IN_TANGENT"/&gt;
+ *     &lt;enumeration value="INPUT"/&gt;
+ *     &lt;enumeration value="INTERPOLATION"/&gt;
+ *     &lt;enumeration value="INV_BIND_MATRIX"/&gt;
+ *     &lt;enumeration value="JOINT"/&gt;
+ *     &lt;enumeration value="LINEAR_STEPS"/&gt;
+ *     &lt;enumeration value="MORPH_TARGET"/&gt;
+ *     &lt;enumeration value="MORPH_WEIGHT"/&gt;
+ *     &lt;enumeration value="NORMAL"/&gt;
+ *     &lt;enumeration value="OUTPUT"/&gt;
+ *     &lt;enumeration value="OUT_TANGENT"/&gt;
+ *     &lt;enumeration value="POSITION"/&gt;
+ *     &lt;enumeration value="TANGENT"/&gt;
+ *     &lt;enumeration value="TEXBINORMAL"/&gt;
+ *     &lt;enumeration value="TEXCOORD"/&gt;
+ *     &lt;enumeration value="TEXTANGENT"/&gt;
+ *     &lt;enumeration value="UV"/&gt;
+ *     &lt;enumeration value="VERTEX"/&gt;
+ *     &lt;enumeration value="WEIGHT"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

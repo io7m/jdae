@@ -16,15 +16,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for fx_sampler_mip_filter_enum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="fx_sampler_mip_filter_enum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="NONE"/>
- *     &lt;enumeration value="NEAREST"/>
- *     &lt;enumeration value="LINEAR"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="fx_sampler_mip_filter_enum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="NONE"/&gt;
+ *     &lt;enumeration value="NEAREST"/&gt;
+ *     &lt;enumeration value="LINEAR"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

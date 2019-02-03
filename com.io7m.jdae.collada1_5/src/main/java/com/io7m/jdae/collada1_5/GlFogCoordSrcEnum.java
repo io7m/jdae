@@ -16,14 +16,14 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for gl_fog_coord_src_enum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="gl_fog_coord_src_enum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="FOG_COORDINATE"/>
- *     &lt;enumeration value="FRAGMENT_DEPTH"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="gl_fog_coord_src_enum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="FOG_COORDINATE"/&gt;
+ *     &lt;enumeration value="FRAGMENT_DEPTH"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

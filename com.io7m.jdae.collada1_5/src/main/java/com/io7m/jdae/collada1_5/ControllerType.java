@@ -31,22 +31,22 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="controller_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="asset" type="{http://www.collada.org/2008/03/COLLADASchema}asset_type" minOccurs="0"/>
- *         &lt;choice>
- *           &lt;element name="skin" type="{http://www.collada.org/2008/03/COLLADASchema}skin_type"/>
- *           &lt;element name="morph" type="{http://www.collada.org/2008/03/COLLADASchema}morph_type"/>
- *         &lt;/choice>
- *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />
- *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}token" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="controller_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="asset" type="{http://www.collada.org/2008/03/COLLADASchema}asset_type" minOccurs="0"/&gt;
+ *         &lt;choice&gt;
+ *           &lt;element name="skin" type="{http://www.collada.org/2008/03/COLLADASchema}skin_type"/&gt;
+ *           &lt;element name="morph" type="{http://www.collada.org/2008/03/COLLADASchema}morph_type"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+ *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -153,7 +153,7 @@ public class ControllerType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the extra property.
+     * This is why there is not a {@code set} method for the extra property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

@@ -31,35 +31,35 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}asset" minOccurs="0"/>
- *         &lt;choice maxOccurs="unbounded" minOccurs="0">
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}lookat"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}matrix"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}rotate"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}scale"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}skew"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}translate"/>
- *         &lt;/choice>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_camera" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_controller" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_geometry" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_light" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_node" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}node" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />
- *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *       &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *       &lt;attribute name="type" type="{http://www.collada.org/2005/11/COLLADASchema}NodeType" default="NODE" />
- *       &lt;attribute name="layer" type="{http://www.collada.org/2005/11/COLLADASchema}ListOfNames" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}asset" minOccurs="0"/&gt;
+ *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}lookat"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}matrix"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}rotate"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}scale"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}skew"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}translate"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_camera" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_controller" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_geometry" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_light" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_node" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}node" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+ *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *       &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *       &lt;attribute name="type" type="{http://www.collada.org/2005/11/COLLADASchema}NodeType" default="NODE" /&gt;
+ *       &lt;attribute name="layer" type="{http://www.collada.org/2005/11/COLLADASchema}ListOfNames" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -152,7 +152,7 @@ public class Node {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the lookatOrMatrixOrRotate property.
+     * This is why there is not a {@code set} method for the lookatOrMatrixOrRotate property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -188,7 +188,7 @@ public class Node {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the instanceCamera property.
+     * This is why there is not a {@code set} method for the instanceCamera property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -219,7 +219,7 @@ public class Node {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the instanceController property.
+     * This is why there is not a {@code set} method for the instanceController property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -250,7 +250,7 @@ public class Node {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the instanceGeometry property.
+     * This is why there is not a {@code set} method for the instanceGeometry property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -281,7 +281,7 @@ public class Node {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the instanceLight property.
+     * This is why there is not a {@code set} method for the instanceLight property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -312,7 +312,7 @@ public class Node {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the instanceNode property.
+     * This is why there is not a {@code set} method for the instanceNode property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -343,7 +343,7 @@ public class Node {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the node property.
+     * This is why there is not a {@code set} method for the node property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -354,7 +354,7 @@ public class Node {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Node }
+     *
      * 
      * 
      */
@@ -374,7 +374,7 @@ public class Node {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the extra property.
+     * This is why there is not a {@code set} method for the extra property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -503,7 +503,7 @@ public class Node {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the layer property.
+     * This is why there is not a {@code set} method for the layer property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

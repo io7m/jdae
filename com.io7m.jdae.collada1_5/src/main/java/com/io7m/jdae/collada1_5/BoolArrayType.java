@@ -32,15 +32,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="bool_array_type">
- *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.collada.org/2008/03/COLLADASchema>list_of_bools_type">
- *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />
- *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}token" />
- *       &lt;attribute name="count" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}uint_type" />
- *     &lt;/extension>
- *   &lt;/simpleContent>
- * &lt;/complexType>
+ * &lt;complexType name="bool_array_type"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://www.collada.org/2008/03/COLLADASchema&gt;list_of_bools_type"&gt;
+ *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+ *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+ *       &lt;attribute name="count" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}uint_type" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -72,7 +72,7 @@ public class BoolArrayType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the value property.
+     * This is why there is not a {@code set} method for the value property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

@@ -23,17 +23,17 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="gles_texenv_command_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="constant" type="{http://www.collada.org/2008/03/COLLADASchema}gles_texture_constant_type" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="operator" type="{http://www.collada.org/2008/03/COLLADASchema}gles_texenv_mode_enum" />
- *       &lt;attribute name="sampler" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="gles_texenv_command_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="constant" type="{http://www.collada.org/2008/03/COLLADASchema}gles_texture_constant_type" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="operator" type="{http://www.collada.org/2008/03/COLLADASchema}gles_texenv_mode_enum" /&gt;
+ *       &lt;attribute name="sampler" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

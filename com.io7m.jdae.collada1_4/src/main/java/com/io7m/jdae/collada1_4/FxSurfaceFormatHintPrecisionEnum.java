@@ -16,15 +16,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for fx_surface_format_hint_precision_enum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="fx_surface_format_hint_precision_enum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="LOW"/>
- *     &lt;enumeration value="MID"/>
- *     &lt;enumeration value="HIGH"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="fx_surface_format_hint_precision_enum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="LOW"/&gt;
+ *     &lt;enumeration value="MID"/&gt;
+ *     &lt;enumeration value="HIGH"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

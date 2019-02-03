@@ -23,12 +23,12 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="gl_samplerCUBE">
- *   &lt;complexContent>
- *     &lt;extension base="{http://www.collada.org/2005/11/COLLADASchema}fx_samplerCUBE_common">
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="gl_samplerCUBE"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.collada.org/2005/11/COLLADASchema}fx_samplerCUBE_common"&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

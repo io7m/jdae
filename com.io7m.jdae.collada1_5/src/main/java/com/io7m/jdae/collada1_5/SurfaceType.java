@@ -28,38 +28,38 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="surface_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;choice>
- *           &lt;element name="plane" type="{http://www.collada.org/2008/03/COLLADASchema}plane_type"/>
- *           &lt;element name="sphere" type="{http://www.collada.org/2008/03/COLLADASchema}sphere_type"/>
- *           &lt;element name="torus" type="{http://www.collada.org/2008/03/COLLADASchema}torus_type"/>
- *           &lt;element name="swept_surface" type="{http://www.collada.org/2008/03/COLLADASchema}swept_surface_type"/>
- *           &lt;element name="nurbs_surface" type="{http://www.collada.org/2008/03/COLLADASchema}nurbs_surface_type"/>
- *           &lt;element name="cone" type="{http://www.collada.org/2008/03/COLLADASchema}cone_type"/>
- *           &lt;element name="cylinder">
- *             &lt;complexType>
- *               &lt;complexContent>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                   &lt;sequence>
- *                     &lt;element name="radius" type="{http://www.collada.org/2008/03/COLLADASchema}float_type"/>
- *                     &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/>
- *                   &lt;/sequence>
- *                 &lt;/restriction>
- *               &lt;/complexContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *         &lt;/choice>
- *         &lt;element name="orient" type="{http://www.collada.org/2008/03/COLLADASchema}orient_type" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="origin" type="{http://www.collada.org/2008/03/COLLADASchema}origin_type" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="sid" type="{http://www.collada.org/2008/03/COLLADASchema}sid_type" />
- *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}token" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="surface_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;choice&gt;
+ *           &lt;element name="plane" type="{http://www.collada.org/2008/03/COLLADASchema}plane_type"/&gt;
+ *           &lt;element name="sphere" type="{http://www.collada.org/2008/03/COLLADASchema}sphere_type"/&gt;
+ *           &lt;element name="torus" type="{http://www.collada.org/2008/03/COLLADASchema}torus_type"/&gt;
+ *           &lt;element name="swept_surface" type="{http://www.collada.org/2008/03/COLLADASchema}swept_surface_type"/&gt;
+ *           &lt;element name="nurbs_surface" type="{http://www.collada.org/2008/03/COLLADASchema}nurbs_surface_type"/&gt;
+ *           &lt;element name="cone" type="{http://www.collada.org/2008/03/COLLADASchema}cone_type"/&gt;
+ *           &lt;element name="cylinder"&gt;
+ *             &lt;complexType&gt;
+ *               &lt;complexContent&gt;
+ *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                   &lt;sequence&gt;
+ *                     &lt;element name="radius" type="{http://www.collada.org/2008/03/COLLADASchema}float_type"/&gt;
+ *                     &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                   &lt;/sequence&gt;
+ *                 &lt;/restriction&gt;
+ *               &lt;/complexContent&gt;
+ *             &lt;/complexType&gt;
+ *           &lt;/element&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element name="orient" type="{http://www.collada.org/2008/03/COLLADASchema}orient_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="origin" type="{http://www.collada.org/2008/03/COLLADASchema}origin_type" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="sid" type="{http://www.collada.org/2008/03/COLLADASchema}sid_type" /&gt;
+ *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -272,7 +272,7 @@ public class SurfaceType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the orient property.
+     * This is why there is not a {@code set} method for the orient property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -373,16 +373,16 @@ public class SurfaceType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="radius" type="{http://www.collada.org/2008/03/COLLADASchema}float_type"/>
-     *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="radius" type="{http://www.collada.org/2008/03/COLLADASchema}float_type"/&gt;
+     *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -420,7 +420,7 @@ public class SurfaceType {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the extra property.
+         * This is why there is not a {@code set} method for the extra property.
          * 
          * <p>
          * For example, to add a new item, do as follows:

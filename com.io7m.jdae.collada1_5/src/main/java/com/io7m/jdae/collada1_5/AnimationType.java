@@ -35,37 +35,37 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="animation_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="asset" type="{http://www.collada.org/2008/03/COLLADASchema}asset_type" minOccurs="0"/>
- *         &lt;choice>
- *           &lt;sequence>
- *             &lt;element name="source" type="{http://www.collada.org/2008/03/COLLADASchema}source_type" maxOccurs="unbounded"/>
- *             &lt;choice>
- *               &lt;sequence>
- *                 &lt;element name="sampler" type="{http://www.collada.org/2008/03/COLLADASchema}sampler_type" maxOccurs="unbounded"/>
- *                 &lt;element name="channel" type="{http://www.collada.org/2008/03/COLLADASchema}channel_type" maxOccurs="unbounded"/>
- *                 &lt;element name="animation" type="{http://www.collada.org/2008/03/COLLADASchema}animation_type" maxOccurs="unbounded" minOccurs="0"/>
- *               &lt;/sequence>
- *               &lt;element name="animation" type="{http://www.collada.org/2008/03/COLLADASchema}animation_type" maxOccurs="unbounded"/>
- *             &lt;/choice>
- *           &lt;/sequence>
- *           &lt;sequence>
- *             &lt;element name="sampler" type="{http://www.collada.org/2008/03/COLLADASchema}sampler_type" maxOccurs="unbounded"/>
- *             &lt;element name="channel" type="{http://www.collada.org/2008/03/COLLADASchema}channel_type" maxOccurs="unbounded"/>
- *             &lt;element name="animation" type="{http://www.collada.org/2008/03/COLLADASchema}animation_type" maxOccurs="unbounded" minOccurs="0"/>
- *           &lt;/sequence>
- *           &lt;element name="animation" type="{http://www.collada.org/2008/03/COLLADASchema}animation_type" maxOccurs="unbounded"/>
- *         &lt;/choice>
- *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />
- *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}token" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="animation_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="asset" type="{http://www.collada.org/2008/03/COLLADASchema}asset_type" minOccurs="0"/&gt;
+ *         &lt;choice&gt;
+ *           &lt;sequence&gt;
+ *             &lt;element name="source" type="{http://www.collada.org/2008/03/COLLADASchema}source_type" maxOccurs="unbounded"/&gt;
+ *             &lt;choice&gt;
+ *               &lt;sequence&gt;
+ *                 &lt;element name="sampler" type="{http://www.collada.org/2008/03/COLLADASchema}sampler_type" maxOccurs="unbounded"/&gt;
+ *                 &lt;element name="channel" type="{http://www.collada.org/2008/03/COLLADASchema}channel_type" maxOccurs="unbounded"/&gt;
+ *                 &lt;element name="animation" type="{http://www.collada.org/2008/03/COLLADASchema}animation_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *               &lt;/sequence&gt;
+ *               &lt;element name="animation" type="{http://www.collada.org/2008/03/COLLADASchema}animation_type" maxOccurs="unbounded"/&gt;
+ *             &lt;/choice&gt;
+ *           &lt;/sequence&gt;
+ *           &lt;sequence&gt;
+ *             &lt;element name="sampler" type="{http://www.collada.org/2008/03/COLLADASchema}sampler_type" maxOccurs="unbounded"/&gt;
+ *             &lt;element name="channel" type="{http://www.collada.org/2008/03/COLLADASchema}channel_type" maxOccurs="unbounded"/&gt;
+ *             &lt;element name="animation" type="{http://www.collada.org/2008/03/COLLADASchema}animation_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *           &lt;/sequence&gt;
+ *           &lt;element name="animation" type="{http://www.collada.org/2008/03/COLLADASchema}animation_type" maxOccurs="unbounded"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+ *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -112,7 +112,7 @@ public class AnimationType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the content property.
+     * This is why there is not a {@code set} method for the content property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -125,7 +125,7 @@ public class AnimationType {
      * Objects of the following type(s) are allowed in the list
      * {@link JAXBElement }{@code <}{@link ExtraType }{@code >}
      * {@link JAXBElement }{@code <}{@link SamplerType }{@code >}
-     * {@link JAXBElement }{@code <}{@link AnimationType }{@code >}
+     * {@link JAXBElement }{@code <} {@code >}
      * {@link JAXBElement }{@code <}{@link AssetType }{@code >}
      * {@link JAXBElement }{@code <}{@link SourceType }{@code >}
      * {@link JAXBElement }{@code <}{@link ChannelType }{@code >}

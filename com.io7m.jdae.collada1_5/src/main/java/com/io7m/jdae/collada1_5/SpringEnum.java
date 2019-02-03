@@ -16,14 +16,14 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for spring_enum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="spring_enum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="LINEAR"/>
- *     &lt;enumeration value="ANGULAR"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="spring_enum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="LINEAR"/&gt;
+ *     &lt;enumeration value="ANGULAR"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

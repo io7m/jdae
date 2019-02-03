@@ -32,15 +32,15 @@ import javax.xml.namespace.QName;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="logbase.type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}logbase.content"/>
- *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}Common.attrib"/>
- *       &lt;anyAttribute processContents='skip' namespace='##other'/>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="logbase.type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}logbase.content"/&gt;
+ *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}Common.attrib"/&gt;
+ *       &lt;anyAttribute processContents='skip' namespace='##other'/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -2282,7 +2282,7 @@ public class LogbaseType {
      * 
      * @return
      *     possible object is
-     *     {@link LogbaseType }
+     *
      *     
      */
     public LogbaseType getLogbase() {
@@ -2294,7 +2294,7 @@ public class LogbaseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link LogbaseType }
+     *
      *     
      */
     public void setLogbase(LogbaseType value) {
@@ -4396,7 +4396,7 @@ public class LogbaseType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the clazz property.
+     * This is why there is not a {@code set} method for the clazz property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

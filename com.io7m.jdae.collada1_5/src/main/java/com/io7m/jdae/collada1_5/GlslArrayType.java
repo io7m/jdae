@@ -31,16 +31,16 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="glsl_array_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}glsl_value_group" maxOccurs="unbounded"/>
- *       &lt;/sequence>
- *       &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="glsl_array_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}glsl_value_group" maxOccurs="unbounded"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -88,7 +88,7 @@ public class GlslArrayType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the glslValueGroup property.
+     * This is why there is not a {@code set} method for the glslValueGroup property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -118,7 +118,7 @@ public class GlslArrayType {
      * {@link JAXBElement }{@code <}{@link FxSampler2DType }{@code >}
      * {@link JAXBElement }{@code <}{@link FxSamplerCUBEType }{@code >}
      * {@link JAXBElement }{@code <}{@link List }{@code <}{@link Long }{@code >}{@code >}
-     * {@link JAXBElement }{@code <}{@link GlslArrayType }{@code >}
+     * {@link JAXBElement }{@code <} {@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link List }{@code <}{@link Boolean }{@code >}{@code >}
      * {@link JAXBElement }{@code <}{@link List }{@code <}{@link Double }{@code >}{@code >}

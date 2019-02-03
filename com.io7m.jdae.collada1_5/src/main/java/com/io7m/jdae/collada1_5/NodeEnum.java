@@ -16,14 +16,14 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for node_enum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="node_enum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="JOINT"/>
- *     &lt;enumeration value="NODE"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="node_enum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="JOINT"/&gt;
+ *     &lt;enumeration value="NODE"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

@@ -26,27 +26,27 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence minOccurs="0">
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}source" maxOccurs="unbounded"/>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}vertices"/>
- *         &lt;choice maxOccurs="unbounded" minOccurs="0">
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}lines"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}linestrips"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}polygons"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}polylist"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}triangles"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}trifans"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}tristrips"/>
- *         &lt;/choice>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="convex_hull_of" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence minOccurs="0"&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}source" maxOccurs="unbounded"/&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}vertices"/&gt;
+ *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}lines"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}linestrips"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}polygons"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}polylist"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}triangles"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}trifans"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}tristrips"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="convex_hull_of" type="{http://www.w3.org/2001/XMLSchema}anyURI" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -85,7 +85,7 @@ public class ConvexMesh {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the source property.
+     * This is why there is not a {@code set} method for the source property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -138,7 +138,7 @@ public class ConvexMesh {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the linesOrLinestripsOrPolygons property.
+     * This is why there is not a {@code set} method for the linesOrLinestripsOrPolygons property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -175,7 +175,7 @@ public class ConvexMesh {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the extra property.
+     * This is why there is not a {@code set} method for the extra property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

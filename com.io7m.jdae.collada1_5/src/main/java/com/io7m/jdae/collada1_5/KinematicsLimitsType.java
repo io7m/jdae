@@ -20,16 +20,16 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="kinematics_limits_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="min" type="{http://www.collada.org/2008/03/COLLADASchema}common_float_or_param_type"/>
- *         &lt;element name="max" type="{http://www.collada.org/2008/03/COLLADASchema}common_float_or_param_type"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="kinematics_limits_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="min" type="{http://www.collada.org/2008/03/COLLADASchema}common_float_or_param_type"/&gt;
+ *         &lt;element name="max" type="{http://www.collada.org/2008/03/COLLADASchema}common_float_or_param_type"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

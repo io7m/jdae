@@ -28,40 +28,40 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="bind" maxOccurs="unbounded" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="semantic" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *                 &lt;attribute name="target" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="bind_vertex_input" maxOccurs="unbounded" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="semantic" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *                 &lt;attribute name="input_semantic" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *                 &lt;attribute name="input_set" type="{http://www.collada.org/2005/11/COLLADASchema}uint" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *       &lt;attribute name="target" use="required" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
- *       &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="bind" maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="semantic" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *                 &lt;attribute name="target" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="bind_vertex_input" maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="semantic" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *                 &lt;attribute name="input_semantic" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *                 &lt;attribute name="input_set" type="{http://www.collada.org/2005/11/COLLADASchema}uint" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *       &lt;attribute name="target" use="required" type="{http://www.w3.org/2001/XMLSchema}anyURI" /&gt;
+ *       &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -102,7 +102,7 @@ public class InstanceMaterial {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the bind property.
+     * This is why there is not a {@code set} method for the bind property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -131,7 +131,7 @@ public class InstanceMaterial {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the bindVertexInput property.
+     * This is why there is not a {@code set} method for the bindVertexInput property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -162,7 +162,7 @@ public class InstanceMaterial {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the extra property.
+     * This is why there is not a {@code set} method for the extra property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -287,14 +287,14 @@ public class InstanceMaterial {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="semantic" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-     *       &lt;attribute name="target" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="semantic" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+     *       &lt;attribute name="target" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -369,15 +369,15 @@ public class InstanceMaterial {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="semantic" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-     *       &lt;attribute name="input_semantic" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-     *       &lt;attribute name="input_set" type="{http://www.collada.org/2005/11/COLLADASchema}uint" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="semantic" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+     *       &lt;attribute name="input_semantic" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+     *       &lt;attribute name="input_set" type="{http://www.collada.org/2005/11/COLLADASchema}uint" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

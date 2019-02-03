@@ -35,14 +35,14 @@ import javax.xml.namespace.QName;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="maction.type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}maction.content" maxOccurs="unbounded"/>
- *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}maction.attlist"/>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="maction.type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}maction.content" maxOccurs="unbounded"/&gt;
+ *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}maction.attlist"/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -254,7 +254,7 @@ public class MactionType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the mactionContent property.
+     * This is why there is not a {@code set} method for the mactionContent property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -326,7 +326,7 @@ public class MactionType {
      * {@link JAXBElement }{@code <}{@link InverseType }{@code >}
      * {@link JAXBElement }{@code <}{@link ConstantType }{@code >}
      * {@link JAXBElement }{@code <}{@link DegreeType }{@code >}
-     * {@link JAXBElement }{@code <}{@link MactionType }{@code >}
+     * {@link JAXBElement }{@code <} {@code >}
      * {@link JAXBElement }{@code <}{@link MsqrtType }{@code >}
      * {@link JAXBElement }{@code <}{@link ConstantType }{@code >}
      * {@link JAXBElement }{@code <}{@link MoverType }{@code >}
@@ -500,7 +500,7 @@ public class MactionType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the clazz property.
+     * This is why there is not a {@code set} method for the clazz property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

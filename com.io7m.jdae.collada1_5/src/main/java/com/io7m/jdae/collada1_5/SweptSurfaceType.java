@@ -26,23 +26,23 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="swept_surface_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="curve" type="{http://www.collada.org/2008/03/COLLADASchema}curve_type"/>
- *         &lt;choice>
- *           &lt;element name="direction" type="{http://www.collada.org/2008/03/COLLADASchema}float3_type"/>
- *           &lt;sequence>
- *             &lt;element name="origin" type="{http://www.collada.org/2008/03/COLLADASchema}float3_type"/>
- *             &lt;element name="axis" type="{http://www.collada.org/2008/03/COLLADASchema}float3_type"/>
- *           &lt;/sequence>
- *         &lt;/choice>
- *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="swept_surface_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="curve" type="{http://www.collada.org/2008/03/COLLADASchema}curve_type"/&gt;
+ *         &lt;choice&gt;
+ *           &lt;element name="direction" type="{http://www.collada.org/2008/03/COLLADASchema}float3_type"/&gt;
+ *           &lt;sequence&gt;
+ *             &lt;element name="origin" type="{http://www.collada.org/2008/03/COLLADASchema}float3_type"/&gt;
+ *             &lt;element name="axis" type="{http://www.collada.org/2008/03/COLLADASchema}float3_type"/&gt;
+ *           &lt;/sequence&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -104,7 +104,7 @@ public class SweptSurfaceType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the direction property.
+     * This is why there is not a {@code set} method for the direction property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -133,7 +133,7 @@ public class SweptSurfaceType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the origin property.
+     * This is why there is not a {@code set} method for the origin property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -162,7 +162,7 @@ public class SweptSurfaceType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the axis property.
+     * This is why there is not a {@code set} method for the axis property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -191,7 +191,7 @@ public class SweptSurfaceType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the extra property.
+     * This is why there is not a {@code set} method for the extra property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

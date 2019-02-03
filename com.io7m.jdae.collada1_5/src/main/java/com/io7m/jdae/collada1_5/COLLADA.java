@@ -26,54 +26,54 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="asset" type="{http://www.collada.org/2008/03/COLLADASchema}asset_type"/>
- *         &lt;choice maxOccurs="unbounded" minOccurs="0">
- *           &lt;element name="library_animations" type="{http://www.collada.org/2008/03/COLLADASchema}library_animations_type"/>
- *           &lt;element name="library_animation_clips" type="{http://www.collada.org/2008/03/COLLADASchema}library_animation_clips_type"/>
- *           &lt;element name="library_cameras" type="{http://www.collada.org/2008/03/COLLADASchema}library_cameras_type"/>
- *           &lt;element name="library_controllers" type="{http://www.collada.org/2008/03/COLLADASchema}library_controllers_type"/>
- *           &lt;element name="library_geometries" type="{http://www.collada.org/2008/03/COLLADASchema}library_geometries_type"/>
- *           &lt;element name="library_effects" type="{http://www.collada.org/2008/03/COLLADASchema}library_effects_type"/>
- *           &lt;element name="library_force_fields" type="{http://www.collada.org/2008/03/COLLADASchema}library_force_fields_type"/>
- *           &lt;element name="library_images" type="{http://www.collada.org/2008/03/COLLADASchema}library_images_type"/>
- *           &lt;element name="library_lights" type="{http://www.collada.org/2008/03/COLLADASchema}library_lights_type"/>
- *           &lt;element name="library_materials" type="{http://www.collada.org/2008/03/COLLADASchema}library_materials_type"/>
- *           &lt;element name="library_nodes" type="{http://www.collada.org/2008/03/COLLADASchema}library_nodes_type"/>
- *           &lt;element name="library_physics_materials" type="{http://www.collada.org/2008/03/COLLADASchema}library_physics_materials_type"/>
- *           &lt;element name="library_physics_models" type="{http://www.collada.org/2008/03/COLLADASchema}library_physics_models_type"/>
- *           &lt;element name="library_physics_scenes" type="{http://www.collada.org/2008/03/COLLADASchema}library_physics_scenes_type"/>
- *           &lt;element name="library_visual_scenes" type="{http://www.collada.org/2008/03/COLLADASchema}library_visual_scenes_type"/>
- *           &lt;element name="library_joints" type="{http://www.collada.org/2008/03/COLLADASchema}library_joints_type"/>
- *           &lt;element name="library_kinematics_models" type="{http://www.collada.org/2008/03/COLLADASchema}library_kinematics_models_type"/>
- *           &lt;element name="library_articulated_systems" type="{http://www.collada.org/2008/03/COLLADASchema}library_articulated_systems_type"/>
- *           &lt;element name="library_kinematics_scenes" type="{http://www.collada.org/2008/03/COLLADASchema}library_kinematics_scenes_type"/>
- *           &lt;element name="library_formulas" type="{http://www.collada.org/2008/03/COLLADASchema}library_formulas_type"/>
- *         &lt;/choice>
- *         &lt;element name="scene" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="instance_physics_scene" type="{http://www.collada.org/2008/03/COLLADASchema}instance_with_extra_type" maxOccurs="unbounded" minOccurs="0"/>
- *                   &lt;element name="instance_visual_scene" type="{http://www.collada.org/2008/03/COLLADASchema}instance_with_extra_type" minOccurs="0"/>
- *                   &lt;element name="instance_kinematics_scene" type="{http://www.collada.org/2008/03/COLLADASchema}instance_kinematics_scene_type" maxOccurs="unbounded" minOccurs="0"/>
- *                   &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="version" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}version_enum" />
- *       &lt;attribute ref="{http://www.w3.org/XML/1998/namespace}base"/>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="asset" type="{http://www.collada.org/2008/03/COLLADASchema}asset_type"/&gt;
+ *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;element name="library_animations" type="{http://www.collada.org/2008/03/COLLADASchema}library_animations_type"/&gt;
+ *           &lt;element name="library_animation_clips" type="{http://www.collada.org/2008/03/COLLADASchema}library_animation_clips_type"/&gt;
+ *           &lt;element name="library_cameras" type="{http://www.collada.org/2008/03/COLLADASchema}library_cameras_type"/&gt;
+ *           &lt;element name="library_controllers" type="{http://www.collada.org/2008/03/COLLADASchema}library_controllers_type"/&gt;
+ *           &lt;element name="library_geometries" type="{http://www.collada.org/2008/03/COLLADASchema}library_geometries_type"/&gt;
+ *           &lt;element name="library_effects" type="{http://www.collada.org/2008/03/COLLADASchema}library_effects_type"/&gt;
+ *           &lt;element name="library_force_fields" type="{http://www.collada.org/2008/03/COLLADASchema}library_force_fields_type"/&gt;
+ *           &lt;element name="library_images" type="{http://www.collada.org/2008/03/COLLADASchema}library_images_type"/&gt;
+ *           &lt;element name="library_lights" type="{http://www.collada.org/2008/03/COLLADASchema}library_lights_type"/&gt;
+ *           &lt;element name="library_materials" type="{http://www.collada.org/2008/03/COLLADASchema}library_materials_type"/&gt;
+ *           &lt;element name="library_nodes" type="{http://www.collada.org/2008/03/COLLADASchema}library_nodes_type"/&gt;
+ *           &lt;element name="library_physics_materials" type="{http://www.collada.org/2008/03/COLLADASchema}library_physics_materials_type"/&gt;
+ *           &lt;element name="library_physics_models" type="{http://www.collada.org/2008/03/COLLADASchema}library_physics_models_type"/&gt;
+ *           &lt;element name="library_physics_scenes" type="{http://www.collada.org/2008/03/COLLADASchema}library_physics_scenes_type"/&gt;
+ *           &lt;element name="library_visual_scenes" type="{http://www.collada.org/2008/03/COLLADASchema}library_visual_scenes_type"/&gt;
+ *           &lt;element name="library_joints" type="{http://www.collada.org/2008/03/COLLADASchema}library_joints_type"/&gt;
+ *           &lt;element name="library_kinematics_models" type="{http://www.collada.org/2008/03/COLLADASchema}library_kinematics_models_type"/&gt;
+ *           &lt;element name="library_articulated_systems" type="{http://www.collada.org/2008/03/COLLADASchema}library_articulated_systems_type"/&gt;
+ *           &lt;element name="library_kinematics_scenes" type="{http://www.collada.org/2008/03/COLLADASchema}library_kinematics_scenes_type"/&gt;
+ *           &lt;element name="library_formulas" type="{http://www.collada.org/2008/03/COLLADASchema}library_formulas_type"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element name="scene" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="instance_physics_scene" type="{http://www.collada.org/2008/03/COLLADASchema}instance_with_extra_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                   &lt;element name="instance_visual_scene" type="{http://www.collada.org/2008/03/COLLADASchema}instance_with_extra_type" minOccurs="0"/&gt;
+ *                   &lt;element name="instance_kinematics_scene" type="{http://www.collada.org/2008/03/COLLADASchema}instance_kinematics_scene_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                   &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="version" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}version_enum" /&gt;
+ *       &lt;attribute ref="{http://www.w3.org/XML/1998/namespace}base"/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -152,7 +152,7 @@ public class COLLADA {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the libraries property.
+     * This is why there is not a {@code set} method for the libraries property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -224,7 +224,7 @@ public class COLLADA {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the extra property.
+     * This is why there is not a {@code set} method for the extra property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -304,18 +304,18 @@ public class COLLADA {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="instance_physics_scene" type="{http://www.collada.org/2008/03/COLLADASchema}instance_with_extra_type" maxOccurs="unbounded" minOccurs="0"/>
-     *         &lt;element name="instance_visual_scene" type="{http://www.collada.org/2008/03/COLLADASchema}instance_with_extra_type" minOccurs="0"/>
-     *         &lt;element name="instance_kinematics_scene" type="{http://www.collada.org/2008/03/COLLADASchema}instance_kinematics_scene_type" maxOccurs="unbounded" minOccurs="0"/>
-     *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="instance_physics_scene" type="{http://www.collada.org/2008/03/COLLADASchema}instance_with_extra_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *         &lt;element name="instance_visual_scene" type="{http://www.collada.org/2008/03/COLLADASchema}instance_with_extra_type" minOccurs="0"/&gt;
+     *         &lt;element name="instance_kinematics_scene" type="{http://www.collada.org/2008/03/COLLADASchema}instance_kinematics_scene_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -344,7 +344,7 @@ public class COLLADA {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the instancePhysicsScene property.
+         * This is why there is not a {@code set} method for the instancePhysicsScene property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -397,7 +397,7 @@ public class COLLADA {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the instanceKinematicsScene property.
+         * This is why there is not a {@code set} method for the instanceKinematicsScene property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -426,7 +426,7 @@ public class COLLADA {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the extra property.
+         * This is why there is not a {@code set} method for the extra property.
          * 
          * <p>
          * For example, to add a new item, do as follows:

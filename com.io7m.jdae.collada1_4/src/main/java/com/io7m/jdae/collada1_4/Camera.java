@@ -31,102 +31,102 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}asset" minOccurs="0"/>
- *         &lt;element name="optics">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="technique_common">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;choice>
- *                             &lt;element name="orthographic">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;sequence>
- *                                       &lt;choice>
- *                                         &lt;sequence>
- *                                           &lt;element name="xmag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
- *                                           &lt;choice minOccurs="0">
- *                                             &lt;element name="ymag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
- *                                             &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
- *                                           &lt;/choice>
- *                                         &lt;/sequence>
- *                                         &lt;sequence>
- *                                           &lt;element name="ymag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
- *                                           &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/>
- *                                         &lt;/sequence>
- *                                       &lt;/choice>
- *                                       &lt;element name="znear" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
- *                                       &lt;element name="zfar" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
- *                                     &lt;/sequence>
- *                                   &lt;/restriction>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                             &lt;element name="perspective">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;sequence>
- *                                       &lt;choice>
- *                                         &lt;sequence>
- *                                           &lt;element name="xfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
- *                                           &lt;choice minOccurs="0">
- *                                             &lt;element name="yfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
- *                                             &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
- *                                           &lt;/choice>
- *                                         &lt;/sequence>
- *                                         &lt;sequence>
- *                                           &lt;element name="yfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
- *                                           &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/>
- *                                         &lt;/sequence>
- *                                       &lt;/choice>
- *                                       &lt;element name="znear" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
- *                                       &lt;element name="zfar" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
- *                                     &lt;/sequence>
- *                                   &lt;/restriction>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                           &lt;/choice>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}technique" maxOccurs="unbounded" minOccurs="0"/>
- *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="imager" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}technique" maxOccurs="unbounded"/>
- *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />
- *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}asset" minOccurs="0"/&gt;
+ *         &lt;element name="optics"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="technique_common"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;choice&gt;
+ *                             &lt;element name="orthographic"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;complexContent&gt;
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                     &lt;sequence&gt;
+ *                                       &lt;choice&gt;
+ *                                         &lt;sequence&gt;
+ *                                           &lt;element name="xmag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+ *                                           &lt;choice minOccurs="0"&gt;
+ *                                             &lt;element name="ymag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+ *                                             &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+ *                                           &lt;/choice&gt;
+ *                                         &lt;/sequence&gt;
+ *                                         &lt;sequence&gt;
+ *                                           &lt;element name="ymag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+ *                                           &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/&gt;
+ *                                         &lt;/sequence&gt;
+ *                                       &lt;/choice&gt;
+ *                                       &lt;element name="znear" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+ *                                       &lt;element name="zfar" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+ *                                     &lt;/sequence&gt;
+ *                                   &lt;/restriction&gt;
+ *                                 &lt;/complexContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                             &lt;element name="perspective"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;complexContent&gt;
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                     &lt;sequence&gt;
+ *                                       &lt;choice&gt;
+ *                                         &lt;sequence&gt;
+ *                                           &lt;element name="xfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+ *                                           &lt;choice minOccurs="0"&gt;
+ *                                             &lt;element name="yfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+ *                                             &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+ *                                           &lt;/choice&gt;
+ *                                         &lt;/sequence&gt;
+ *                                         &lt;sequence&gt;
+ *                                           &lt;element name="yfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+ *                                           &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/&gt;
+ *                                         &lt;/sequence&gt;
+ *                                       &lt;/choice&gt;
+ *                                       &lt;element name="znear" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+ *                                       &lt;element name="zfar" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+ *                                     &lt;/sequence&gt;
+ *                                   &lt;/restriction&gt;
+ *                                 &lt;/complexContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                           &lt;/choice&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}technique" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="imager" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}technique" maxOccurs="unbounded"/&gt;
+ *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+ *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -239,7 +239,7 @@ public class Camera {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the extra property.
+     * This is why there is not a {@code set} method for the extra property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -316,16 +316,16 @@ public class Camera {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}technique" maxOccurs="unbounded"/>
-     *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}technique" maxOccurs="unbounded"/&gt;
+     *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -351,7 +351,7 @@ public class Camera {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the technique property.
+         * This is why there is not a {@code set} method for the technique property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -382,7 +382,7 @@ public class Camera {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the extra property.
+         * This is why there is not a {@code set} method for the extra property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -413,76 +413,76 @@ public class Camera {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="technique_common">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;choice>
-     *                   &lt;element name="orthographic">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;sequence>
-     *                             &lt;choice>
-     *                               &lt;sequence>
-     *                                 &lt;element name="xmag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-     *                                 &lt;choice minOccurs="0">
-     *                                   &lt;element name="ymag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-     *                                   &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-     *                                 &lt;/choice>
-     *                               &lt;/sequence>
-     *                               &lt;sequence>
-     *                                 &lt;element name="ymag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-     *                                 &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/>
-     *                               &lt;/sequence>
-     *                             &lt;/choice>
-     *                             &lt;element name="znear" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-     *                             &lt;element name="zfar" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-     *                           &lt;/sequence>
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                   &lt;element name="perspective">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;sequence>
-     *                             &lt;choice>
-     *                               &lt;sequence>
-     *                                 &lt;element name="xfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-     *                                 &lt;choice minOccurs="0">
-     *                                   &lt;element name="yfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-     *                                   &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-     *                                 &lt;/choice>
-     *                               &lt;/sequence>
-     *                               &lt;sequence>
-     *                                 &lt;element name="yfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-     *                                 &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/>
-     *                               &lt;/sequence>
-     *                             &lt;/choice>
-     *                             &lt;element name="znear" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-     *                             &lt;element name="zfar" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-     *                           &lt;/sequence>
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                 &lt;/choice>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}technique" maxOccurs="unbounded" minOccurs="0"/>
-     *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="technique_common"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;choice&gt;
+     *                   &lt;element name="orthographic"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;sequence&gt;
+     *                             &lt;choice&gt;
+     *                               &lt;sequence&gt;
+     *                                 &lt;element name="xmag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+     *                                 &lt;choice minOccurs="0"&gt;
+     *                                   &lt;element name="ymag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+     *                                   &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+     *                                 &lt;/choice&gt;
+     *                               &lt;/sequence&gt;
+     *                               &lt;sequence&gt;
+     *                                 &lt;element name="ymag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+     *                                 &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/&gt;
+     *                               &lt;/sequence&gt;
+     *                             &lt;/choice&gt;
+     *                             &lt;element name="znear" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+     *                             &lt;element name="zfar" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+     *                           &lt;/sequence&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                   &lt;element name="perspective"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;sequence&gt;
+     *                             &lt;choice&gt;
+     *                               &lt;sequence&gt;
+     *                                 &lt;element name="xfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+     *                                 &lt;choice minOccurs="0"&gt;
+     *                                   &lt;element name="yfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+     *                                   &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+     *                                 &lt;/choice&gt;
+     *                               &lt;/sequence&gt;
+     *                               &lt;sequence&gt;
+     *                                 &lt;element name="yfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+     *                                 &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/&gt;
+     *                               &lt;/sequence&gt;
+     *                             &lt;/choice&gt;
+     *                             &lt;element name="znear" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+     *                             &lt;element name="zfar" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+     *                           &lt;/sequence&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                 &lt;/choice&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}technique" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -533,7 +533,7 @@ public class Camera {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the technique property.
+         * This is why there is not a {@code set} method for the technique property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -564,7 +564,7 @@ public class Camera {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the extra property.
+         * This is why there is not a {@code set} method for the extra property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -593,64 +593,64 @@ public class Camera {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;choice>
-         *         &lt;element name="orthographic">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;sequence>
-         *                   &lt;choice>
-         *                     &lt;sequence>
-         *                       &lt;element name="xmag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-         *                       &lt;choice minOccurs="0">
-         *                         &lt;element name="ymag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-         *                         &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-         *                       &lt;/choice>
-         *                     &lt;/sequence>
-         *                     &lt;sequence>
-         *                       &lt;element name="ymag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-         *                       &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/>
-         *                     &lt;/sequence>
-         *                   &lt;/choice>
-         *                   &lt;element name="znear" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-         *                   &lt;element name="zfar" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-         *                 &lt;/sequence>
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="perspective">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;sequence>
-         *                   &lt;choice>
-         *                     &lt;sequence>
-         *                       &lt;element name="xfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-         *                       &lt;choice minOccurs="0">
-         *                         &lt;element name="yfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-         *                         &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-         *                       &lt;/choice>
-         *                     &lt;/sequence>
-         *                     &lt;sequence>
-         *                       &lt;element name="yfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-         *                       &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/>
-         *                     &lt;/sequence>
-         *                   &lt;/choice>
-         *                   &lt;element name="znear" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-         *                   &lt;element name="zfar" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-         *                 &lt;/sequence>
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/choice>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;choice&gt;
+         *         &lt;element name="orthographic"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;sequence&gt;
+         *                   &lt;choice&gt;
+         *                     &lt;sequence&gt;
+         *                       &lt;element name="xmag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+         *                       &lt;choice minOccurs="0"&gt;
+         *                         &lt;element name="ymag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+         *                         &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+         *                       &lt;/choice&gt;
+         *                     &lt;/sequence&gt;
+         *                     &lt;sequence&gt;
+         *                       &lt;element name="ymag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+         *                       &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/&gt;
+         *                     &lt;/sequence&gt;
+         *                   &lt;/choice&gt;
+         *                   &lt;element name="znear" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+         *                   &lt;element name="zfar" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+         *                 &lt;/sequence&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="perspective"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;sequence&gt;
+         *                   &lt;choice&gt;
+         *                     &lt;sequence&gt;
+         *                       &lt;element name="xfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+         *                       &lt;choice minOccurs="0"&gt;
+         *                         &lt;element name="yfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+         *                         &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+         *                       &lt;/choice&gt;
+         *                     &lt;/sequence&gt;
+         *                     &lt;sequence&gt;
+         *                       &lt;element name="yfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+         *                       &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/&gt;
+         *                     &lt;/sequence&gt;
+         *                   &lt;/choice&gt;
+         *                   &lt;element name="znear" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+         *                   &lt;element name="zfar" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+         *                 &lt;/sequence&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/choice&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -720,29 +720,29 @@ public class Camera {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;choice>
-             *           &lt;sequence>
-             *             &lt;element name="xmag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-             *             &lt;choice minOccurs="0">
-             *               &lt;element name="ymag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-             *               &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-             *             &lt;/choice>
-             *           &lt;/sequence>
-             *           &lt;sequence>
-             *             &lt;element name="ymag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-             *             &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/>
-             *           &lt;/sequence>
-             *         &lt;/choice>
-             *         &lt;element name="znear" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-             *         &lt;element name="zfar" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;choice&gt;
+             *           &lt;sequence&gt;
+             *             &lt;element name="xmag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+             *             &lt;choice minOccurs="0"&gt;
+             *               &lt;element name="ymag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+             *               &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+             *             &lt;/choice&gt;
+             *           &lt;/sequence&gt;
+             *           &lt;sequence&gt;
+             *             &lt;element name="ymag" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+             *             &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/&gt;
+             *           &lt;/sequence&gt;
+             *         &lt;/choice&gt;
+             *         &lt;element name="znear" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+             *         &lt;element name="zfar" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -779,7 +779,7 @@ public class Camera {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the content property.
+                 * This is why there is not a {@code set} method for the content property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -814,29 +814,29 @@ public class Camera {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;choice>
-             *           &lt;sequence>
-             *             &lt;element name="xfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-             *             &lt;choice minOccurs="0">
-             *               &lt;element name="yfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-             *               &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-             *             &lt;/choice>
-             *           &lt;/sequence>
-             *           &lt;sequence>
-             *             &lt;element name="yfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-             *             &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/>
-             *           &lt;/sequence>
-             *         &lt;/choice>
-             *         &lt;element name="znear" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-             *         &lt;element name="zfar" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;choice&gt;
+             *           &lt;sequence&gt;
+             *             &lt;element name="xfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+             *             &lt;choice minOccurs="0"&gt;
+             *               &lt;element name="yfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+             *               &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+             *             &lt;/choice&gt;
+             *           &lt;/sequence&gt;
+             *           &lt;sequence&gt;
+             *             &lt;element name="yfov" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+             *             &lt;element name="aspect_ratio" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/&gt;
+             *           &lt;/sequence&gt;
+             *         &lt;/choice&gt;
+             *         &lt;element name="znear" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+             *         &lt;element name="zfar" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat"/&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -873,7 +873,7 @@ public class Camera {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the content property.
+                 * This is why there is not a {@code set} method for the content property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:

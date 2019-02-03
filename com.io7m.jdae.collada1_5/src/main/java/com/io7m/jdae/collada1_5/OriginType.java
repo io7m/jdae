@@ -22,12 +22,12 @@ import javax.xml.bind.annotation.XmlValue;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="origin_type">
- *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.collada.org/2008/03/COLLADASchema>float3_type">
- *     &lt;/extension>
- *   &lt;/simpleContent>
- * &lt;/complexType>
+ * &lt;complexType name="origin_type"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://www.collada.org/2008/03/COLLADASchema&gt;float3_type"&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -48,7 +48,7 @@ public class OriginType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the value property.
+     * This is why there is not a {@code set} method for the value property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

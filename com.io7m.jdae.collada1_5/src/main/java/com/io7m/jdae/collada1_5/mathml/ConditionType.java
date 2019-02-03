@@ -26,14 +26,14 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="condition.type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}condition.content" maxOccurs="unbounded"/>
- *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}condition.attlist"/>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="condition.type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}condition.content" maxOccurs="unbounded"/&gt;
+ *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}condition.attlist"/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -226,7 +226,7 @@ public class ConditionType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the conditionContent property.
+     * This is why there is not a {@code set} method for the conditionContent property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -383,7 +383,7 @@ public class ConditionType {
      * {@link JAXBElement }{@code <}{@link DomainofapplicationType }{@code >}
      * {@link JAXBElement }{@code <}{@link RelationsType }{@code >}
      * {@link JAXBElement }{@code <}{@link MatrixType }{@code >}
-     * {@link JAXBElement }{@code <}{@link ConditionType }{@code >}
+     * {@link JAXBElement }{@code <} {@code >}
      * {@link JAXBElement }{@code <}{@link MnType }{@code >}
      * {@link JAXBElement }{@code <}{@link ListType }{@code >}
      * {@link JAXBElement }{@code <}{@link LaplacianType }{@code >}

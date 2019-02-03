@@ -34,14 +34,14 @@ import javax.xml.namespace.QName;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="uplimit.type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}uplimit.content" maxOccurs="unbounded"/>
- *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}uplimit.attlist"/>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="uplimit.type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}uplimit.content" maxOccurs="unbounded"/&gt;
+ *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}uplimit.attlist"/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -253,7 +253,7 @@ public class UplimitType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the uplimitContent property.
+     * This is why there is not a {@code set} method for the uplimitContent property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -359,7 +359,7 @@ public class UplimitType {
      * {@link JAXBElement }{@code <}{@link DeterminantType }{@code >}
      * {@link JAXBElement }{@code <}{@link ArithType }{@code >}
      * {@link JAXBElement }{@code <}{@link ArithType }{@code >}
-     * {@link JAXBElement }{@code <}{@link UplimitType }{@code >}
+     * {@link JAXBElement }{@code <} {@code >}
      * {@link JAXBElement }{@code <}{@link ConstantType }{@code >}
      * {@link JAXBElement }{@code <}{@link VarianceType }{@code >}
      * {@link JAXBElement }{@code <}{@link NotinType }{@code >}
@@ -495,7 +495,7 @@ public class UplimitType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the clazz property.
+     * This is why there is not a {@code set} method for the clazz property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

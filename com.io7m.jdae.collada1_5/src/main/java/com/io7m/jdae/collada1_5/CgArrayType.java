@@ -31,17 +31,17 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="cg_array_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}cg_param_group" maxOccurs="unbounded"/>
- *       &lt;/sequence>
- *       &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" />
- *       &lt;attribute name="resizable" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="cg_array_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}cg_param_group" maxOccurs="unbounded"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" /&gt;
+ *       &lt;attribute name="resizable" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -158,7 +158,7 @@ public class CgArrayType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the cgParamGroup property.
+     * This is why there is not a {@code set} method for the cgParamGroup property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -255,7 +255,7 @@ public class CgArrayType {
      * {@link JAXBElement }{@code <}{@link List }{@code <}{@link Long }{@code >}{@code >}
      * {@link JAXBElement }{@code <}{@link List }{@code <}{@link Long }{@code >}{@code >}
      * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link CgArrayType }{@code >}
+     * {@link JAXBElement }{@code <} {@code >}
      * {@link JAXBElement }{@code <}{@link List }{@code <}{@link Boolean }{@code >}{@code >}
      * {@link JAXBElement }{@code <}{@link List }{@code <}{@link Long }{@code >}{@code >}
      * {@link JAXBElement }{@code <}{@link String }{@code >}

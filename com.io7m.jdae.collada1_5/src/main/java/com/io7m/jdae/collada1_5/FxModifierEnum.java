@@ -16,19 +16,19 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for fx_modifier_enum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="fx_modifier_enum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="CONST"/>
- *     &lt;enumeration value="UNIFORM"/>
- *     &lt;enumeration value="VARYING"/>
- *     &lt;enumeration value="STATIC"/>
- *     &lt;enumeration value="VOLATILE"/>
- *     &lt;enumeration value="EXTERN"/>
- *     &lt;enumeration value="SHARED"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="fx_modifier_enum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="CONST"/&gt;
+ *     &lt;enumeration value="UNIFORM"/&gt;
+ *     &lt;enumeration value="VARYING"/&gt;
+ *     &lt;enumeration value="STATIC"/&gt;
+ *     &lt;enumeration value="VOLATILE"/&gt;
+ *     &lt;enumeration value="EXTERN"/&gt;
+ *     &lt;enumeration value="SHARED"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

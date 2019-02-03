@@ -29,97 +29,97 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="cg_pass_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="annotate" type="{http://www.collada.org/2008/03/COLLADASchema}fx_annotate_type" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="states" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}gl_pipeline_settings_group" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="program" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="shader" maxOccurs="unbounded" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="sources">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}fx_sources_type">
- *                                     &lt;attribute name="entry" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
- *                                   &lt;/extension>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                             &lt;element name="compiler" type="{http://www.collada.org/2008/03/COLLADASchema}fx_target_type" maxOccurs="unbounded" minOccurs="0"/>
- *                             &lt;element name="bind_uniform" maxOccurs="unbounded" minOccurs="0">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;choice>
- *                                       &lt;element name="param">
- *                                         &lt;complexType>
- *                                           &lt;complexContent>
- *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                               &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *                                             &lt;/restriction>
- *                                           &lt;/complexContent>
- *                                         &lt;/complexType>
- *                                       &lt;/element>
- *                                       &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}cg_param_group"/>
- *                                     &lt;/choice>
- *                                     &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *                                   &lt;/restriction>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                           &lt;/sequence>
- *                           &lt;attribute name="stage" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}fx_pipeline_stage_enum" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="evaluate" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="color_target" type="{http://www.collada.org/2008/03/COLLADASchema}fx_colortarget_type" maxOccurs="unbounded" minOccurs="0"/>
- *                   &lt;element name="depth_target" type="{http://www.collada.org/2008/03/COLLADASchema}fx_depthtarget_type" maxOccurs="unbounded" minOccurs="0"/>
- *                   &lt;element name="stencil_target" type="{http://www.collada.org/2008/03/COLLADASchema}fx_stenciltarget_type" maxOccurs="unbounded" minOccurs="0"/>
- *                   &lt;element name="color_clear" type="{http://www.collada.org/2008/03/COLLADASchema}fx_clearcolor_type" maxOccurs="unbounded" minOccurs="0"/>
- *                   &lt;element name="depth_clear" type="{http://www.collada.org/2008/03/COLLADASchema}fx_cleardepth_type" maxOccurs="unbounded" minOccurs="0"/>
- *                   &lt;element name="stencil_clear" type="{http://www.collada.org/2008/03/COLLADASchema}fx_clearstencil_type" maxOccurs="unbounded" minOccurs="0"/>
- *                   &lt;element name="draw" type="{http://www.collada.org/2008/03/COLLADASchema}fx_draw_type" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="sid" type="{http://www.collada.org/2008/03/COLLADASchema}sid_type" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="cg_pass_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="annotate" type="{http://www.collada.org/2008/03/COLLADASchema}fx_annotate_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="states" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}gl_pipeline_settings_group" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="program" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="shader" maxOccurs="unbounded" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="sources"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;complexContent&gt;
+ *                                   &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}fx_sources_type"&gt;
+ *                                     &lt;attribute name="entry" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+ *                                   &lt;/extension&gt;
+ *                                 &lt;/complexContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                             &lt;element name="compiler" type="{http://www.collada.org/2008/03/COLLADASchema}fx_target_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                             &lt;element name="bind_uniform" maxOccurs="unbounded" minOccurs="0"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;complexContent&gt;
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                     &lt;choice&gt;
+ *                                       &lt;element name="param"&gt;
+ *                                         &lt;complexType&gt;
+ *                                           &lt;complexContent&gt;
+ *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                               &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *                                             &lt;/restriction&gt;
+ *                                           &lt;/complexContent&gt;
+ *                                         &lt;/complexType&gt;
+ *                                       &lt;/element&gt;
+ *                                       &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}cg_param_group"/&gt;
+ *                                     &lt;/choice&gt;
+ *                                     &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *                                   &lt;/restriction&gt;
+ *                                 &lt;/complexContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                           &lt;/sequence&gt;
+ *                           &lt;attribute name="stage" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}fx_pipeline_stage_enum" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="evaluate" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="color_target" type="{http://www.collada.org/2008/03/COLLADASchema}fx_colortarget_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                   &lt;element name="depth_target" type="{http://www.collada.org/2008/03/COLLADASchema}fx_depthtarget_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                   &lt;element name="stencil_target" type="{http://www.collada.org/2008/03/COLLADASchema}fx_stenciltarget_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                   &lt;element name="color_clear" type="{http://www.collada.org/2008/03/COLLADASchema}fx_clearcolor_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                   &lt;element name="depth_clear" type="{http://www.collada.org/2008/03/COLLADASchema}fx_cleardepth_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                   &lt;element name="stencil_clear" type="{http://www.collada.org/2008/03/COLLADASchema}fx_clearstencil_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                   &lt;element name="draw" type="{http://www.collada.org/2008/03/COLLADASchema}fx_draw_type" minOccurs="0"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="sid" type="{http://www.collada.org/2008/03/COLLADASchema}sid_type" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -150,7 +150,7 @@ public class CgPassType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the annotate property.
+     * This is why there is not a {@code set} method for the annotate property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -251,7 +251,7 @@ public class CgPassType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the extra property.
+     * This is why there is not a {@code set} method for the extra property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -304,21 +304,21 @@ public class CgPassType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="color_target" type="{http://www.collada.org/2008/03/COLLADASchema}fx_colortarget_type" maxOccurs="unbounded" minOccurs="0"/>
-     *         &lt;element name="depth_target" type="{http://www.collada.org/2008/03/COLLADASchema}fx_depthtarget_type" maxOccurs="unbounded" minOccurs="0"/>
-     *         &lt;element name="stencil_target" type="{http://www.collada.org/2008/03/COLLADASchema}fx_stenciltarget_type" maxOccurs="unbounded" minOccurs="0"/>
-     *         &lt;element name="color_clear" type="{http://www.collada.org/2008/03/COLLADASchema}fx_clearcolor_type" maxOccurs="unbounded" minOccurs="0"/>
-     *         &lt;element name="depth_clear" type="{http://www.collada.org/2008/03/COLLADASchema}fx_cleardepth_type" maxOccurs="unbounded" minOccurs="0"/>
-     *         &lt;element name="stencil_clear" type="{http://www.collada.org/2008/03/COLLADASchema}fx_clearstencil_type" maxOccurs="unbounded" minOccurs="0"/>
-     *         &lt;element name="draw" type="{http://www.collada.org/2008/03/COLLADASchema}fx_draw_type" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="color_target" type="{http://www.collada.org/2008/03/COLLADASchema}fx_colortarget_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *         &lt;element name="depth_target" type="{http://www.collada.org/2008/03/COLLADASchema}fx_depthtarget_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *         &lt;element name="stencil_target" type="{http://www.collada.org/2008/03/COLLADASchema}fx_stenciltarget_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *         &lt;element name="color_clear" type="{http://www.collada.org/2008/03/COLLADASchema}fx_clearcolor_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *         &lt;element name="depth_clear" type="{http://www.collada.org/2008/03/COLLADASchema}fx_cleardepth_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *         &lt;element name="stencil_clear" type="{http://www.collada.org/2008/03/COLLADASchema}fx_clearstencil_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *         &lt;element name="draw" type="{http://www.collada.org/2008/03/COLLADASchema}fx_draw_type" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -356,7 +356,7 @@ public class CgPassType {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the colorTarget property.
+         * This is why there is not a {@code set} method for the colorTarget property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -385,7 +385,7 @@ public class CgPassType {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the depthTarget property.
+         * This is why there is not a {@code set} method for the depthTarget property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -414,7 +414,7 @@ public class CgPassType {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the stencilTarget property.
+         * This is why there is not a {@code set} method for the stencilTarget property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -443,7 +443,7 @@ public class CgPassType {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the colorClear property.
+         * This is why there is not a {@code set} method for the colorClear property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -472,7 +472,7 @@ public class CgPassType {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the depthClear property.
+         * This is why there is not a {@code set} method for the depthClear property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -501,7 +501,7 @@ public class CgPassType {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the stencilClear property.
+         * This is why there is not a {@code set} method for the stencilClear property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -556,56 +556,56 @@ public class CgPassType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="shader" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="sources">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}fx_sources_type">
-     *                           &lt;attribute name="entry" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *                         &lt;/extension>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                   &lt;element name="compiler" type="{http://www.collada.org/2008/03/COLLADASchema}fx_target_type" maxOccurs="unbounded" minOccurs="0"/>
-     *                   &lt;element name="bind_uniform" maxOccurs="unbounded" minOccurs="0">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;choice>
-     *                             &lt;element name="param">
-     *                               &lt;complexType>
-     *                                 &lt;complexContent>
-     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                                     &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-     *                                   &lt;/restriction>
-     *                                 &lt;/complexContent>
-     *                               &lt;/complexType>
-     *                             &lt;/element>
-     *                             &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}cg_param_group"/>
-     *                           &lt;/choice>
-     *                           &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                 &lt;/sequence>
-     *                 &lt;attribute name="stage" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}fx_pipeline_stage_enum" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="shader" maxOccurs="unbounded" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="sources"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}fx_sources_type"&gt;
+     *                           &lt;attribute name="entry" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+     *                         &lt;/extension&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                   &lt;element name="compiler" type="{http://www.collada.org/2008/03/COLLADASchema}fx_target_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *                   &lt;element name="bind_uniform" maxOccurs="unbounded" minOccurs="0"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;choice&gt;
+     *                             &lt;element name="param"&gt;
+     *                               &lt;complexType&gt;
+     *                                 &lt;complexContent&gt;
+     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                                     &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+     *                                   &lt;/restriction&gt;
+     *                                 &lt;/complexContent&gt;
+     *                               &lt;/complexType&gt;
+     *                             &lt;/element&gt;
+     *                             &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}cg_param_group"/&gt;
+     *                           &lt;/choice&gt;
+     *                           &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                 &lt;/sequence&gt;
+     *                 &lt;attribute name="stage" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}fx_pipeline_stage_enum" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -625,7 +625,7 @@ public class CgPassType {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the shader property.
+         * This is why there is not a {@code set} method for the shader property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -654,46 +654,46 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="sources">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}fx_sources_type">
-         *                 &lt;attribute name="entry" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
-         *               &lt;/extension>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="compiler" type="{http://www.collada.org/2008/03/COLLADASchema}fx_target_type" maxOccurs="unbounded" minOccurs="0"/>
-         *         &lt;element name="bind_uniform" maxOccurs="unbounded" minOccurs="0">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;choice>
-         *                   &lt;element name="param">
-         *                     &lt;complexType>
-         *                       &lt;complexContent>
-         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                           &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *                         &lt;/restriction>
-         *                       &lt;/complexContent>
-         *                     &lt;/complexType>
-         *                   &lt;/element>
-         *                   &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}cg_param_group"/>
-         *                 &lt;/choice>
-         *                 &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *       &lt;attribute name="stage" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}fx_pipeline_stage_enum" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="sources"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}fx_sources_type"&gt;
+         *                 &lt;attribute name="entry" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+         *               &lt;/extension&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="compiler" type="{http://www.collada.org/2008/03/COLLADASchema}fx_target_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+         *         &lt;element name="bind_uniform" maxOccurs="unbounded" minOccurs="0"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;choice&gt;
+         *                   &lt;element name="param"&gt;
+         *                     &lt;complexType&gt;
+         *                       &lt;complexContent&gt;
+         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                           &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *                         &lt;/restriction&gt;
+         *                       &lt;/complexContent&gt;
+         *                     &lt;/complexType&gt;
+         *                   &lt;/element&gt;
+         *                   &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}cg_param_group"/&gt;
+         *                 &lt;/choice&gt;
+         *                 &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *       &lt;attribute name="stage" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}fx_pipeline_stage_enum" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -745,7 +745,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the compiler property.
+             * This is why there is not a {@code set} method for the compiler property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -774,7 +774,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the bindUniform property.
+             * This is why there is not a {@code set} method for the bindUniform property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -827,25 +827,25 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;choice>
-             *         &lt;element name="param">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}cg_param_group"/>
-             *       &lt;/choice>
-             *       &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;choice&gt;
+             *         &lt;element name="param"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}cg_param_group"/&gt;
+             *       &lt;/choice&gt;
+             *       &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -1326,7 +1326,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the bool2 property.
+                 * This is why there is not a {@code set} method for the bool2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1355,7 +1355,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the bool3 property.
+                 * This is why there is not a {@code set} method for the bool3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1384,7 +1384,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the bool4 property.
+                 * This is why there is not a {@code set} method for the bool4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1413,7 +1413,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the bool2X1 property.
+                 * This is why there is not a {@code set} method for the bool2X1 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1442,7 +1442,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the bool2X2 property.
+                 * This is why there is not a {@code set} method for the bool2X2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1471,7 +1471,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the bool2X3 property.
+                 * This is why there is not a {@code set} method for the bool2X3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1500,7 +1500,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the bool2X4 property.
+                 * This is why there is not a {@code set} method for the bool2X4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1529,7 +1529,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the bool3X1 property.
+                 * This is why there is not a {@code set} method for the bool3X1 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1558,7 +1558,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the bool3X2 property.
+                 * This is why there is not a {@code set} method for the bool3X2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1587,7 +1587,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the bool3X3 property.
+                 * This is why there is not a {@code set} method for the bool3X3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1616,7 +1616,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the bool3X4 property.
+                 * This is why there is not a {@code set} method for the bool3X4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1645,7 +1645,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the bool4X1 property.
+                 * This is why there is not a {@code set} method for the bool4X1 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1674,7 +1674,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the bool4X2 property.
+                 * This is why there is not a {@code set} method for the bool4X2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1703,7 +1703,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the bool4X3 property.
+                 * This is why there is not a {@code set} method for the bool4X3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1732,7 +1732,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the bool4X4 property.
+                 * This is why there is not a {@code set} method for the bool4X4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1785,7 +1785,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the float2 property.
+                 * This is why there is not a {@code set} method for the float2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1814,7 +1814,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the float3 property.
+                 * This is why there is not a {@code set} method for the float3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1843,7 +1843,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the float4 property.
+                 * This is why there is not a {@code set} method for the float4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1872,7 +1872,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the float2X1 property.
+                 * This is why there is not a {@code set} method for the float2X1 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1901,7 +1901,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the float2X2 property.
+                 * This is why there is not a {@code set} method for the float2X2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1930,7 +1930,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the float2X3 property.
+                 * This is why there is not a {@code set} method for the float2X3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1959,7 +1959,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the float2X4 property.
+                 * This is why there is not a {@code set} method for the float2X4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1988,7 +1988,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the float3X1 property.
+                 * This is why there is not a {@code set} method for the float3X1 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2017,7 +2017,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the float3X2 property.
+                 * This is why there is not a {@code set} method for the float3X2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2046,7 +2046,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the float3X3 property.
+                 * This is why there is not a {@code set} method for the float3X3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2075,7 +2075,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the float3X4 property.
+                 * This is why there is not a {@code set} method for the float3X4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2104,7 +2104,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the float4X1 property.
+                 * This is why there is not a {@code set} method for the float4X1 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2133,7 +2133,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the float4X2 property.
+                 * This is why there is not a {@code set} method for the float4X2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2162,7 +2162,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the float4X3 property.
+                 * This is why there is not a {@code set} method for the float4X3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2191,7 +2191,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the float4X4 property.
+                 * This is why there is not a {@code set} method for the float4X4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2244,7 +2244,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the int2 property.
+                 * This is why there is not a {@code set} method for the int2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2273,7 +2273,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the int3 property.
+                 * This is why there is not a {@code set} method for the int3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2302,7 +2302,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the int4 property.
+                 * This is why there is not a {@code set} method for the int4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2331,7 +2331,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the int2X1 property.
+                 * This is why there is not a {@code set} method for the int2X1 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2360,7 +2360,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the int2X2 property.
+                 * This is why there is not a {@code set} method for the int2X2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2389,7 +2389,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the int2X3 property.
+                 * This is why there is not a {@code set} method for the int2X3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2418,7 +2418,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the int2X4 property.
+                 * This is why there is not a {@code set} method for the int2X4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2447,7 +2447,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the int3X1 property.
+                 * This is why there is not a {@code set} method for the int3X1 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2476,7 +2476,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the int3X2 property.
+                 * This is why there is not a {@code set} method for the int3X2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2505,7 +2505,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the int3X3 property.
+                 * This is why there is not a {@code set} method for the int3X3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2534,7 +2534,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the int3X4 property.
+                 * This is why there is not a {@code set} method for the int3X4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2563,7 +2563,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the int4X1 property.
+                 * This is why there is not a {@code set} method for the int4X1 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2592,7 +2592,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the int4X2 property.
+                 * This is why there is not a {@code set} method for the int4X2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2621,7 +2621,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the int4X3 property.
+                 * This is why there is not a {@code set} method for the int4X3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2650,7 +2650,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the int4X4 property.
+                 * This is why there is not a {@code set} method for the int4X4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2703,7 +2703,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the half2 property.
+                 * This is why there is not a {@code set} method for the half2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2732,7 +2732,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the half3 property.
+                 * This is why there is not a {@code set} method for the half3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2761,7 +2761,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the half4 property.
+                 * This is why there is not a {@code set} method for the half4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2790,7 +2790,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the half2X1 property.
+                 * This is why there is not a {@code set} method for the half2X1 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2819,7 +2819,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the half2X2 property.
+                 * This is why there is not a {@code set} method for the half2X2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2848,7 +2848,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the half2X3 property.
+                 * This is why there is not a {@code set} method for the half2X3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2877,7 +2877,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the half2X4 property.
+                 * This is why there is not a {@code set} method for the half2X4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2906,7 +2906,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the half3X1 property.
+                 * This is why there is not a {@code set} method for the half3X1 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2935,7 +2935,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the half3X2 property.
+                 * This is why there is not a {@code set} method for the half3X2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2964,7 +2964,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the half3X3 property.
+                 * This is why there is not a {@code set} method for the half3X3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -2993,7 +2993,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the half3X4 property.
+                 * This is why there is not a {@code set} method for the half3X4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3022,7 +3022,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the half4X1 property.
+                 * This is why there is not a {@code set} method for the half4X1 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3051,7 +3051,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the half4X2 property.
+                 * This is why there is not a {@code set} method for the half4X2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3080,7 +3080,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the half4X3 property.
+                 * This is why there is not a {@code set} method for the half4X3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3109,7 +3109,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the half4X4 property.
+                 * This is why there is not a {@code set} method for the half4X4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3162,7 +3162,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the fixed2 property.
+                 * This is why there is not a {@code set} method for the fixed2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3191,7 +3191,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the fixed3 property.
+                 * This is why there is not a {@code set} method for the fixed3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3220,7 +3220,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the fixed4 property.
+                 * This is why there is not a {@code set} method for the fixed4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3249,7 +3249,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the fixed2X1 property.
+                 * This is why there is not a {@code set} method for the fixed2X1 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3278,7 +3278,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the fixed2X2 property.
+                 * This is why there is not a {@code set} method for the fixed2X2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3307,7 +3307,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the fixed2X3 property.
+                 * This is why there is not a {@code set} method for the fixed2X3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3336,7 +3336,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the fixed2X4 property.
+                 * This is why there is not a {@code set} method for the fixed2X4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3365,7 +3365,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the fixed3X1 property.
+                 * This is why there is not a {@code set} method for the fixed3X1 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3394,7 +3394,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the fixed3X2 property.
+                 * This is why there is not a {@code set} method for the fixed3X2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3423,7 +3423,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the fixed3X3 property.
+                 * This is why there is not a {@code set} method for the fixed3X3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3452,7 +3452,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the fixed3X4 property.
+                 * This is why there is not a {@code set} method for the fixed3X4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3481,7 +3481,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the fixed4X1 property.
+                 * This is why there is not a {@code set} method for the fixed4X1 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3510,7 +3510,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the fixed4X2 property.
+                 * This is why there is not a {@code set} method for the fixed4X2 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3539,7 +3539,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the fixed4X3 property.
+                 * This is why there is not a {@code set} method for the fixed4X3 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3568,7 +3568,7 @@ public class CgPassType {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the fixed4X4 property.
+                 * This is why there is not a {@code set} method for the fixed4X4 property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3861,13 +3861,13 @@ public class CgPassType {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -3916,13 +3916,13 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}fx_sources_type">
-             *       &lt;attribute name="entry" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
-             *     &lt;/extension>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}fx_sources_type"&gt;
+             *       &lt;attribute name="entry" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+             *     &lt;/extension&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -3975,15 +3975,15 @@ public class CgPassType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}gl_pipeline_settings_group" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}gl_pipeline_settings_group" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -4109,7 +4109,7 @@ public class CgPassType {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the glPipelineSettingsGroup property.
+         * This is why there is not a {@code set} method for the glPipelineSettingsGroup property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -4241,34 +4241,34 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="func">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_func_enum" default="ALWAYS" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="value">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_alpha_value_type" default="0.0" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="func"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_func_enum" default="ALWAYS" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="value"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_alpha_value_type" default="0.0" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -4340,14 +4340,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_func_enum" default="ALWAYS" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_func_enum" default="ALWAYS" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -4424,14 +4424,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_alpha_value_type" default="0.0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_alpha_value_type" default="0.0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -4510,14 +4510,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -4594,14 +4594,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0 0 0 0" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0 0 0 0" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -4624,7 +4624,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -4679,14 +4679,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -4763,14 +4763,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_equation_enum" default="FUNC_ADD" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_equation_enum" default="FUNC_ADD" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -4847,34 +4847,34 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="rgb">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_equation_enum" default="FUNC_ADD" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="alpha">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_equation_enum" default="FUNC_ADD" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="rgb"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_equation_enum" default="FUNC_ADD" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="alpha"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_equation_enum" default="FUNC_ADD" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -4946,14 +4946,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_equation_enum" default="FUNC_ADD" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_equation_enum" default="FUNC_ADD" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -5030,14 +5030,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_equation_enum" default="FUNC_ADD" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_equation_enum" default="FUNC_ADD" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -5116,34 +5116,34 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="src">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ONE" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="dest">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ZERO" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="src"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ONE" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="dest"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ZERO" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -5215,14 +5215,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ZERO" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ZERO" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -5299,14 +5299,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ONE" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ONE" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -5385,54 +5385,54 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="src_rgb">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ONE" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="dest_rgb">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ZERO" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="src_alpha">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ONE" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="dest_alpha">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ZERO" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="src_rgb"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ONE" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="dest_rgb"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ZERO" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="src_alpha"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ONE" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="dest_alpha"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ZERO" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -5558,14 +5558,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ZERO" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ZERO" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -5642,14 +5642,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ZERO" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ZERO" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -5726,14 +5726,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ONE" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ONE" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -5810,14 +5810,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ONE" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_blend_enum" default="ONE" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -5896,15 +5896,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0 0 0 0" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_clip_planes_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0 0 0 0" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_clip_planes_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -5929,7 +5929,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -6008,15 +6008,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_clip_planes_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_clip_planes_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -6119,14 +6119,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -6203,14 +6203,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}bool4_type" default="true true true true" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}bool4_type" default="true true true true" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -6233,7 +6233,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -6288,34 +6288,34 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="face">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_face_enum" default="FRONT_AND_BACK" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="mode">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_material_enum" default="AMBIENT_AND_DIFFUSE" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="face"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_face_enum" default="FRONT_AND_BACK" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="mode"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_material_enum" default="AMBIENT_AND_DIFFUSE" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -6387,14 +6387,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_face_enum" default="FRONT_AND_BACK" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_face_enum" default="FRONT_AND_BACK" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -6471,14 +6471,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_material_enum" default="AMBIENT_AND_DIFFUSE" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_material_enum" default="AMBIENT_AND_DIFFUSE" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -6557,14 +6557,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -6641,14 +6641,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_face_enum" default="BACK" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_face_enum" default="BACK" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -6725,14 +6725,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -6809,14 +6809,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float2_type" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float2_type" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -6839,7 +6839,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -6894,14 +6894,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -6978,14 +6978,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -7062,14 +7062,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_func_enum" default="ALWAYS" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_func_enum" default="ALWAYS" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -7146,14 +7146,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -7230,14 +7230,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float2_type" default="0 1" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float2_type" default="0 1" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -7260,7 +7260,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -7315,14 +7315,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -7399,14 +7399,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -7483,14 +7483,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0 0 0 0" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0 0 0 0" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -7513,7 +7513,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -7568,14 +7568,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_fog_coord_src_enum" default="FOG_COORDINATE" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_fog_coord_src_enum" default="FOG_COORDINATE" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -7652,14 +7652,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="1" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="1" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -7736,14 +7736,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -7820,14 +7820,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="1" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="1" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -7904,14 +7904,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_fog_enum" default="EXP" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_fog_enum" default="EXP" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -7988,14 +7988,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="0" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="0" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -8072,14 +8072,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_front_face_enum" default="CCW" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_front_face_enum" default="CCW" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -8156,15 +8156,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0 0 0 1" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0 0 0 1" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -8189,7 +8189,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -8268,15 +8268,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="1" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="1" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -8379,15 +8379,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0 0 0 0" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0 0 0 0" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -8412,7 +8412,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -8491,15 +8491,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -8602,14 +8602,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -8686,15 +8686,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="0" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="0" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -8797,14 +8797,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0.2 0.2 0.2 1.0" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0.2 0.2 0.2 1.0" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -8827,7 +8827,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -8882,14 +8882,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_light_model_color_control_enum" default="SINGLE_COLOR" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_light_model_color_control_enum" default="SINGLE_COLOR" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -8966,14 +8966,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -9050,14 +9050,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -9134,15 +9134,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0 0 1 0" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0 0 1 0" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -9167,7 +9167,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -9246,15 +9246,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="0" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="0" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -9357,15 +9357,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0 0 0 0" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0 0 0 0" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -9390,7 +9390,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -9469,15 +9469,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="180" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="180" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -9580,15 +9580,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float3_type" default="0 0 -1" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float3_type" default="0 0 -1" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -9613,7 +9613,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -9692,15 +9692,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="0" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="0" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_lights_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -9803,14 +9803,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -9887,14 +9887,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}int2_type" default="1 65536" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}int2_type" default="1 65536" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -9917,7 +9917,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -9972,14 +9972,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -10056,14 +10056,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="1" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="1" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -10140,14 +10140,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_logic_op_enum" default="COPY" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_logic_op_enum" default="COPY" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -10224,14 +10224,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -10308,14 +10308,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0.2 0.2 0.2 1.0" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0.2 0.2 0.2 1.0" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -10338,7 +10338,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -10393,14 +10393,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0.8 0.8 0.8 1.0" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0.8 0.8 0.8 1.0" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -10423,7 +10423,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -10478,14 +10478,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0 0 0 1" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0 0 0 1" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -10508,7 +10508,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -10563,14 +10563,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="0" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="0" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -10647,14 +10647,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0 0 0 1" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" default="0 0 0 1" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -10677,7 +10677,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -10732,14 +10732,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4x4_type" default="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4x4_type" default="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -10762,7 +10762,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -10817,14 +10817,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -10901,14 +10901,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -10985,14 +10985,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float3_type" default="1 0 0" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float3_type" default="1 0 0" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -11015,7 +11015,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -11070,14 +11070,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="1" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="1" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -11154,14 +11154,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="1" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="1" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -11238,14 +11238,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="1" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="1" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -11322,14 +11322,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="0" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float_type" default="0" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -11406,14 +11406,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -11490,34 +11490,34 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="face">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_face_enum" default="FRONT_AND_BACK" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="mode">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_polygon_mode_enum" default="FILL" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="face"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_face_enum" default="FRONT_AND_BACK" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="mode"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_polygon_mode_enum" default="FILL" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -11589,14 +11589,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_face_enum" default="FRONT_AND_BACK" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_face_enum" default="FRONT_AND_BACK" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -11673,14 +11673,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_polygon_mode_enum" default="FILL" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_polygon_mode_enum" default="FILL" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -11759,14 +11759,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float2_type" default="0 0" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float2_type" default="0 0" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -11789,7 +11789,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -11844,14 +11844,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -11928,14 +11928,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -12012,14 +12012,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -12096,14 +12096,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -12180,14 +12180,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -12264,14 +12264,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4x4_type" default="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4x4_type" default="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -12294,7 +12294,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -12349,14 +12349,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -12433,14 +12433,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -12517,14 +12517,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -12601,14 +12601,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -12685,14 +12685,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}int4_type" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}int4_type" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -12715,7 +12715,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -12770,14 +12770,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -12854,14 +12854,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_shade_model_enum" default="SMOOTH" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_shade_model_enum" default="SMOOTH" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -12938,44 +12938,44 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="func">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_func_enum" default="ALWAYS" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="ref">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="0" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="mask">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="func"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_func_enum" default="ALWAYS" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="ref"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="0" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="mask"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -13074,14 +13074,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_func_enum" default="ALWAYS" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_func_enum" default="ALWAYS" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -13158,14 +13158,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -13243,14 +13243,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -13330,54 +13330,54 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="front">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_func_enum" default="ALWAYS" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="back">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_func_enum" default="ALWAYS" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="ref">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="0" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="mask">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="front"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_func_enum" default="ALWAYS" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="back"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_func_enum" default="ALWAYS" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="ref"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="0" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="mask"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -13503,14 +13503,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_func_enum" default="ALWAYS" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_func_enum" default="ALWAYS" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -13587,14 +13587,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_func_enum" default="ALWAYS" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_func_enum" default="ALWAYS" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -13671,14 +13671,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -13756,14 +13756,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -13843,14 +13843,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}int_type" default="4294967295" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}int_type" default="4294967295" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -13927,34 +13927,34 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="face">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_face_enum" default="FRONT_AND_BACK" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="mask">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="face"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_face_enum" default="FRONT_AND_BACK" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="mask"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -14026,14 +14026,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_face_enum" default="FRONT_AND_BACK" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_face_enum" default="FRONT_AND_BACK" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -14110,14 +14110,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -14197,44 +14197,44 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="fail">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="zfail">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="zpass">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="fail"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="zfail"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="zpass"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -14333,14 +14333,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -14417,14 +14417,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -14501,14 +14501,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -14587,54 +14587,54 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="face">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_face_enum" default="FRONT_AND_BACK" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="fail">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="zfail">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="zpass">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" />
-         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="face"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_face_enum" default="FRONT_AND_BACK" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="fail"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="zfail"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="zpass"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" /&gt;
+         *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -14760,14 +14760,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_face_enum" default="FRONT_AND_BACK" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_face_enum" default="FRONT_AND_BACK" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -14844,14 +14844,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -14928,14 +14928,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -15012,14 +15012,14 @@ public class CgPassType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}gl_stencil_op_enum" default="KEEP" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -15098,14 +15098,14 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -15182,17 +15182,17 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;choice>
-         *         &lt;element name="value" type="{http://www.collada.org/2008/03/COLLADASchema}fx_sampler1D_type"/>
-         *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/>
-         *       &lt;/choice>
-         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;choice&gt;
+         *         &lt;element name="value" type="{http://www.collada.org/2008/03/COLLADASchema}fx_sampler1D_type"/&gt;
+         *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/&gt;
+         *       &lt;/choice&gt;
+         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -15292,15 +15292,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -15403,17 +15403,17 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;choice>
-         *         &lt;element name="value" type="{http://www.collada.org/2008/03/COLLADASchema}fx_sampler2D_type"/>
-         *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/>
-         *       &lt;/choice>
-         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;choice&gt;
+         *         &lt;element name="value" type="{http://www.collada.org/2008/03/COLLADASchema}fx_sampler2D_type"/&gt;
+         *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/&gt;
+         *       &lt;/choice&gt;
+         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -15513,15 +15513,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -15624,17 +15624,17 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;choice>
-         *         &lt;element name="value" type="{http://www.collada.org/2008/03/COLLADASchema}fx_sampler3D_type"/>
-         *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/>
-         *       &lt;/choice>
-         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;choice&gt;
+         *         &lt;element name="value" type="{http://www.collada.org/2008/03/COLLADASchema}fx_sampler3D_type"/&gt;
+         *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/&gt;
+         *       &lt;/choice&gt;
+         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -15734,15 +15734,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -15845,17 +15845,17 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;choice>
-         *         &lt;element name="value" type="{http://www.collada.org/2008/03/COLLADASchema}fx_samplerCUBE_type"/>
-         *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/>
-         *       &lt;/choice>
-         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;choice&gt;
+         *         &lt;element name="value" type="{http://www.collada.org/2008/03/COLLADASchema}fx_samplerCUBE_type"/&gt;
+         *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/&gt;
+         *       &lt;/choice&gt;
+         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -15955,15 +15955,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -16066,17 +16066,17 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;choice>
-         *         &lt;element name="value" type="{http://www.collada.org/2008/03/COLLADASchema}fx_samplerDEPTH_type"/>
-         *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/>
-         *       &lt;/choice>
-         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;choice&gt;
+         *         &lt;element name="value" type="{http://www.collada.org/2008/03/COLLADASchema}fx_samplerDEPTH_type"/&gt;
+         *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/&gt;
+         *       &lt;/choice&gt;
+         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -16176,15 +16176,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -16287,15 +16287,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.collada.org/2008/03/COLLADASchema}float4_type" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -16320,7 +16320,7 @@ public class CgPassType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the value property.
+             * This is why there is not a {@code set} method for the value property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -16399,15 +16399,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}string" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -16506,17 +16506,17 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;choice>
-         *         &lt;element name="value" type="{http://www.collada.org/2008/03/COLLADASchema}fx_samplerRECT_type"/>
-         *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/>
-         *       &lt;/choice>
-         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;choice&gt;
+         *         &lt;element name="value" type="{http://www.collada.org/2008/03/COLLADASchema}fx_samplerRECT_type"/&gt;
+         *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/&gt;
+         *       &lt;/choice&gt;
+         *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -16616,15 +16616,15 @@ public class CgPassType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *       &lt;attribute name="index" type="{http://www.collada.org/2008/03/COLLADASchema}gl_max_texture_image_units_index_type" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 

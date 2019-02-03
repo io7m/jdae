@@ -16,16 +16,16 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for fx_pipeline_stage_enum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="fx_pipeline_stage_enum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="TESSELLATION"/>
- *     &lt;enumeration value="VERTEX"/>
- *     &lt;enumeration value="GEOMETRY"/>
- *     &lt;enumeration value="FRAGMENT"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="fx_pipeline_stage_enum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="TESSELLATION"/&gt;
+ *     &lt;enumeration value="VERTEX"/&gt;
+ *     &lt;enumeration value="GEOMETRY"/&gt;
+ *     &lt;enumeration value="FRAGMENT"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

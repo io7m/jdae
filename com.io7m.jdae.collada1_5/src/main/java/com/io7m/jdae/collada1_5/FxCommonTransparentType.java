@@ -20,13 +20,13 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="fx_common_transparent_type">
- *   &lt;complexContent>
- *     &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}fx_common_color_or_texture_type">
- *       &lt;attribute name="opaque" type="{http://www.collada.org/2008/03/COLLADASchema}fx_opaque_enum" default="A_ONE" />
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="fx_common_transparent_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}fx_common_color_or_texture_type"&gt;
+ *       &lt;attribute name="opaque" type="{http://www.collada.org/2008/03/COLLADASchema}fx_opaque_enum" default="A_ONE" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

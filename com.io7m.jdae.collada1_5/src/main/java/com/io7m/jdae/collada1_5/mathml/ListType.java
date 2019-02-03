@@ -34,14 +34,14 @@ import javax.xml.namespace.QName;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="list.type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}list.content" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}list.attlist"/>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="list.type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}list.content" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}list.attlist"/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -250,7 +250,7 @@ public class ListType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the listContent property.
+     * This is why there is not a {@code set} method for the listContent property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -409,7 +409,7 @@ public class ListType {
      * {@link JAXBElement }{@code <}{@link MatrixType }{@code >}
      * {@link JAXBElement }{@code <}{@link ConditionType }{@code >}
      * {@link JAXBElement }{@code <}{@link MnType }{@code >}
-     * {@link JAXBElement }{@code <}{@link ListType }{@code >}
+     * {@link JAXBElement }{@code <} {@code >}
      * {@link JAXBElement }{@code <}{@link LaplacianType }{@code >}
      * {@link JAXBElement }{@code <}{@link CardType }{@code >}
      * {@link JAXBElement }{@code <}{@link FunctionsType }{@code >}
@@ -468,7 +468,7 @@ public class ListType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the clazz property.
+     * This is why there is not a {@code set} method for the clazz property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

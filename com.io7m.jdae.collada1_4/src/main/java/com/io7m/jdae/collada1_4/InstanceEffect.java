@@ -28,41 +28,41 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="technique_hint" maxOccurs="unbounded" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="platform" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *                 &lt;attribute name="profile" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *                 &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="setparam" maxOccurs="unbounded" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}fx_basic_type_common"/>
- *                 &lt;/sequence>
- *                 &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="url" use="required" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
- *       &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="technique_hint" maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="platform" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *                 &lt;attribute name="profile" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *                 &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="setparam" maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}fx_basic_type_common"/&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="url" use="required" type="{http://www.w3.org/2001/XMLSchema}anyURI" /&gt;
+ *       &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -99,7 +99,7 @@ public class InstanceEffect {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the techniqueHint property.
+     * This is why there is not a {@code set} method for the techniqueHint property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -128,7 +128,7 @@ public class InstanceEffect {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the setparam property.
+     * This is why there is not a {@code set} method for the setparam property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -159,7 +159,7 @@ public class InstanceEffect {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the extra property.
+     * This is why there is not a {@code set} method for the extra property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -260,16 +260,16 @@ public class InstanceEffect {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}fx_basic_type_common"/>
-     *       &lt;/sequence>
-     *       &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}fx_basic_type_common"/&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -463,7 +463,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the bool2 property.
+         * This is why there is not a {@code set} method for the bool2 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -492,7 +492,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the bool3 property.
+         * This is why there is not a {@code set} method for the bool3 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -521,7 +521,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the bool4 property.
+         * This is why there is not a {@code set} method for the bool4 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -574,7 +574,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the int2 property.
+         * This is why there is not a {@code set} method for the int2 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -603,7 +603,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the int3 property.
+         * This is why there is not a {@code set} method for the int3 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -632,7 +632,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the int4 property.
+         * This is why there is not a {@code set} method for the int4 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -685,7 +685,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the float2 property.
+         * This is why there is not a {@code set} method for the float2 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -714,7 +714,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the float3 property.
+         * This is why there is not a {@code set} method for the float3 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -743,7 +743,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the float4 property.
+         * This is why there is not a {@code set} method for the float4 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -796,7 +796,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the float1X2 property.
+         * This is why there is not a {@code set} method for the float1X2 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -825,7 +825,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the float1X3 property.
+         * This is why there is not a {@code set} method for the float1X3 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -854,7 +854,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the float1X4 property.
+         * This is why there is not a {@code set} method for the float1X4 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -883,7 +883,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the float2X1 property.
+         * This is why there is not a {@code set} method for the float2X1 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -912,7 +912,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the float2X2 property.
+         * This is why there is not a {@code set} method for the float2X2 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -941,7 +941,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the float2X3 property.
+         * This is why there is not a {@code set} method for the float2X3 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -970,7 +970,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the float2X4 property.
+         * This is why there is not a {@code set} method for the float2X4 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -999,7 +999,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the float3X1 property.
+         * This is why there is not a {@code set} method for the float3X1 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -1028,7 +1028,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the float3X2 property.
+         * This is why there is not a {@code set} method for the float3X2 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -1057,7 +1057,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the float3X3 property.
+         * This is why there is not a {@code set} method for the float3X3 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -1086,7 +1086,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the float3X4 property.
+         * This is why there is not a {@code set} method for the float3X4 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -1115,7 +1115,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the float4X1 property.
+         * This is why there is not a {@code set} method for the float4X1 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -1144,7 +1144,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the float4X2 property.
+         * This is why there is not a {@code set} method for the float4X2 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -1173,7 +1173,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the float4X3 property.
+         * This is why there is not a {@code set} method for the float4X3 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -1202,7 +1202,7 @@ public class InstanceEffect {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the float4X4 property.
+         * This is why there is not a {@code set} method for the float4X4 property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -1449,15 +1449,15 @@ public class InstanceEffect {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="platform" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-     *       &lt;attribute name="profile" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-     *       &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="platform" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+     *       &lt;attribute name="profile" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+     *       &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

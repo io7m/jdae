@@ -34,14 +34,14 @@ import javax.xml.namespace.QName;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="mmultiscripts.type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}mmultiscripts.content"/>
- *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}mmultiscripts.attlist"/>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="mmultiscripts.type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}mmultiscripts.content"/&gt;
+ *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}mmultiscripts.attlist"/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -250,7 +250,7 @@ public class MmultiscriptsType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the content property.
+     * This is why there is not a {@code set} method for the content property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -312,7 +312,7 @@ public class MmultiscriptsType {
      * {@link JAXBElement }{@code <}{@link RelationsType }{@code >}
      * {@link JAXBElement }{@code <}{@link LambdaType }{@code >}
      * {@link JAXBElement }{@code <}{@link ConstantType }{@code >}
-     * {@link JAXBElement }{@code <}{@link MmultiscriptsType }{@code >}
+     * {@link JAXBElement }{@code <} {@code >}
      * {@link JAXBElement }{@code <}{@link MoType }{@code >}
      * {@link JAXBElement }{@code <}{@link MtableType }{@code >}
      * {@link JAXBElement }{@code <}{@link CartesianproductType }{@code >}
@@ -446,7 +446,7 @@ public class MmultiscriptsType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the clazz property.
+     * This is why there is not a {@code set} method for the clazz property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

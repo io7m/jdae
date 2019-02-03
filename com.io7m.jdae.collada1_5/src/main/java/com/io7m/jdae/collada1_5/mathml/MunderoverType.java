@@ -34,14 +34,14 @@ import javax.xml.namespace.QName;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="munderover.type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}Presentation-expr.class" maxOccurs="3" minOccurs="3"/>
- *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}munderover.attlist"/>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="munderover.type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}Presentation-expr.class" maxOccurs="3" minOccurs="3"/&gt;
+ *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}munderover.attlist"/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -252,7 +252,7 @@ public class MunderoverType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the presentationExprClass property.
+     * This is why there is not a {@code set} method for the presentationExprClass property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -290,7 +290,7 @@ public class MunderoverType {
      * {@link JAXBElement }{@code <}{@link SetType }{@code >}
      * {@link JAXBElement }{@code <}{@link ElementaryFunctionsType }{@code >}
      * {@link JAXBElement }{@code <}{@link BvarType }{@code >}
-     * {@link JAXBElement }{@code <}{@link MunderoverType }{@code >}
+     * {@link JAXBElement }{@code <} {@code >}
      * {@link JAXBElement }{@code <}{@link SdevType }{@code >}
      * {@link JAXBElement }{@code <}{@link ElementaryFunctionsType }{@code >}
      * {@link JAXBElement }{@code <}{@link CiType }{@code >}
@@ -494,7 +494,7 @@ public class MunderoverType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the clazz property.
+     * This is why there is not a {@code set} method for the clazz property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

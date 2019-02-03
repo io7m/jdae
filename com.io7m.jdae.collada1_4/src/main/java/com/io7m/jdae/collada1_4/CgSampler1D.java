@@ -19,12 +19,12 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="cg_sampler1D">
- *   &lt;complexContent>
- *     &lt;extension base="{http://www.collada.org/2005/11/COLLADASchema}fx_sampler1D_common">
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="cg_sampler1D"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.collada.org/2005/11/COLLADASchema}fx_sampler1D_common"&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

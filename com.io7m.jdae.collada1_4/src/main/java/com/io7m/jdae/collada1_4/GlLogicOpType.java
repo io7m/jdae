@@ -16,27 +16,27 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for gl_logic_op_type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="gl_logic_op_type">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="CLEAR"/>
- *     &lt;enumeration value="AND"/>
- *     &lt;enumeration value="AND_REVERSE"/>
- *     &lt;enumeration value="COPY"/>
- *     &lt;enumeration value="AND_INVERTED"/>
- *     &lt;enumeration value="NOOP"/>
- *     &lt;enumeration value="XOR"/>
- *     &lt;enumeration value="OR"/>
- *     &lt;enumeration value="NOR"/>
- *     &lt;enumeration value="EQUIV"/>
- *     &lt;enumeration value="INVERT"/>
- *     &lt;enumeration value="OR_REVERSE"/>
- *     &lt;enumeration value="COPY_INVERTED"/>
- *     &lt;enumeration value="NAND"/>
- *     &lt;enumeration value="SET"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="gl_logic_op_type"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="CLEAR"/&gt;
+ *     &lt;enumeration value="AND"/&gt;
+ *     &lt;enumeration value="AND_REVERSE"/&gt;
+ *     &lt;enumeration value="COPY"/&gt;
+ *     &lt;enumeration value="AND_INVERTED"/&gt;
+ *     &lt;enumeration value="NOOP"/&gt;
+ *     &lt;enumeration value="XOR"/&gt;
+ *     &lt;enumeration value="OR"/&gt;
+ *     &lt;enumeration value="NOR"/&gt;
+ *     &lt;enumeration value="EQUIV"/&gt;
+ *     &lt;enumeration value="INVERT"/&gt;
+ *     &lt;enumeration value="OR_REVERSE"/&gt;
+ *     &lt;enumeration value="COPY_INVERTED"/&gt;
+ *     &lt;enumeration value="NAND"/&gt;
+ *     &lt;enumeration value="SET"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

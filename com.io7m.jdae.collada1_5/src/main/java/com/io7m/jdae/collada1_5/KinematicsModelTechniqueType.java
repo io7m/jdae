@@ -23,24 +23,24 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="kinematics_model_technique_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="newparam" type="{http://www.collada.org/2008/03/COLLADASchema}kinematics_newparam_type" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;choice maxOccurs="unbounded" minOccurs="0">
- *           &lt;element name="instance_joint" type="{http://www.collada.org/2008/03/COLLADASchema}instance_joint_type"/>
- *           &lt;element name="joint" type="{http://www.collada.org/2008/03/COLLADASchema}joint_type"/>
- *         &lt;/choice>
- *         &lt;element name="link" type="{http://www.collada.org/2008/03/COLLADASchema}link_type" maxOccurs="unbounded"/>
- *         &lt;choice maxOccurs="unbounded" minOccurs="0">
- *           &lt;element name="formula" type="{http://www.collada.org/2008/03/COLLADASchema}formula_type"/>
- *           &lt;element name="instance_formula" type="{http://www.collada.org/2008/03/COLLADASchema}instance_formula_type"/>
- *         &lt;/choice>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="kinematics_model_technique_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="newparam" type="{http://www.collada.org/2008/03/COLLADASchema}kinematics_newparam_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;element name="instance_joint" type="{http://www.collada.org/2008/03/COLLADASchema}instance_joint_type"/&gt;
+ *           &lt;element name="joint" type="{http://www.collada.org/2008/03/COLLADASchema}joint_type"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element name="link" type="{http://www.collada.org/2008/03/COLLADASchema}link_type" maxOccurs="unbounded"/&gt;
+ *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;element name="formula" type="{http://www.collada.org/2008/03/COLLADASchema}formula_type"/&gt;
+ *           &lt;element name="instance_formula" type="{http://www.collada.org/2008/03/COLLADASchema}instance_formula_type"/&gt;
+ *         &lt;/choice&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -75,7 +75,7 @@ public class KinematicsModelTechniqueType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the newparam property.
+     * This is why there is not a {@code set} method for the newparam property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -104,7 +104,7 @@ public class KinematicsModelTechniqueType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the instanceJointOrJoint property.
+     * This is why there is not a {@code set} method for the instanceJointOrJoint property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -134,7 +134,7 @@ public class KinematicsModelTechniqueType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the link property.
+     * This is why there is not a {@code set} method for the link property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -163,7 +163,7 @@ public class KinematicsModelTechniqueType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the formulaOrInstanceFormula property.
+     * This is why there is not a {@code set} method for the formulaOrInstanceFormula property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

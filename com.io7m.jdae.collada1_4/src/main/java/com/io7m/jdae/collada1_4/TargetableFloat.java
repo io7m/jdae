@@ -29,13 +29,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="TargetableFloat">
- *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.collada.org/2005/11/COLLADASchema>float">
- *       &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *     &lt;/extension>
- *   &lt;/simpleContent>
- * &lt;/complexType>
+ * &lt;complexType name="TargetableFloat"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://www.collada.org/2005/11/COLLADASchema&gt;float"&gt;
+ *       &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

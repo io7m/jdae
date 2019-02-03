@@ -17,15 +17,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for simple-size.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="simple-size">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="small"/>
- *     &lt;enumeration value="normal"/>
- *     &lt;enumeration value="big"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="simple-size"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="small"/&gt;
+ *     &lt;enumeration value="normal"/&gt;
+ *     &lt;enumeration value="big"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

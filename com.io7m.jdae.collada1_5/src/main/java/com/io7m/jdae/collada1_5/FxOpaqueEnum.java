@@ -16,16 +16,16 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for fx_opaque_enum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="fx_opaque_enum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="A_ONE"/>
- *     &lt;enumeration value="A_ZERO"/>
- *     &lt;enumeration value="RGB_ONE"/>
- *     &lt;enumeration value="RGB_ZERO"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="fx_opaque_enum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="A_ONE"/&gt;
+ *     &lt;enumeration value="A_ZERO"/&gt;
+ *     &lt;enumeration value="RGB_ONE"/&gt;
+ *     &lt;enumeration value="RGB_ZERO"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

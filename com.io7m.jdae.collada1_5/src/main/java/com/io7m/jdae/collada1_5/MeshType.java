@@ -27,26 +27,26 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="mesh_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="source" type="{http://www.collada.org/2008/03/COLLADASchema}source_type" maxOccurs="unbounded"/>
- *         &lt;element name="vertices" type="{http://www.collada.org/2008/03/COLLADASchema}vertices_type"/>
- *         &lt;choice maxOccurs="unbounded" minOccurs="0">
- *           &lt;element name="lines" type="{http://www.collada.org/2008/03/COLLADASchema}lines_type"/>
- *           &lt;element name="linestrips" type="{http://www.collada.org/2008/03/COLLADASchema}linestrips_type"/>
- *           &lt;element name="polygons" type="{http://www.collada.org/2008/03/COLLADASchema}polygons_type"/>
- *           &lt;element name="polylist" type="{http://www.collada.org/2008/03/COLLADASchema}polylist_type"/>
- *           &lt;element name="triangles" type="{http://www.collada.org/2008/03/COLLADASchema}triangles_type"/>
- *           &lt;element name="trifans" type="{http://www.collada.org/2008/03/COLLADASchema}trifans_type"/>
- *           &lt;element name="tristrips" type="{http://www.collada.org/2008/03/COLLADASchema}tristrips_type"/>
- *         &lt;/choice>
- *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="mesh_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="source" type="{http://www.collada.org/2008/03/COLLADASchema}source_type" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="vertices" type="{http://www.collada.org/2008/03/COLLADASchema}vertices_type"/&gt;
+ *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;element name="lines" type="{http://www.collada.org/2008/03/COLLADASchema}lines_type"/&gt;
+ *           &lt;element name="linestrips" type="{http://www.collada.org/2008/03/COLLADASchema}linestrips_type"/&gt;
+ *           &lt;element name="polygons" type="{http://www.collada.org/2008/03/COLLADASchema}polygons_type"/&gt;
+ *           &lt;element name="polylist" type="{http://www.collada.org/2008/03/COLLADASchema}polylist_type"/&gt;
+ *           &lt;element name="triangles" type="{http://www.collada.org/2008/03/COLLADASchema}triangles_type"/&gt;
+ *           &lt;element name="trifans" type="{http://www.collada.org/2008/03/COLLADASchema}trifans_type"/&gt;
+ *           &lt;element name="tristrips" type="{http://www.collada.org/2008/03/COLLADASchema}tristrips_type"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -83,7 +83,7 @@ public class MeshType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the source property.
+     * This is why there is not a {@code set} method for the source property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -136,7 +136,7 @@ public class MeshType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the linesOrLinestripsOrPolygons property.
+     * This is why there is not a {@code set} method for the linesOrLinestripsOrPolygons property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -171,7 +171,7 @@ public class MeshType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the extra property.
+     * This is why there is not a {@code set} method for the extra property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

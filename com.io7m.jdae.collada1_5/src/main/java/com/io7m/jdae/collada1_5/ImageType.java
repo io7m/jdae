@@ -28,245 +28,245 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="image_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="asset" type="{http://www.collada.org/2008/03/COLLADASchema}asset_type" minOccurs="0"/>
- *         &lt;element name="renderable" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="share" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;choice minOccurs="0">
- *           &lt;element name="init_from">
- *             &lt;complexType>
- *               &lt;complexContent>
- *                 &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type">
- *                   &lt;attribute name="mips_generate" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" />
- *                 &lt;/extension>
- *               &lt;/complexContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *           &lt;element name="create_2d">
- *             &lt;complexType>
- *               &lt;complexContent>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                   &lt;sequence>
- *                     &lt;choice>
- *                       &lt;element name="size_exact">
- *                         &lt;complexType>
- *                           &lt;complexContent>
- *                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                               &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
- *                               &lt;attribute name="height" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
- *                             &lt;/restriction>
- *                           &lt;/complexContent>
- *                         &lt;/complexType>
- *                       &lt;/element>
- *                       &lt;element name="size_ratio">
- *                         &lt;complexType>
- *                           &lt;complexContent>
- *                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                               &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}float" />
- *                               &lt;attribute name="height" use="required" type="{http://www.w3.org/2001/XMLSchema}float" />
- *                             &lt;/restriction>
- *                           &lt;/complexContent>
- *                         &lt;/complexType>
- *                       &lt;/element>
- *                     &lt;/choice>
- *                     &lt;choice>
- *                       &lt;element name="mips" type="{http://www.collada.org/2008/03/COLLADASchema}image_mips_type"/>
- *                       &lt;element name="unnormalized" type="{http://www.w3.org/2001/XMLSchema}anyType"/>
- *                     &lt;/choice>
- *                     &lt;element name="array" minOccurs="0">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                             &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" />
- *                           &lt;/restriction>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                     &lt;element name="format" minOccurs="0">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                             &lt;sequence>
- *                               &lt;element name="hint">
- *                                 &lt;complexType>
- *                                   &lt;complexContent>
- *                                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                       &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" />
- *                                       &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" />
- *                                       &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" />
- *                                       &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" />
- *                                     &lt;/restriction>
- *                                   &lt;/complexContent>
- *                                 &lt;/complexType>
- *                               &lt;/element>
- *                               &lt;element name="exact" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
- *                             &lt;/sequence>
- *                           &lt;/restriction>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                     &lt;element name="init_from" maxOccurs="unbounded" minOccurs="0">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type">
- *                             &lt;attribute name="mip_index" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
- *                             &lt;attribute name="array_index" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" default="0" />
- *                           &lt;/extension>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                   &lt;/sequence>
- *                 &lt;/restriction>
- *               &lt;/complexContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *           &lt;element name="create_3d">
- *             &lt;complexType>
- *               &lt;complexContent>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                   &lt;sequence>
- *                     &lt;element name="size">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                             &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
- *                             &lt;attribute name="height" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
- *                             &lt;attribute name="depth" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
- *                           &lt;/restriction>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                     &lt;element name="mips" type="{http://www.collada.org/2008/03/COLLADASchema}image_mips_type"/>
- *                     &lt;element name="array" minOccurs="0">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                             &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
- *                           &lt;/restriction>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                     &lt;element name="format" minOccurs="0">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                             &lt;sequence>
- *                               &lt;element name="hint">
- *                                 &lt;complexType>
- *                                   &lt;complexContent>
- *                                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                       &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" />
- *                                       &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" />
- *                                       &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" />
- *                                       &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" />
- *                                     &lt;/restriction>
- *                                   &lt;/complexContent>
- *                                 &lt;/complexType>
- *                               &lt;/element>
- *                               &lt;element name="exact" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
- *                             &lt;/sequence>
- *                           &lt;/restriction>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                     &lt;element name="init_from" maxOccurs="unbounded" minOccurs="0">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type">
- *                             &lt;attribute name="depth" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
- *                             &lt;attribute name="mip_index" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
- *                             &lt;attribute name="array_index" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" default="0" />
- *                           &lt;/extension>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                   &lt;/sequence>
- *                 &lt;/restriction>
- *               &lt;/complexContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *           &lt;element name="create_cube">
- *             &lt;complexType>
- *               &lt;complexContent>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                   &lt;sequence>
- *                     &lt;element name="size">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                             &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
- *                           &lt;/restriction>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                     &lt;element name="mips" type="{http://www.collada.org/2008/03/COLLADASchema}image_mips_type"/>
- *                     &lt;element name="array" minOccurs="0">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                             &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
- *                           &lt;/restriction>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                     &lt;element name="format" minOccurs="0">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                             &lt;sequence>
- *                               &lt;element name="hint">
- *                                 &lt;complexType>
- *                                   &lt;complexContent>
- *                                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                       &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" />
- *                                       &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" />
- *                                       &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" />
- *                                       &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" />
- *                                     &lt;/restriction>
- *                                   &lt;/complexContent>
- *                                 &lt;/complexType>
- *                               &lt;/element>
- *                               &lt;element name="exact" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
- *                             &lt;/sequence>
- *                           &lt;/restriction>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                     &lt;element name="init_from" maxOccurs="unbounded" minOccurs="0">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type">
- *                             &lt;attribute name="face" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_face_enum" />
- *                             &lt;attribute name="mip_index" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
- *                             &lt;attribute name="array_index" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" default="0" />
- *                           &lt;/extension>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                   &lt;/sequence>
- *                 &lt;/restriction>
- *               &lt;/complexContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *         &lt;/choice>
- *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />
- *       &lt;attribute name="sid" type="{http://www.collada.org/2008/03/COLLADASchema}sid_type" />
- *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}token" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="image_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="asset" type="{http://www.collada.org/2008/03/COLLADASchema}asset_type" minOccurs="0"/&gt;
+ *         &lt;element name="renderable" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="share" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;choice minOccurs="0"&gt;
+ *           &lt;element name="init_from"&gt;
+ *             &lt;complexType&gt;
+ *               &lt;complexContent&gt;
+ *                 &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type"&gt;
+ *                   &lt;attribute name="mips_generate" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" /&gt;
+ *                 &lt;/extension&gt;
+ *               &lt;/complexContent&gt;
+ *             &lt;/complexType&gt;
+ *           &lt;/element&gt;
+ *           &lt;element name="create_2d"&gt;
+ *             &lt;complexType&gt;
+ *               &lt;complexContent&gt;
+ *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                   &lt;sequence&gt;
+ *                     &lt;choice&gt;
+ *                       &lt;element name="size_exact"&gt;
+ *                         &lt;complexType&gt;
+ *                           &lt;complexContent&gt;
+ *                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                               &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+ *                               &lt;attribute name="height" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+ *                             &lt;/restriction&gt;
+ *                           &lt;/complexContent&gt;
+ *                         &lt;/complexType&gt;
+ *                       &lt;/element&gt;
+ *                       &lt;element name="size_ratio"&gt;
+ *                         &lt;complexType&gt;
+ *                           &lt;complexContent&gt;
+ *                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                               &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}float" /&gt;
+ *                               &lt;attribute name="height" use="required" type="{http://www.w3.org/2001/XMLSchema}float" /&gt;
+ *                             &lt;/restriction&gt;
+ *                           &lt;/complexContent&gt;
+ *                         &lt;/complexType&gt;
+ *                       &lt;/element&gt;
+ *                     &lt;/choice&gt;
+ *                     &lt;choice&gt;
+ *                       &lt;element name="mips" type="{http://www.collada.org/2008/03/COLLADASchema}image_mips_type"/&gt;
+ *                       &lt;element name="unnormalized" type="{http://www.w3.org/2001/XMLSchema}anyType"/&gt;
+ *                     &lt;/choice&gt;
+ *                     &lt;element name="array" minOccurs="0"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                             &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" /&gt;
+ *                           &lt;/restriction&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                     &lt;element name="format" minOccurs="0"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                             &lt;sequence&gt;
+ *                               &lt;element name="hint"&gt;
+ *                                 &lt;complexType&gt;
+ *                                   &lt;complexContent&gt;
+ *                                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                       &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" /&gt;
+ *                                       &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" /&gt;
+ *                                       &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" /&gt;
+ *                                       &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+ *                                     &lt;/restriction&gt;
+ *                                   &lt;/complexContent&gt;
+ *                                 &lt;/complexType&gt;
+ *                               &lt;/element&gt;
+ *                               &lt;element name="exact" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/&gt;
+ *                             &lt;/sequence&gt;
+ *                           &lt;/restriction&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                     &lt;element name="init_from" maxOccurs="unbounded" minOccurs="0"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type"&gt;
+ *                             &lt;attribute name="mip_index" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+ *                             &lt;attribute name="array_index" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" default="0" /&gt;
+ *                           &lt;/extension&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                   &lt;/sequence&gt;
+ *                 &lt;/restriction&gt;
+ *               &lt;/complexContent&gt;
+ *             &lt;/complexType&gt;
+ *           &lt;/element&gt;
+ *           &lt;element name="create_3d"&gt;
+ *             &lt;complexType&gt;
+ *               &lt;complexContent&gt;
+ *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                   &lt;sequence&gt;
+ *                     &lt;element name="size"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                             &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+ *                             &lt;attribute name="height" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+ *                             &lt;attribute name="depth" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+ *                           &lt;/restriction&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                     &lt;element name="mips" type="{http://www.collada.org/2008/03/COLLADASchema}image_mips_type"/&gt;
+ *                     &lt;element name="array" minOccurs="0"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                             &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+ *                           &lt;/restriction&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                     &lt;element name="format" minOccurs="0"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                             &lt;sequence&gt;
+ *                               &lt;element name="hint"&gt;
+ *                                 &lt;complexType&gt;
+ *                                   &lt;complexContent&gt;
+ *                                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                       &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" /&gt;
+ *                                       &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" /&gt;
+ *                                       &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" /&gt;
+ *                                       &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+ *                                     &lt;/restriction&gt;
+ *                                   &lt;/complexContent&gt;
+ *                                 &lt;/complexType&gt;
+ *                               &lt;/element&gt;
+ *                               &lt;element name="exact" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/&gt;
+ *                             &lt;/sequence&gt;
+ *                           &lt;/restriction&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                     &lt;element name="init_from" maxOccurs="unbounded" minOccurs="0"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type"&gt;
+ *                             &lt;attribute name="depth" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+ *                             &lt;attribute name="mip_index" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+ *                             &lt;attribute name="array_index" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" default="0" /&gt;
+ *                           &lt;/extension&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                   &lt;/sequence&gt;
+ *                 &lt;/restriction&gt;
+ *               &lt;/complexContent&gt;
+ *             &lt;/complexType&gt;
+ *           &lt;/element&gt;
+ *           &lt;element name="create_cube"&gt;
+ *             &lt;complexType&gt;
+ *               &lt;complexContent&gt;
+ *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                   &lt;sequence&gt;
+ *                     &lt;element name="size"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                             &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+ *                           &lt;/restriction&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                     &lt;element name="mips" type="{http://www.collada.org/2008/03/COLLADASchema}image_mips_type"/&gt;
+ *                     &lt;element name="array" minOccurs="0"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                             &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+ *                           &lt;/restriction&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                     &lt;element name="format" minOccurs="0"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                             &lt;sequence&gt;
+ *                               &lt;element name="hint"&gt;
+ *                                 &lt;complexType&gt;
+ *                                   &lt;complexContent&gt;
+ *                                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                       &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" /&gt;
+ *                                       &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" /&gt;
+ *                                       &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" /&gt;
+ *                                       &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+ *                                     &lt;/restriction&gt;
+ *                                   &lt;/complexContent&gt;
+ *                                 &lt;/complexType&gt;
+ *                               &lt;/element&gt;
+ *                               &lt;element name="exact" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/&gt;
+ *                             &lt;/sequence&gt;
+ *                           &lt;/restriction&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                     &lt;element name="init_from" maxOccurs="unbounded" minOccurs="0"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type"&gt;
+ *                             &lt;attribute name="face" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_face_enum" /&gt;
+ *                             &lt;attribute name="mip_index" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+ *                             &lt;attribute name="array_index" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" default="0" /&gt;
+ *                           &lt;/extension&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                   &lt;/sequence&gt;
+ *                 &lt;/restriction&gt;
+ *               &lt;/complexContent&gt;
+ *             &lt;/complexType&gt;
+ *           &lt;/element&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+ *       &lt;attribute name="sid" type="{http://www.collada.org/2008/03/COLLADASchema}sid_type" /&gt;
+ *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -458,7 +458,7 @@ public class ImageType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the extra property.
+     * This is why there is not a {@code set} method for the extra property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -559,82 +559,82 @@ public class ImageType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;choice>
-     *           &lt;element name="size_exact">
-     *             &lt;complexType>
-     *               &lt;complexContent>
-     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                   &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-     *                   &lt;attribute name="height" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-     *                 &lt;/restriction>
-     *               &lt;/complexContent>
-     *             &lt;/complexType>
-     *           &lt;/element>
-     *           &lt;element name="size_ratio">
-     *             &lt;complexType>
-     *               &lt;complexContent>
-     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                   &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}float" />
-     *                   &lt;attribute name="height" use="required" type="{http://www.w3.org/2001/XMLSchema}float" />
-     *                 &lt;/restriction>
-     *               &lt;/complexContent>
-     *             &lt;/complexType>
-     *           &lt;/element>
-     *         &lt;/choice>
-     *         &lt;choice>
-     *           &lt;element name="mips" type="{http://www.collada.org/2008/03/COLLADASchema}image_mips_type"/>
-     *           &lt;element name="unnormalized" type="{http://www.w3.org/2001/XMLSchema}anyType"/>
-     *         &lt;/choice>
-     *         &lt;element name="array" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="format" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="hint">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" />
-     *                           &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" />
-     *                           &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" />
-     *                           &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                   &lt;element name="exact" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="init_from" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type">
-     *                 &lt;attribute name="mip_index" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-     *                 &lt;attribute name="array_index" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" default="0" />
-     *               &lt;/extension>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;choice&gt;
+     *           &lt;element name="size_exact"&gt;
+     *             &lt;complexType&gt;
+     *               &lt;complexContent&gt;
+     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                   &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+     *                   &lt;attribute name="height" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+     *                 &lt;/restriction&gt;
+     *               &lt;/complexContent&gt;
+     *             &lt;/complexType&gt;
+     *           &lt;/element&gt;
+     *           &lt;element name="size_ratio"&gt;
+     *             &lt;complexType&gt;
+     *               &lt;complexContent&gt;
+     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                   &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}float" /&gt;
+     *                   &lt;attribute name="height" use="required" type="{http://www.w3.org/2001/XMLSchema}float" /&gt;
+     *                 &lt;/restriction&gt;
+     *               &lt;/complexContent&gt;
+     *             &lt;/complexType&gt;
+     *           &lt;/element&gt;
+     *         &lt;/choice&gt;
+     *         &lt;choice&gt;
+     *           &lt;element name="mips" type="{http://www.collada.org/2008/03/COLLADASchema}image_mips_type"/&gt;
+     *           &lt;element name="unnormalized" type="{http://www.w3.org/2001/XMLSchema}anyType"/&gt;
+     *         &lt;/choice&gt;
+     *         &lt;element name="array" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="format" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="hint"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" /&gt;
+     *                           &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" /&gt;
+     *                           &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" /&gt;
+     *                           &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                   &lt;element name="exact" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/&gt;
+     *                 &lt;/sequence&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="init_from" maxOccurs="unbounded" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type"&gt;
+     *                 &lt;attribute name="mip_index" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+     *                 &lt;attribute name="array_index" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" default="0" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -813,7 +813,7 @@ public class ImageType {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the initFrom property.
+         * This is why there is not a {@code set} method for the initFrom property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -842,13 +842,13 @@ public class ImageType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -894,27 +894,27 @@ public class ImageType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="hint">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" />
-         *                 &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" />
-         *                 &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" />
-         *                 &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="exact" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="hint"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" /&gt;
+         *                 &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" /&gt;
+         *                 &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" /&gt;
+         *                 &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="exact" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -987,16 +987,16 @@ public class ImageType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" />
-             *       &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" />
-             *       &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" />
-             *       &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" /&gt;
+             *       &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" /&gt;
+             *       &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" /&gt;
+             *       &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -1127,14 +1127,14 @@ public class ImageType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type">
-         *       &lt;attribute name="mip_index" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-         *       &lt;attribute name="array_index" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" default="0" />
-         *     &lt;/extension>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type"&gt;
+         *       &lt;attribute name="mip_index" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+         *       &lt;attribute name="array_index" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" default="0" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -1205,14 +1205,14 @@ public class ImageType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-         *       &lt;attribute name="height" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+         *       &lt;attribute name="height" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -1269,14 +1269,14 @@ public class ImageType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}float" />
-         *       &lt;attribute name="height" use="required" type="{http://www.w3.org/2001/XMLSchema}float" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}float" /&gt;
+         *       &lt;attribute name="height" use="required" type="{http://www.w3.org/2001/XMLSchema}float" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -1333,69 +1333,69 @@ public class ImageType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="size">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-     *                 &lt;attribute name="height" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-     *                 &lt;attribute name="depth" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="mips" type="{http://www.collada.org/2008/03/COLLADASchema}image_mips_type"/>
-     *         &lt;element name="array" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="format" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="hint">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" />
-     *                           &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" />
-     *                           &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" />
-     *                           &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                   &lt;element name="exact" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="init_from" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type">
-     *                 &lt;attribute name="depth" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-     *                 &lt;attribute name="mip_index" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-     *                 &lt;attribute name="array_index" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" default="0" />
-     *               &lt;/extension>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="size"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+     *                 &lt;attribute name="height" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+     *                 &lt;attribute name="depth" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="mips" type="{http://www.collada.org/2008/03/COLLADASchema}image_mips_type"/&gt;
+     *         &lt;element name="array" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="format" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="hint"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" /&gt;
+     *                           &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" /&gt;
+     *                           &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" /&gt;
+     *                           &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                   &lt;element name="exact" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/&gt;
+     *                 &lt;/sequence&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="init_from" maxOccurs="unbounded" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type"&gt;
+     *                 &lt;attribute name="depth" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+     *                 &lt;attribute name="mip_index" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+     *                 &lt;attribute name="array_index" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" default="0" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1522,7 +1522,7 @@ public class ImageType {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the initFrom property.
+         * This is why there is not a {@code set} method for the initFrom property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -1551,13 +1551,13 @@ public class ImageType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -1595,27 +1595,27 @@ public class ImageType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="hint">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" />
-         *                 &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" />
-         *                 &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" />
-         *                 &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="exact" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="hint"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" /&gt;
+         *                 &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" /&gt;
+         *                 &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" /&gt;
+         *                 &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="exact" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -1688,16 +1688,16 @@ public class ImageType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" />
-             *       &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" />
-             *       &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" />
-             *       &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" /&gt;
+             *       &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" /&gt;
+             *       &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" /&gt;
+             *       &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -1828,15 +1828,15 @@ public class ImageType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type">
-         *       &lt;attribute name="depth" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-         *       &lt;attribute name="mip_index" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-         *       &lt;attribute name="array_index" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" default="0" />
-         *     &lt;/extension>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type"&gt;
+         *       &lt;attribute name="depth" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+         *       &lt;attribute name="mip_index" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+         *       &lt;attribute name="array_index" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" default="0" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -1926,15 +1926,15 @@ public class ImageType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-         *       &lt;attribute name="height" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-         *       &lt;attribute name="depth" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+         *       &lt;attribute name="height" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+         *       &lt;attribute name="depth" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -2012,67 +2012,67 @@ public class ImageType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="size">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="mips" type="{http://www.collada.org/2008/03/COLLADASchema}image_mips_type"/>
-     *         &lt;element name="array" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="format" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="hint">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" />
-     *                           &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" />
-     *                           &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" />
-     *                           &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                   &lt;element name="exact" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="init_from" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type">
-     *                 &lt;attribute name="face" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_face_enum" />
-     *                 &lt;attribute name="mip_index" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-     *                 &lt;attribute name="array_index" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" default="0" />
-     *               &lt;/extension>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="size"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="mips" type="{http://www.collada.org/2008/03/COLLADASchema}image_mips_type"/&gt;
+     *         &lt;element name="array" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="format" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="hint"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" /&gt;
+     *                           &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" /&gt;
+     *                           &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" /&gt;
+     *                           &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                   &lt;element name="exact" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/&gt;
+     *                 &lt;/sequence&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="init_from" maxOccurs="unbounded" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type"&gt;
+     *                 &lt;attribute name="face" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_face_enum" /&gt;
+     *                 &lt;attribute name="mip_index" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+     *                 &lt;attribute name="array_index" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" default="0" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -2199,7 +2199,7 @@ public class ImageType {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the initFrom property.
+         * This is why there is not a {@code set} method for the initFrom property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -2228,13 +2228,13 @@ public class ImageType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -2272,27 +2272,27 @@ public class ImageType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="hint">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" />
-         *                 &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" />
-         *                 &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" />
-         *                 &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="exact" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="hint"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" /&gt;
+         *                 &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" /&gt;
+         *                 &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" /&gt;
+         *                 &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="exact" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -2365,16 +2365,16 @@ public class ImageType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" />
-             *       &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" />
-             *       &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" />
-             *       &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="channels" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_channels_enum" /&gt;
+             *       &lt;attribute name="range" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_range_enum" /&gt;
+             *       &lt;attribute name="precision" type="{http://www.collada.org/2008/03/COLLADASchema}image_format_hint_precision_enum" default="DEFAULT" /&gt;
+             *       &lt;attribute name="space" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -2505,15 +2505,15 @@ public class ImageType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type">
-         *       &lt;attribute name="face" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_face_enum" />
-         *       &lt;attribute name="mip_index" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-         *       &lt;attribute name="array_index" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" default="0" />
-         *     &lt;/extension>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type"&gt;
+         *       &lt;attribute name="face" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}image_face_enum" /&gt;
+         *       &lt;attribute name="mip_index" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+         *       &lt;attribute name="array_index" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" default="0" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -2610,13 +2610,13 @@ public class ImageType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="width" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -2656,13 +2656,13 @@ public class ImageType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type">
-     *       &lt;attribute name="mips_generate" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" />
-     *     &lt;/extension>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}image_source_type"&gt;
+     *       &lt;attribute name="mips_generate" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -2713,13 +2713,13 @@ public class ImageType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="share" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="share" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

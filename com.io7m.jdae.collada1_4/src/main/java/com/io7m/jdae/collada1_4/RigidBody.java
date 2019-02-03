@@ -29,95 +29,95 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="technique_common">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="dynamic" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;simpleContent>
- *                         &lt;extension base="&lt;http://www.collada.org/2005/11/COLLADASchema>bool">
- *                           &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *                         &lt;/extension>
- *                       &lt;/simpleContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="mass" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/>
- *                   &lt;element name="mass_frame" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;choice maxOccurs="unbounded">
- *                             &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}translate"/>
- *                             &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}rotate"/>
- *                           &lt;/choice>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="inertia" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat3" minOccurs="0"/>
- *                   &lt;choice minOccurs="0">
- *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_physics_material"/>
- *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}physics_material"/>
- *                   &lt;/choice>
- *                   &lt;element name="shape" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="hollow" minOccurs="0">
- *                               &lt;complexType>
- *                                 &lt;simpleContent>
- *                                   &lt;extension base="&lt;http://www.collada.org/2005/11/COLLADASchema>bool">
- *                                     &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *                                   &lt;/extension>
- *                                 &lt;/simpleContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                             &lt;element name="mass" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/>
- *                             &lt;element name="density" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/>
- *                             &lt;choice minOccurs="0">
- *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_physics_material"/>
- *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}physics_material"/>
- *                             &lt;/choice>
- *                             &lt;choice>
- *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_geometry"/>
- *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}plane"/>
- *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}box"/>
- *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}sphere"/>
- *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}cylinder"/>
- *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}tapered_cylinder"/>
- *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}capsule"/>
- *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}tapered_capsule"/>
- *                             &lt;/choice>
- *                             &lt;choice maxOccurs="unbounded" minOccurs="0">
- *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}translate"/>
- *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}rotate"/>
- *                             &lt;/choice>
- *                             &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}technique" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="sid" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="technique_common"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="dynamic" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;simpleContent&gt;
+ *                         &lt;extension base="&lt;http://www.collada.org/2005/11/COLLADASchema&gt;bool"&gt;
+ *                           &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *                         &lt;/extension&gt;
+ *                       &lt;/simpleContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="mass" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/&gt;
+ *                   &lt;element name="mass_frame" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;choice maxOccurs="unbounded"&gt;
+ *                             &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}translate"/&gt;
+ *                             &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}rotate"/&gt;
+ *                           &lt;/choice&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="inertia" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat3" minOccurs="0"/&gt;
+ *                   &lt;choice minOccurs="0"&gt;
+ *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_physics_material"/&gt;
+ *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}physics_material"/&gt;
+ *                   &lt;/choice&gt;
+ *                   &lt;element name="shape" maxOccurs="unbounded"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="hollow" minOccurs="0"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;simpleContent&gt;
+ *                                   &lt;extension base="&lt;http://www.collada.org/2005/11/COLLADASchema&gt;bool"&gt;
+ *                                     &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *                                   &lt;/extension&gt;
+ *                                 &lt;/simpleContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                             &lt;element name="mass" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/&gt;
+ *                             &lt;element name="density" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/&gt;
+ *                             &lt;choice minOccurs="0"&gt;
+ *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_physics_material"/&gt;
+ *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}physics_material"/&gt;
+ *                             &lt;/choice&gt;
+ *                             &lt;choice&gt;
+ *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_geometry"/&gt;
+ *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}plane"/&gt;
+ *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}box"/&gt;
+ *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}sphere"/&gt;
+ *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}cylinder"/&gt;
+ *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}tapered_cylinder"/&gt;
+ *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}capsule"/&gt;
+ *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}tapered_capsule"/&gt;
+ *                             &lt;/choice&gt;
+ *                             &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}translate"/&gt;
+ *                               &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}rotate"/&gt;
+ *                             &lt;/choice&gt;
+ *                             &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                           &lt;/sequence&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}technique" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="sid" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -177,7 +177,7 @@ public class RigidBody {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the technique property.
+     * This is why there is not a {@code set} method for the technique property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -208,7 +208,7 @@ public class RigidBody {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the extra property.
+     * This is why there is not a {@code set} method for the extra property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -285,81 +285,81 @@ public class RigidBody {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="dynamic" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.collada.org/2005/11/COLLADASchema>bool">
-     *                 &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="mass" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/>
-     *         &lt;element name="mass_frame" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;choice maxOccurs="unbounded">
-     *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}translate"/>
-     *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}rotate"/>
-     *                 &lt;/choice>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="inertia" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat3" minOccurs="0"/>
-     *         &lt;choice minOccurs="0">
-     *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_physics_material"/>
-     *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}physics_material"/>
-     *         &lt;/choice>
-     *         &lt;element name="shape" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="hollow" minOccurs="0">
-     *                     &lt;complexType>
-     *                       &lt;simpleContent>
-     *                         &lt;extension base="&lt;http://www.collada.org/2005/11/COLLADASchema>bool">
-     *                           &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-     *                         &lt;/extension>
-     *                       &lt;/simpleContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                   &lt;element name="mass" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/>
-     *                   &lt;element name="density" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/>
-     *                   &lt;choice minOccurs="0">
-     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_physics_material"/>
-     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}physics_material"/>
-     *                   &lt;/choice>
-     *                   &lt;choice>
-     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_geometry"/>
-     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}plane"/>
-     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}box"/>
-     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}sphere"/>
-     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}cylinder"/>
-     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}tapered_cylinder"/>
-     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}capsule"/>
-     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}tapered_capsule"/>
-     *                   &lt;/choice>
-     *                   &lt;choice maxOccurs="unbounded" minOccurs="0">
-     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}translate"/>
-     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}rotate"/>
-     *                   &lt;/choice>
-     *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="dynamic" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;simpleContent&gt;
+     *               &lt;extension base="&lt;http://www.collada.org/2005/11/COLLADASchema&gt;bool"&gt;
+     *                 &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/simpleContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="mass" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/&gt;
+     *         &lt;element name="mass_frame" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;choice maxOccurs="unbounded"&gt;
+     *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}translate"/&gt;
+     *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}rotate"/&gt;
+     *                 &lt;/choice&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="inertia" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat3" minOccurs="0"/&gt;
+     *         &lt;choice minOccurs="0"&gt;
+     *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_physics_material"/&gt;
+     *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}physics_material"/&gt;
+     *         &lt;/choice&gt;
+     *         &lt;element name="shape" maxOccurs="unbounded"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="hollow" minOccurs="0"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;simpleContent&gt;
+     *                         &lt;extension base="&lt;http://www.collada.org/2005/11/COLLADASchema&gt;bool"&gt;
+     *                           &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+     *                         &lt;/extension&gt;
+     *                       &lt;/simpleContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                   &lt;element name="mass" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/&gt;
+     *                   &lt;element name="density" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/&gt;
+     *                   &lt;choice minOccurs="0"&gt;
+     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_physics_material"/&gt;
+     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}physics_material"/&gt;
+     *                   &lt;/choice&gt;
+     *                   &lt;choice&gt;
+     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_geometry"/&gt;
+     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}plane"/&gt;
+     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}box"/&gt;
+     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}sphere"/&gt;
+     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}cylinder"/&gt;
+     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}tapered_cylinder"/&gt;
+     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}capsule"/&gt;
+     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}tapered_capsule"/&gt;
+     *                   &lt;/choice&gt;
+     *                   &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}translate"/&gt;
+     *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}rotate"/&gt;
+     *                   &lt;/choice&gt;
+     *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *                 &lt;/sequence&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -543,7 +543,7 @@ public class RigidBody {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the shape property.
+         * This is why there is not a {@code set} method for the shape property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -572,13 +572,13 @@ public class RigidBody {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;simpleContent>
-         *     &lt;extension base="&lt;http://www.collada.org/2005/11/COLLADASchema>bool">
-         *       &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/extension>
-         *   &lt;/simpleContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;simpleContent&gt;
+         *     &lt;extension base="&lt;http://www.collada.org/2005/11/COLLADASchema&gt;bool"&gt;
+         *       &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/simpleContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -645,16 +645,16 @@ public class RigidBody {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;choice maxOccurs="unbounded">
-         *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}translate"/>
-         *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}rotate"/>
-         *       &lt;/choice>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;choice maxOccurs="unbounded"&gt;
+         *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}translate"/&gt;
+         *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}rotate"/&gt;
+         *       &lt;/choice&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -678,7 +678,7 @@ public class RigidBody {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the translateOrRotate property.
+             * This is why there is not a {@code set} method for the translateOrRotate property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -710,44 +710,44 @@ public class RigidBody {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="hollow" minOccurs="0">
-         *           &lt;complexType>
-         *             &lt;simpleContent>
-         *               &lt;extension base="&lt;http://www.collada.org/2005/11/COLLADASchema>bool">
-         *                 &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *               &lt;/extension>
-         *             &lt;/simpleContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="mass" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/>
-         *         &lt;element name="density" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/>
-         *         &lt;choice minOccurs="0">
-         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_physics_material"/>
-         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}physics_material"/>
-         *         &lt;/choice>
-         *         &lt;choice>
-         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_geometry"/>
-         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}plane"/>
-         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}box"/>
-         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}sphere"/>
-         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}cylinder"/>
-         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}tapered_cylinder"/>
-         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}capsule"/>
-         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}tapered_capsule"/>
-         *         &lt;/choice>
-         *         &lt;choice maxOccurs="unbounded" minOccurs="0">
-         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}translate"/>
-         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}rotate"/>
-         *         &lt;/choice>
-         *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="hollow" minOccurs="0"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;simpleContent&gt;
+         *               &lt;extension base="&lt;http://www.collada.org/2005/11/COLLADASchema&gt;bool"&gt;
+         *                 &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *               &lt;/extension&gt;
+         *             &lt;/simpleContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="mass" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/&gt;
+         *         &lt;element name="density" type="{http://www.collada.org/2005/11/COLLADASchema}TargetableFloat" minOccurs="0"/&gt;
+         *         &lt;choice minOccurs="0"&gt;
+         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_physics_material"/&gt;
+         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}physics_material"/&gt;
+         *         &lt;/choice&gt;
+         *         &lt;choice&gt;
+         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}instance_geometry"/&gt;
+         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}plane"/&gt;
+         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}box"/&gt;
+         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}sphere"/&gt;
+         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}cylinder"/&gt;
+         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}tapered_cylinder"/&gt;
+         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}capsule"/&gt;
+         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}tapered_capsule"/&gt;
+         *         &lt;/choice&gt;
+         *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}translate"/&gt;
+         *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}rotate"/&gt;
+         *         &lt;/choice&gt;
+         *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -1136,7 +1136,7 @@ public class RigidBody {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the translateOrRotate property.
+             * This is why there is not a {@code set} method for the translateOrRotate property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -1168,7 +1168,7 @@ public class RigidBody {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the extra property.
+             * This is why there is not a {@code set} method for the extra property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -1197,13 +1197,13 @@ public class RigidBody {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;simpleContent>
-             *     &lt;extension base="&lt;http://www.collada.org/2005/11/COLLADASchema>bool">
-             *       &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/extension>
-             *   &lt;/simpleContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;simpleContent&gt;
+             *     &lt;extension base="&lt;http://www.collada.org/2005/11/COLLADASchema&gt;bool"&gt;
+             *       &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/extension&gt;
+             *   &lt;/simpleContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 

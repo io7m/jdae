@@ -16,16 +16,16 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for fx_pipeline_stage_common.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="fx_pipeline_stage_common">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="VERTEXPROGRAM"/>
- *     &lt;enumeration value="FRAGMENTPROGRAM"/>
- *     &lt;enumeration value="VERTEXSHADER"/>
- *     &lt;enumeration value="PIXELSHADER"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="fx_pipeline_stage_common"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="VERTEXPROGRAM"/&gt;
+ *     &lt;enumeration value="FRAGMENTPROGRAM"/&gt;
+ *     &lt;enumeration value="VERTEXSHADER"/&gt;
+ *     &lt;enumeration value="PIXELSHADER"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

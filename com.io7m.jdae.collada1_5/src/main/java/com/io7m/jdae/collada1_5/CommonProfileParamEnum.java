@@ -16,29 +16,29 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for common_profile_param_enum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="common_profile_param_enum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="A"/>
- *     &lt;enumeration value="ANGLE"/>
- *     &lt;enumeration value="B"/>
- *     &lt;enumeration value="DOUBLE_SIDED"/>
- *     &lt;enumeration value="G"/>
- *     &lt;enumeration value="P"/>
- *     &lt;enumeration value="Q"/>
- *     &lt;enumeration value="R"/>
- *     &lt;enumeration value="S"/>
- *     &lt;enumeration value="T"/>
- *     &lt;enumeration value="TIME"/>
- *     &lt;enumeration value="U"/>
- *     &lt;enumeration value="V"/>
- *     &lt;enumeration value="W"/>
- *     &lt;enumeration value="X"/>
- *     &lt;enumeration value="Y"/>
- *     &lt;enumeration value="Z"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="common_profile_param_enum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="A"/&gt;
+ *     &lt;enumeration value="ANGLE"/&gt;
+ *     &lt;enumeration value="B"/&gt;
+ *     &lt;enumeration value="DOUBLE_SIDED"/&gt;
+ *     &lt;enumeration value="G"/&gt;
+ *     &lt;enumeration value="P"/&gt;
+ *     &lt;enumeration value="Q"/&gt;
+ *     &lt;enumeration value="R"/&gt;
+ *     &lt;enumeration value="S"/&gt;
+ *     &lt;enumeration value="T"/&gt;
+ *     &lt;enumeration value="TIME"/&gt;
+ *     &lt;enumeration value="U"/&gt;
+ *     &lt;enumeration value="V"/&gt;
+ *     &lt;enumeration value="W"/&gt;
+ *     &lt;enumeration value="X"/&gt;
+ *     &lt;enumeration value="Y"/&gt;
+ *     &lt;enumeration value="Z"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

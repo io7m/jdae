@@ -34,14 +34,14 @@ import javax.xml.namespace.QName;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="interval.type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}Content-expr.class" maxOccurs="2"/>
- *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}interval.attlist"/>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="interval.type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}Content-expr.class" maxOccurs="2"/&gt;
+ *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}interval.attlist"/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -250,7 +250,7 @@ public class IntervalType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the contentExprClass property.
+     * This is why there is not a {@code set} method for the contentExprClass property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -337,7 +337,7 @@ public class IntervalType {
      * {@link JAXBElement }{@code <}{@link LogicType }{@code >}
      * {@link JAXBElement }{@code <}{@link ElementaryFunctionsType }{@code >}
      * {@link JAXBElement }{@code <}{@link MomentType }{@code >}
-     * {@link JAXBElement }{@code <}{@link IntervalType }{@code >}
+     * {@link JAXBElement }{@code <} {@code >}
      * {@link JAXBElement }{@code <}{@link MiType }{@code >}
      * {@link JAXBElement }{@code <}{@link ElementaryFunctionsType }{@code >}
      * {@link JAXBElement }{@code <}{@link OuterproductType }{@code >}
@@ -472,7 +472,7 @@ public class IntervalType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the clazz property.
+     * This is why there is not a {@code set} method for the clazz property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

@@ -25,13 +25,13 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="instance_node_type">
- *   &lt;complexContent>
- *     &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}instance_with_extra_type">
- *       &lt;attribute name="proxy" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="instance_node_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}instance_with_extra_type"&gt;
+ *       &lt;attribute name="proxy" type="{http://www.w3.org/2001/XMLSchema}anyURI" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

@@ -16,16 +16,16 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for gles_sampler_wrap_enum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="gles_sampler_wrap_enum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="REPEAT"/>
- *     &lt;enumeration value="CLAMP"/>
- *     &lt;enumeration value="CLAMP_TO_EDGE"/>
- *     &lt;enumeration value="MIRRORED_REPEAT"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="gles_sampler_wrap_enum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="REPEAT"/&gt;
+ *     &lt;enumeration value="CLAMP"/&gt;
+ *     &lt;enumeration value="CLAMP_TO_EDGE"/&gt;
+ *     &lt;enumeration value="MIRRORED_REPEAT"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

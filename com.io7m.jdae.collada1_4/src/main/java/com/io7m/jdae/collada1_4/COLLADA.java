@@ -26,48 +26,48 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}asset"/>
- *         &lt;choice maxOccurs="unbounded" minOccurs="0">
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_animations"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_animation_clips"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_cameras"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_controllers"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_geometries"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_effects"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_force_fields"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_images"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_lights"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_materials"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_nodes"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_physics_materials"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_physics_models"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_physics_scenes"/>
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_visual_scenes"/>
- *         &lt;/choice>
- *         &lt;element name="scene" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="instance_physics_scene" type="{http://www.collada.org/2005/11/COLLADASchema}InstanceWithExtra" maxOccurs="unbounded" minOccurs="0"/>
- *                   &lt;element name="instance_visual_scene" type="{http://www.collada.org/2005/11/COLLADASchema}InstanceWithExtra" minOccurs="0"/>
- *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="version" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}VersionType" />
- *       &lt;attribute ref="{http://www.w3.org/XML/1998/namespace}base"/>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}asset"/&gt;
+ *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_animations"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_animation_clips"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_cameras"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_controllers"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_geometries"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_effects"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_force_fields"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_images"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_lights"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_materials"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_nodes"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_physics_materials"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_physics_models"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_physics_scenes"/&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}library_visual_scenes"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element name="scene" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="instance_physics_scene" type="{http://www.collada.org/2005/11/COLLADASchema}InstanceWithExtra" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                   &lt;element name="instance_visual_scene" type="{http://www.collada.org/2005/11/COLLADASchema}InstanceWithExtra" minOccurs="0"/&gt;
+ *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="version" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}VersionType" /&gt;
+ *       &lt;attribute ref="{http://www.w3.org/XML/1998/namespace}base"/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -143,7 +143,7 @@ public class COLLADA {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the libraries property.
+     * This is why there is not a {@code set} method for the libraries property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -212,7 +212,7 @@ public class COLLADA {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the extra property.
+     * This is why there is not a {@code set} method for the extra property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -292,17 +292,17 @@ public class COLLADA {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="instance_physics_scene" type="{http://www.collada.org/2005/11/COLLADASchema}InstanceWithExtra" maxOccurs="unbounded" minOccurs="0"/>
-     *         &lt;element name="instance_visual_scene" type="{http://www.collada.org/2005/11/COLLADASchema}InstanceWithExtra" minOccurs="0"/>
-     *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="instance_physics_scene" type="{http://www.collada.org/2005/11/COLLADASchema}InstanceWithExtra" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *         &lt;element name="instance_visual_scene" type="{http://www.collada.org/2005/11/COLLADASchema}InstanceWithExtra" minOccurs="0"/&gt;
+     *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -328,7 +328,7 @@ public class COLLADA {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the instancePhysicsScene property.
+         * This is why there is not a {@code set} method for the instancePhysicsScene property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -383,7 +383,7 @@ public class COLLADA {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the extra property.
+         * This is why there is not a {@code set} method for the extra property.
          * 
          * <p>
          * For example, to add a new item, do as follows:

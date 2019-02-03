@@ -24,20 +24,20 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="kinematics_setparam_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;choice>
- *         &lt;element name="float" type="{http://www.collada.org/2008/03/COLLADASchema}float_type"/>
- *         &lt;element name="int" type="{http://www.collada.org/2008/03/COLLADASchema}int_type"/>
- *         &lt;element name="SIDREF" type="{http://www.collada.org/2008/03/COLLADASchema}sidref_type"/>
- *         &lt;element name="bool" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         &lt;element name="connect_param" type="{http://www.collada.org/2008/03/COLLADASchema}kinematics_connect_param_type"/>
- *       &lt;/choice>
- *       &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="kinematics_setparam_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;choice&gt;
+ *         &lt;element name="float" type="{http://www.collada.org/2008/03/COLLADASchema}float_type"/&gt;
+ *         &lt;element name="int" type="{http://www.collada.org/2008/03/COLLADASchema}int_type"/&gt;
+ *         &lt;element name="SIDREF" type="{http://www.collada.org/2008/03/COLLADASchema}sidref_type"/&gt;
+ *         &lt;element name="bool" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="connect_param" type="{http://www.collada.org/2008/03/COLLADASchema}kinematics_connect_param_type"/&gt;
+ *       &lt;/choice&gt;
+ *       &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

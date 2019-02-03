@@ -24,12 +24,12 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="scale_type">
- *   &lt;simpleContent>
- *     &lt;restriction base="&lt;http://www.collada.org/2008/03/COLLADASchema>targetable_float3_type">
- *     &lt;/restriction>
- *   &lt;/simpleContent>
- * &lt;/complexType>
+ * &lt;complexType name="scale_type"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;restriction base="&lt;http://www.collada.org/2008/03/COLLADASchema&gt;targetable_float3_type"&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

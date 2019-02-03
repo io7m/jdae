@@ -16,14 +16,14 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for gl_light_model_color_control_enum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="gl_light_model_color_control_enum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="SINGLE_COLOR"/>
- *     &lt;enumeration value="SEPARATE_SPECULAR_COLOR"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="gl_light_model_color_control_enum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="SINGLE_COLOR"/&gt;
+ *     &lt;enumeration value="SEPARATE_SPECULAR_COLOR"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

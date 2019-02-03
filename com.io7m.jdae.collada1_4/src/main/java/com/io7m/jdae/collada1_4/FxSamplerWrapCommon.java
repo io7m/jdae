@@ -16,17 +16,17 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for fx_sampler_wrap_common.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="fx_sampler_wrap_common">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="NONE"/>
- *     &lt;enumeration value="WRAP"/>
- *     &lt;enumeration value="MIRROR"/>
- *     &lt;enumeration value="CLAMP"/>
- *     &lt;enumeration value="BORDER"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="fx_sampler_wrap_common"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="NONE"/&gt;
+ *     &lt;enumeration value="WRAP"/&gt;
+ *     &lt;enumeration value="MIRROR"/&gt;
+ *     &lt;enumeration value="CLAMP"/&gt;
+ *     &lt;enumeration value="BORDER"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

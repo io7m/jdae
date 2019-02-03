@@ -27,24 +27,24 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="common_newparam_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="semantic" type="{http://www.w3.org/2001/XMLSchema}NCName" minOccurs="0"/>
- *         &lt;choice>
- *           &lt;element name="float" type="{http://www.collada.org/2005/11/COLLADASchema}float"/>
- *           &lt;element name="float2" type="{http://www.collada.org/2005/11/COLLADASchema}float2"/>
- *           &lt;element name="float3" type="{http://www.collada.org/2005/11/COLLADASchema}float3"/>
- *           &lt;element name="float4" type="{http://www.collada.org/2005/11/COLLADASchema}float4"/>
- *           &lt;element name="surface" type="{http://www.collada.org/2005/11/COLLADASchema}fx_surface_common"/>
- *           &lt;element name="sampler2D" type="{http://www.collada.org/2005/11/COLLADASchema}fx_sampler2D_common"/>
- *         &lt;/choice>
- *       &lt;/sequence>
- *       &lt;attribute name="sid" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="common_newparam_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="semantic" type="{http://www.w3.org/2001/XMLSchema}NCName" minOccurs="0"/&gt;
+ *         &lt;choice&gt;
+ *           &lt;element name="float" type="{http://www.collada.org/2005/11/COLLADASchema}float"/&gt;
+ *           &lt;element name="float2" type="{http://www.collada.org/2005/11/COLLADASchema}float2"/&gt;
+ *           &lt;element name="float3" type="{http://www.collada.org/2005/11/COLLADASchema}float3"/&gt;
+ *           &lt;element name="float4" type="{http://www.collada.org/2005/11/COLLADASchema}float4"/&gt;
+ *           &lt;element name="surface" type="{http://www.collada.org/2005/11/COLLADASchema}fx_surface_common"/&gt;
+ *           &lt;element name="sampler2D" type="{http://www.collada.org/2005/11/COLLADASchema}fx_sampler2D_common"/&gt;
+ *         &lt;/choice&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="sid" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -140,7 +140,7 @@ public class CommonNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float2 property.
+     * This is why there is not a {@code set} method for the float2 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -169,7 +169,7 @@ public class CommonNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float3 property.
+     * This is why there is not a {@code set} method for the float3 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -198,7 +198,7 @@ public class CommonNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float4 property.
+     * This is why there is not a {@code set} method for the float4 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

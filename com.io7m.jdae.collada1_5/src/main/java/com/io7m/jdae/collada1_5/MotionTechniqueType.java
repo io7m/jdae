@@ -22,16 +22,16 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="motion_technique_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="axis_info" type="{http://www.collada.org/2008/03/COLLADASchema}motion_axis_info_type" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="effector_info" type="{http://www.collada.org/2008/03/COLLADASchema}motion_effector_info_type" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="motion_technique_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="axis_info" type="{http://www.collada.org/2008/03/COLLADASchema}motion_axis_info_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="effector_info" type="{http://www.collada.org/2008/03/COLLADASchema}motion_effector_info_type" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -55,7 +55,7 @@ public class MotionTechniqueType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the axisInfo property.
+     * This is why there is not a {@code set} method for the axisInfo property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

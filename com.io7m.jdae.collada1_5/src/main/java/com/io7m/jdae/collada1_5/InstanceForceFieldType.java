@@ -23,12 +23,12 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="instance_force_field_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.collada.org/2008/03/COLLADASchema}instance_with_extra_type">
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="instance_force_field_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.collada.org/2008/03/COLLADASchema}instance_with_extra_type"&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

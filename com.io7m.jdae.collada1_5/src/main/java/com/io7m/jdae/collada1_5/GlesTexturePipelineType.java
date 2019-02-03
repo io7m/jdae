@@ -30,18 +30,18 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="gles_texture_pipeline_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;choice maxOccurs="unbounded">
- *         &lt;element name="texcombiner" type="{http://www.collada.org/2008/03/COLLADASchema}gles_texcombiner_command_type"/>
- *         &lt;element name="texenv" type="{http://www.collada.org/2008/03/COLLADASchema}gles_texenv_command_type"/>
- *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type"/>
- *       &lt;/choice>
- *       &lt;attribute name="sid" type="{http://www.collada.org/2008/03/COLLADASchema}sid_type" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="gles_texture_pipeline_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;choice maxOccurs="unbounded"&gt;
+ *         &lt;element name="texcombiner" type="{http://www.collada.org/2008/03/COLLADASchema}gles_texcombiner_command_type"/&gt;
+ *         &lt;element name="texenv" type="{http://www.collada.org/2008/03/COLLADASchema}gles_texenv_command_type"/&gt;
+ *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type"/&gt;
+ *       &lt;/choice&gt;
+ *       &lt;attribute name="sid" type="{http://www.collada.org/2008/03/COLLADASchema}sid_type" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -69,7 +69,7 @@ public class GlesTexturePipelineType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the texcombinerOrTexenvOrExtra property.
+     * This is why there is not a {@code set} method for the texcombinerOrTexenvOrExtra property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

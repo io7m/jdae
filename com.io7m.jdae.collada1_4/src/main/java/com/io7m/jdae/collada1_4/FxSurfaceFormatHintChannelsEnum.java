@@ -16,19 +16,19 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for fx_surface_format_hint_channels_enum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="fx_surface_format_hint_channels_enum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="RGB"/>
- *     &lt;enumeration value="RGBA"/>
- *     &lt;enumeration value="L"/>
- *     &lt;enumeration value="LA"/>
- *     &lt;enumeration value="D"/>
- *     &lt;enumeration value="XYZ"/>
- *     &lt;enumeration value="XYZW"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="fx_surface_format_hint_channels_enum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="RGB"/&gt;
+ *     &lt;enumeration value="RGBA"/&gt;
+ *     &lt;enumeration value="L"/&gt;
+ *     &lt;enumeration value="LA"/&gt;
+ *     &lt;enumeration value="D"/&gt;
+ *     &lt;enumeration value="XYZ"/&gt;
+ *     &lt;enumeration value="XYZW"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

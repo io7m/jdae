@@ -27,64 +27,64 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="link_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;choice maxOccurs="unbounded" minOccurs="0">
- *           &lt;element name="rotate" type="{http://www.collada.org/2008/03/COLLADASchema}rotate_type"/>
- *           &lt;element name="translate" type="{http://www.collada.org/2008/03/COLLADASchema}translate_type"/>
- *         &lt;/choice>
- *         &lt;choice maxOccurs="unbounded" minOccurs="0">
- *           &lt;element name="attachment_full">
- *             &lt;complexType>
- *               &lt;complexContent>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                   &lt;sequence>
- *                     &lt;choice maxOccurs="unbounded" minOccurs="0">
- *                       &lt;element name="rotate" type="{http://www.collada.org/2008/03/COLLADASchema}rotate_type"/>
- *                       &lt;element name="translate" type="{http://www.collada.org/2008/03/COLLADASchema}translate_type"/>
- *                     &lt;/choice>
- *                     &lt;element name="link" type="{http://www.collada.org/2008/03/COLLADASchema}link_type"/>
- *                   &lt;/sequence>
- *                   &lt;attribute name="joint" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
- *                 &lt;/restriction>
- *               &lt;/complexContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *           &lt;element name="attachment_start">
- *             &lt;complexType>
- *               &lt;complexContent>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                   &lt;choice maxOccurs="unbounded">
- *                     &lt;element name="rotate" type="{http://www.collada.org/2008/03/COLLADASchema}rotate_type"/>
- *                     &lt;element name="translate" type="{http://www.collada.org/2008/03/COLLADASchema}translate_type"/>
- *                   &lt;/choice>
- *                   &lt;attribute name="joint" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
- *                 &lt;/restriction>
- *               &lt;/complexContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *           &lt;element name="attachment_end">
- *             &lt;complexType>
- *               &lt;complexContent>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                   &lt;choice maxOccurs="unbounded" minOccurs="0">
- *                     &lt;element name="rotate" type="{http://www.collada.org/2008/03/COLLADASchema}rotate_type"/>
- *                     &lt;element name="translate" type="{http://www.collada.org/2008/03/COLLADASchema}translate_type"/>
- *                   &lt;/choice>
- *                   &lt;attribute name="joint" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
- *                 &lt;/restriction>
- *               &lt;/complexContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *         &lt;/choice>
- *       &lt;/sequence>
- *       &lt;attribute name="sid" type="{http://www.collada.org/2008/03/COLLADASchema}sid_type" />
- *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}token" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="link_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;element name="rotate" type="{http://www.collada.org/2008/03/COLLADASchema}rotate_type"/&gt;
+ *           &lt;element name="translate" type="{http://www.collada.org/2008/03/COLLADASchema}translate_type"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;element name="attachment_full"&gt;
+ *             &lt;complexType&gt;
+ *               &lt;complexContent&gt;
+ *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                   &lt;sequence&gt;
+ *                     &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *                       &lt;element name="rotate" type="{http://www.collada.org/2008/03/COLLADASchema}rotate_type"/&gt;
+ *                       &lt;element name="translate" type="{http://www.collada.org/2008/03/COLLADASchema}translate_type"/&gt;
+ *                     &lt;/choice&gt;
+ *                     &lt;element name="link" type="{http://www.collada.org/2008/03/COLLADASchema}link_type"/&gt;
+ *                   &lt;/sequence&gt;
+ *                   &lt;attribute name="joint" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+ *                 &lt;/restriction&gt;
+ *               &lt;/complexContent&gt;
+ *             &lt;/complexType&gt;
+ *           &lt;/element&gt;
+ *           &lt;element name="attachment_start"&gt;
+ *             &lt;complexType&gt;
+ *               &lt;complexContent&gt;
+ *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                   &lt;choice maxOccurs="unbounded"&gt;
+ *                     &lt;element name="rotate" type="{http://www.collada.org/2008/03/COLLADASchema}rotate_type"/&gt;
+ *                     &lt;element name="translate" type="{http://www.collada.org/2008/03/COLLADASchema}translate_type"/&gt;
+ *                   &lt;/choice&gt;
+ *                   &lt;attribute name="joint" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+ *                 &lt;/restriction&gt;
+ *               &lt;/complexContent&gt;
+ *             &lt;/complexType&gt;
+ *           &lt;/element&gt;
+ *           &lt;element name="attachment_end"&gt;
+ *             &lt;complexType&gt;
+ *               &lt;complexContent&gt;
+ *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                   &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *                     &lt;element name="rotate" type="{http://www.collada.org/2008/03/COLLADASchema}rotate_type"/&gt;
+ *                     &lt;element name="translate" type="{http://www.collada.org/2008/03/COLLADASchema}translate_type"/&gt;
+ *                   &lt;/choice&gt;
+ *                   &lt;attribute name="joint" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+ *                 &lt;/restriction&gt;
+ *               &lt;/complexContent&gt;
+ *             &lt;/complexType&gt;
+ *           &lt;/element&gt;
+ *         &lt;/choice&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="sid" type="{http://www.collada.org/2008/03/COLLADASchema}sid_type" /&gt;
+ *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -122,7 +122,7 @@ public class LinkType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the rotateOrTranslate property.
+     * This is why there is not a {@code set} method for the rotateOrTranslate property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -152,7 +152,7 @@ public class LinkType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the attachmentFullOrAttachmentStartOrAttachmentEnd property.
+     * This is why there is not a {@code set} method for the attachmentFullOrAttachmentStartOrAttachmentEnd property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -231,17 +231,17 @@ public class LinkType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;choice maxOccurs="unbounded" minOccurs="0">
-     *         &lt;element name="rotate" type="{http://www.collada.org/2008/03/COLLADASchema}rotate_type"/>
-     *         &lt;element name="translate" type="{http://www.collada.org/2008/03/COLLADASchema}translate_type"/>
-     *       &lt;/choice>
-     *       &lt;attribute name="joint" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+     *         &lt;element name="rotate" type="{http://www.collada.org/2008/03/COLLADASchema}rotate_type"/&gt;
+     *         &lt;element name="translate" type="{http://www.collada.org/2008/03/COLLADASchema}translate_type"/&gt;
+     *       &lt;/choice&gt;
+     *       &lt;attribute name="joint" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -269,7 +269,7 @@ public class LinkType {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the rotateOrTranslate property.
+         * This is why there is not a {@code set} method for the rotateOrTranslate property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -325,20 +325,20 @@ public class LinkType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;choice maxOccurs="unbounded" minOccurs="0">
-     *           &lt;element name="rotate" type="{http://www.collada.org/2008/03/COLLADASchema}rotate_type"/>
-     *           &lt;element name="translate" type="{http://www.collada.org/2008/03/COLLADASchema}translate_type"/>
-     *         &lt;/choice>
-     *         &lt;element name="link" type="{http://www.collada.org/2008/03/COLLADASchema}link_type"/>
-     *       &lt;/sequence>
-     *       &lt;attribute name="joint" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+     *           &lt;element name="rotate" type="{http://www.collada.org/2008/03/COLLADASchema}rotate_type"/&gt;
+     *           &lt;element name="translate" type="{http://www.collada.org/2008/03/COLLADASchema}translate_type"/&gt;
+     *         &lt;/choice&gt;
+     *         &lt;element name="link" type="{http://www.collada.org/2008/03/COLLADASchema}link_type"/&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="joint" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -369,7 +369,7 @@ public class LinkType {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the rotateOrTranslate property.
+         * This is why there is not a {@code set} method for the rotateOrTranslate property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -449,17 +449,17 @@ public class LinkType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;choice maxOccurs="unbounded">
-     *         &lt;element name="rotate" type="{http://www.collada.org/2008/03/COLLADASchema}rotate_type"/>
-     *         &lt;element name="translate" type="{http://www.collada.org/2008/03/COLLADASchema}translate_type"/>
-     *       &lt;/choice>
-     *       &lt;attribute name="joint" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;choice maxOccurs="unbounded"&gt;
+     *         &lt;element name="rotate" type="{http://www.collada.org/2008/03/COLLADASchema}rotate_type"/&gt;
+     *         &lt;element name="translate" type="{http://www.collada.org/2008/03/COLLADASchema}translate_type"/&gt;
+     *       &lt;/choice&gt;
+     *       &lt;attribute name="joint" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -487,7 +487,7 @@ public class LinkType {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the rotateOrTranslate property.
+         * This is why there is not a {@code set} method for the rotateOrTranslate property.
          * 
          * <p>
          * For example, to add a new item, do as follows:

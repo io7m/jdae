@@ -17,19 +17,19 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for named-space.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="named-space">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="veryverythinmathspace"/>
- *     &lt;enumeration value="verythinmathspace"/>
- *     &lt;enumeration value="thinmathspace"/>
- *     &lt;enumeration value="mediummathspace"/>
- *     &lt;enumeration value="thickmathspace"/>
- *     &lt;enumeration value="verythickmathspace"/>
- *     &lt;enumeration value="veryverythickmathspace"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="named-space"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="veryverythinmathspace"/&gt;
+ *     &lt;enumeration value="verythinmathspace"/&gt;
+ *     &lt;enumeration value="thinmathspace"/&gt;
+ *     &lt;enumeration value="mediummathspace"/&gt;
+ *     &lt;enumeration value="thickmathspace"/&gt;
+ *     &lt;enumeration value="verythickmathspace"/&gt;
+ *     &lt;enumeration value="veryverythickmathspace"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

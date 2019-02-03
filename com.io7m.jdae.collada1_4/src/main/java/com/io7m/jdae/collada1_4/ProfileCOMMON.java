@@ -28,115 +28,115 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}asset" minOccurs="0"/>
- *         &lt;choice maxOccurs="unbounded" minOccurs="0">
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}image"/>
- *           &lt;element name="newparam" type="{http://www.collada.org/2005/11/COLLADASchema}common_newparam_type"/>
- *         &lt;/choice>
- *         &lt;element name="technique">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}asset" minOccurs="0"/>
- *                   &lt;choice maxOccurs="unbounded" minOccurs="0">
- *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}image"/>
- *                     &lt;element name="newparam" type="{http://www.collada.org/2005/11/COLLADASchema}common_newparam_type"/>
- *                   &lt;/choice>
- *                   &lt;choice>
- *                     &lt;element name="constant">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                             &lt;sequence>
- *                               &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
- *                               &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
- *                               &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
- *                               &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/>
- *                               &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
- *                               &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
- *                             &lt;/sequence>
- *                           &lt;/restriction>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                     &lt;element name="lambert">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                             &lt;sequence>
- *                               &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
- *                               &lt;element name="ambient" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
- *                               &lt;element name="diffuse" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
- *                               &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
- *                               &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
- *                               &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/>
- *                               &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
- *                               &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
- *                             &lt;/sequence>
- *                           &lt;/restriction>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                     &lt;element name="phong">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                             &lt;sequence>
- *                               &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
- *                               &lt;element name="ambient" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
- *                               &lt;element name="diffuse" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
- *                               &lt;element name="specular" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
- *                               &lt;element name="shininess" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
- *                               &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
- *                               &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
- *                               &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/>
- *                               &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
- *                               &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
- *                             &lt;/sequence>
- *                           &lt;/restriction>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                     &lt;element name="blinn">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                             &lt;sequence>
- *                               &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
- *                               &lt;element name="ambient" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
- *                               &lt;element name="diffuse" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
- *                               &lt;element name="specular" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
- *                               &lt;element name="shininess" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
- *                               &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
- *                               &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
- *                               &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/>
- *                               &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
- *                               &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
- *                             &lt;/sequence>
- *                           &lt;/restriction>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                   &lt;/choice>
- *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *                 &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />
- *                 &lt;attribute name="sid" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}asset" minOccurs="0"/&gt;
+ *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}image"/&gt;
+ *           &lt;element name="newparam" type="{http://www.collada.org/2005/11/COLLADASchema}common_newparam_type"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element name="technique"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}asset" minOccurs="0"/&gt;
+ *                   &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}image"/&gt;
+ *                     &lt;element name="newparam" type="{http://www.collada.org/2005/11/COLLADASchema}common_newparam_type"/&gt;
+ *                   &lt;/choice&gt;
+ *                   &lt;choice&gt;
+ *                     &lt;element name="constant"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                             &lt;sequence&gt;
+ *                               &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+ *                               &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+ *                               &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+ *                               &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/&gt;
+ *                               &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+ *                               &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+ *                             &lt;/sequence&gt;
+ *                           &lt;/restriction&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                     &lt;element name="lambert"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                             &lt;sequence&gt;
+ *                               &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+ *                               &lt;element name="ambient" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+ *                               &lt;element name="diffuse" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+ *                               &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+ *                               &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+ *                               &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/&gt;
+ *                               &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+ *                               &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+ *                             &lt;/sequence&gt;
+ *                           &lt;/restriction&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                     &lt;element name="phong"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                             &lt;sequence&gt;
+ *                               &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+ *                               &lt;element name="ambient" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+ *                               &lt;element name="diffuse" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+ *                               &lt;element name="specular" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+ *                               &lt;element name="shininess" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+ *                               &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+ *                               &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+ *                               &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/&gt;
+ *                               &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+ *                               &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+ *                             &lt;/sequence&gt;
+ *                           &lt;/restriction&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                     &lt;element name="blinn"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                             &lt;sequence&gt;
+ *                               &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+ *                               &lt;element name="ambient" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+ *                               &lt;element name="diffuse" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+ *                               &lt;element name="specular" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+ *                               &lt;element name="shininess" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+ *                               &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+ *                               &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+ *                               &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/&gt;
+ *                               &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+ *                               &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+ *                             &lt;/sequence&gt;
+ *                           &lt;/restriction&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                   &lt;/choice&gt;
+ *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+ *                 &lt;attribute name="sid" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -196,7 +196,7 @@ public class ProfileCOMMON {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the imageOrNewparam property.
+     * This is why there is not a {@code set} method for the imageOrNewparam property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -252,7 +252,7 @@ public class ProfileCOMMON {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the extra property.
+     * This is why there is not a {@code set} method for the extra property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -305,98 +305,98 @@ public class ProfileCOMMON {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}asset" minOccurs="0"/>
-     *         &lt;choice maxOccurs="unbounded" minOccurs="0">
-     *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}image"/>
-     *           &lt;element name="newparam" type="{http://www.collada.org/2005/11/COLLADASchema}common_newparam_type"/>
-     *         &lt;/choice>
-     *         &lt;choice>
-     *           &lt;element name="constant">
-     *             &lt;complexType>
-     *               &lt;complexContent>
-     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                   &lt;sequence>
-     *                     &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-     *                     &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-     *                     &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-     *                     &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/>
-     *                     &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-     *                     &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-     *                   &lt;/sequence>
-     *                 &lt;/restriction>
-     *               &lt;/complexContent>
-     *             &lt;/complexType>
-     *           &lt;/element>
-     *           &lt;element name="lambert">
-     *             &lt;complexType>
-     *               &lt;complexContent>
-     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                   &lt;sequence>
-     *                     &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-     *                     &lt;element name="ambient" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-     *                     &lt;element name="diffuse" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-     *                     &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-     *                     &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-     *                     &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/>
-     *                     &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-     *                     &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-     *                   &lt;/sequence>
-     *                 &lt;/restriction>
-     *               &lt;/complexContent>
-     *             &lt;/complexType>
-     *           &lt;/element>
-     *           &lt;element name="phong">
-     *             &lt;complexType>
-     *               &lt;complexContent>
-     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                   &lt;sequence>
-     *                     &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-     *                     &lt;element name="ambient" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-     *                     &lt;element name="diffuse" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-     *                     &lt;element name="specular" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-     *                     &lt;element name="shininess" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-     *                     &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-     *                     &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-     *                     &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/>
-     *                     &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-     *                     &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-     *                   &lt;/sequence>
-     *                 &lt;/restriction>
-     *               &lt;/complexContent>
-     *             &lt;/complexType>
-     *           &lt;/element>
-     *           &lt;element name="blinn">
-     *             &lt;complexType>
-     *               &lt;complexContent>
-     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                   &lt;sequence>
-     *                     &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-     *                     &lt;element name="ambient" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-     *                     &lt;element name="diffuse" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-     *                     &lt;element name="specular" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-     *                     &lt;element name="shininess" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-     *                     &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-     *                     &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-     *                     &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/>
-     *                     &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-     *                     &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-     *                   &lt;/sequence>
-     *                 &lt;/restriction>
-     *               &lt;/complexContent>
-     *             &lt;/complexType>
-     *           &lt;/element>
-     *         &lt;/choice>
-     *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />
-     *       &lt;attribute name="sid" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}asset" minOccurs="0"/&gt;
+     *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+     *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}image"/&gt;
+     *           &lt;element name="newparam" type="{http://www.collada.org/2005/11/COLLADASchema}common_newparam_type"/&gt;
+     *         &lt;/choice&gt;
+     *         &lt;choice&gt;
+     *           &lt;element name="constant"&gt;
+     *             &lt;complexType&gt;
+     *               &lt;complexContent&gt;
+     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                   &lt;sequence&gt;
+     *                     &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+     *                     &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+     *                     &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+     *                     &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/&gt;
+     *                     &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+     *                     &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+     *                   &lt;/sequence&gt;
+     *                 &lt;/restriction&gt;
+     *               &lt;/complexContent&gt;
+     *             &lt;/complexType&gt;
+     *           &lt;/element&gt;
+     *           &lt;element name="lambert"&gt;
+     *             &lt;complexType&gt;
+     *               &lt;complexContent&gt;
+     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                   &lt;sequence&gt;
+     *                     &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+     *                     &lt;element name="ambient" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+     *                     &lt;element name="diffuse" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+     *                     &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+     *                     &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+     *                     &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/&gt;
+     *                     &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+     *                     &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+     *                   &lt;/sequence&gt;
+     *                 &lt;/restriction&gt;
+     *               &lt;/complexContent&gt;
+     *             &lt;/complexType&gt;
+     *           &lt;/element&gt;
+     *           &lt;element name="phong"&gt;
+     *             &lt;complexType&gt;
+     *               &lt;complexContent&gt;
+     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                   &lt;sequence&gt;
+     *                     &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+     *                     &lt;element name="ambient" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+     *                     &lt;element name="diffuse" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+     *                     &lt;element name="specular" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+     *                     &lt;element name="shininess" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+     *                     &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+     *                     &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+     *                     &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/&gt;
+     *                     &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+     *                     &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+     *                   &lt;/sequence&gt;
+     *                 &lt;/restriction&gt;
+     *               &lt;/complexContent&gt;
+     *             &lt;/complexType&gt;
+     *           &lt;/element&gt;
+     *           &lt;element name="blinn"&gt;
+     *             &lt;complexType&gt;
+     *               &lt;complexContent&gt;
+     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                   &lt;sequence&gt;
+     *                     &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+     *                     &lt;element name="ambient" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+     *                     &lt;element name="diffuse" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+     *                     &lt;element name="specular" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+     *                     &lt;element name="shininess" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+     *                     &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+     *                     &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+     *                     &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/&gt;
+     *                     &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+     *                     &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+     *                   &lt;/sequence&gt;
+     *                 &lt;/restriction&gt;
+     *               &lt;/complexContent&gt;
+     *             &lt;/complexType&gt;
+     *           &lt;/element&gt;
+     *         &lt;/choice&gt;
+     *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+     *       &lt;attribute name="sid" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -467,7 +467,7 @@ public class ProfileCOMMON {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the imageOrNewparam property.
+         * This is why there is not a {@code set} method for the imageOrNewparam property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -595,7 +595,7 @@ public class ProfileCOMMON {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the extra property.
+         * This is why there is not a {@code set} method for the extra property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -672,24 +672,24 @@ public class ProfileCOMMON {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-         *         &lt;element name="ambient" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-         *         &lt;element name="diffuse" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-         *         &lt;element name="specular" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-         *         &lt;element name="shininess" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-         *         &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-         *         &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-         *         &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/>
-         *         &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-         *         &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+         *         &lt;element name="ambient" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+         *         &lt;element name="diffuse" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+         *         &lt;element name="specular" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+         *         &lt;element name="shininess" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+         *         &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+         *         &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+         *         &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/&gt;
+         *         &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+         *         &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -970,20 +970,20 @@ public class ProfileCOMMON {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-         *         &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-         *         &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-         *         &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/>
-         *         &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-         *         &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+         *         &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+         *         &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+         *         &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/&gt;
+         *         &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+         *         &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -1160,22 +1160,22 @@ public class ProfileCOMMON {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-         *         &lt;element name="ambient" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-         *         &lt;element name="diffuse" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-         *         &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-         *         &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-         *         &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/>
-         *         &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-         *         &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+         *         &lt;element name="ambient" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+         *         &lt;element name="diffuse" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+         *         &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+         *         &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+         *         &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/&gt;
+         *         &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+         *         &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -1404,24 +1404,24 @@ public class ProfileCOMMON {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-         *         &lt;element name="ambient" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-         *         &lt;element name="diffuse" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-         *         &lt;element name="specular" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-         *         &lt;element name="shininess" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-         *         &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/>
-         *         &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-         *         &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/>
-         *         &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-         *         &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="emission" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+         *         &lt;element name="ambient" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+         *         &lt;element name="diffuse" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+         *         &lt;element name="specular" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+         *         &lt;element name="shininess" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+         *         &lt;element name="reflective" type="{http://www.collada.org/2005/11/COLLADASchema}common_color_or_texture_type" minOccurs="0"/&gt;
+         *         &lt;element name="reflectivity" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+         *         &lt;element name="transparent" type="{http://www.collada.org/2005/11/COLLADASchema}common_transparent_type" minOccurs="0"/&gt;
+         *         &lt;element name="transparency" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+         *         &lt;element name="index_of_refraction" type="{http://www.collada.org/2005/11/COLLADASchema}common_float_or_param_type" minOccurs="0"/&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 

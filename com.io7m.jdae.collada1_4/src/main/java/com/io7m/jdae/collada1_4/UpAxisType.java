@@ -16,15 +16,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for UpAxisType.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="UpAxisType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="X_UP"/>
- *     &lt;enumeration value="Y_UP"/>
- *     &lt;enumeration value="Z_UP"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="UpAxisType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="X_UP"/&gt;
+ *     &lt;enumeration value="Y_UP"/&gt;
+ *     &lt;enumeration value="Z_UP"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

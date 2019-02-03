@@ -31,126 +31,126 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}asset" minOccurs="0"/>
- *         &lt;choice maxOccurs="unbounded" minOccurs="0">
- *           &lt;element name="code" type="{http://www.collada.org/2005/11/COLLADASchema}fx_code_profile"/>
- *           &lt;element name="include" type="{http://www.collada.org/2005/11/COLLADASchema}fx_include_common"/>
- *         &lt;/choice>
- *         &lt;choice maxOccurs="unbounded" minOccurs="0">
- *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}image"/>
- *           &lt;element name="newparam" type="{http://www.collada.org/2005/11/COLLADASchema}cg_newparam"/>
- *         &lt;/choice>
- *         &lt;element name="technique" maxOccurs="unbounded">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}asset" minOccurs="0"/>
- *                   &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/>
- *                   &lt;choice maxOccurs="unbounded" minOccurs="0">
- *                     &lt;element name="code" type="{http://www.collada.org/2005/11/COLLADASchema}fx_code_profile"/>
- *                     &lt;element name="include" type="{http://www.collada.org/2005/11/COLLADASchema}fx_include_common"/>
- *                   &lt;/choice>
- *                   &lt;choice maxOccurs="unbounded" minOccurs="0">
- *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}image"/>
- *                     &lt;element name="newparam" type="{http://www.collada.org/2005/11/COLLADASchema}cg_newparam"/>
- *                     &lt;element name="setparam" type="{http://www.collada.org/2005/11/COLLADASchema}cg_setparam"/>
- *                   &lt;/choice>
- *                   &lt;element name="pass" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/>
- *                             &lt;element name="color_target" type="{http://www.collada.org/2005/11/COLLADASchema}fx_colortarget_common" maxOccurs="unbounded" minOccurs="0"/>
- *                             &lt;element name="depth_target" type="{http://www.collada.org/2005/11/COLLADASchema}fx_depthtarget_common" maxOccurs="unbounded" minOccurs="0"/>
- *                             &lt;element name="stencil_target" type="{http://www.collada.org/2005/11/COLLADASchema}fx_stenciltarget_common" maxOccurs="unbounded" minOccurs="0"/>
- *                             &lt;element name="color_clear" type="{http://www.collada.org/2005/11/COLLADASchema}fx_clearcolor_common" maxOccurs="unbounded" minOccurs="0"/>
- *                             &lt;element name="depth_clear" type="{http://www.collada.org/2005/11/COLLADASchema}fx_cleardepth_common" maxOccurs="unbounded" minOccurs="0"/>
- *                             &lt;element name="stencil_clear" type="{http://www.collada.org/2005/11/COLLADASchema}fx_clearstencil_common" maxOccurs="unbounded" minOccurs="0"/>
- *                             &lt;element name="draw" type="{http://www.collada.org/2005/11/COLLADASchema}fx_draw_common" minOccurs="0"/>
- *                             &lt;choice maxOccurs="unbounded">
- *                               &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}gl_pipeline_settings"/>
- *                               &lt;element name="shader">
- *                                 &lt;complexType>
- *                                   &lt;complexContent>
- *                                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                       &lt;sequence>
- *                                         &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/>
- *                                         &lt;sequence minOccurs="0">
- *                                           &lt;element name="compiler_target">
- *                                             &lt;complexType>
- *                                               &lt;simpleContent>
- *                                                 &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>NMTOKEN">
- *                                                 &lt;/extension>
- *                                               &lt;/simpleContent>
- *                                             &lt;/complexType>
- *                                           &lt;/element>
- *                                           &lt;element name="compiler_options" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                                         &lt;/sequence>
- *                                         &lt;element name="name">
- *                                           &lt;complexType>
- *                                             &lt;simpleContent>
- *                                               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>NCName">
- *                                                 &lt;attribute name="source" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *                                               &lt;/extension>
- *                                             &lt;/simpleContent>
- *                                           &lt;/complexType>
- *                                         &lt;/element>
- *                                         &lt;element name="bind" maxOccurs="unbounded" minOccurs="0">
- *                                           &lt;complexType>
- *                                             &lt;complexContent>
- *                                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                                 &lt;choice>
- *                                                   &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}cg_param_type"/>
- *                                                   &lt;element name="param">
- *                                                     &lt;complexType>
- *                                                       &lt;complexContent>
- *                                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                                           &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *                                                         &lt;/restriction>
- *                                                       &lt;/complexContent>
- *                                                     &lt;/complexType>
- *                                                   &lt;/element>
- *                                                 &lt;/choice>
- *                                                 &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *                                               &lt;/restriction>
- *                                             &lt;/complexContent>
- *                                           &lt;/complexType>
- *                                         &lt;/element>
- *                                       &lt;/sequence>
- *                                       &lt;attribute name="stage" type="{http://www.collada.org/2005/11/COLLADASchema}cg_pipeline_stage" />
- *                                     &lt;/restriction>
- *                                   &lt;/complexContent>
- *                                 &lt;/complexType>
- *                               &lt;/element>
- *                             &lt;/choice>
- *                             &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
- *                           &lt;/sequence>
- *                           &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *                 &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />
- *                 &lt;attribute name="sid" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />
- *       &lt;attribute name="platform" type="{http://www.w3.org/2001/XMLSchema}NCName" default="PC" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}asset" minOccurs="0"/&gt;
+ *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;element name="code" type="{http://www.collada.org/2005/11/COLLADASchema}fx_code_profile"/&gt;
+ *           &lt;element name="include" type="{http://www.collada.org/2005/11/COLLADASchema}fx_include_common"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}image"/&gt;
+ *           &lt;element name="newparam" type="{http://www.collada.org/2005/11/COLLADASchema}cg_newparam"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element name="technique" maxOccurs="unbounded"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}asset" minOccurs="0"/&gt;
+ *                   &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                   &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *                     &lt;element name="code" type="{http://www.collada.org/2005/11/COLLADASchema}fx_code_profile"/&gt;
+ *                     &lt;element name="include" type="{http://www.collada.org/2005/11/COLLADASchema}fx_include_common"/&gt;
+ *                   &lt;/choice&gt;
+ *                   &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *                     &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}image"/&gt;
+ *                     &lt;element name="newparam" type="{http://www.collada.org/2005/11/COLLADASchema}cg_newparam"/&gt;
+ *                     &lt;element name="setparam" type="{http://www.collada.org/2005/11/COLLADASchema}cg_setparam"/&gt;
+ *                   &lt;/choice&gt;
+ *                   &lt;element name="pass" maxOccurs="unbounded"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                             &lt;element name="color_target" type="{http://www.collada.org/2005/11/COLLADASchema}fx_colortarget_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                             &lt;element name="depth_target" type="{http://www.collada.org/2005/11/COLLADASchema}fx_depthtarget_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                             &lt;element name="stencil_target" type="{http://www.collada.org/2005/11/COLLADASchema}fx_stenciltarget_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                             &lt;element name="color_clear" type="{http://www.collada.org/2005/11/COLLADASchema}fx_clearcolor_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                             &lt;element name="depth_clear" type="{http://www.collada.org/2005/11/COLLADASchema}fx_cleardepth_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                             &lt;element name="stencil_clear" type="{http://www.collada.org/2005/11/COLLADASchema}fx_clearstencil_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                             &lt;element name="draw" type="{http://www.collada.org/2005/11/COLLADASchema}fx_draw_common" minOccurs="0"/&gt;
+ *                             &lt;choice maxOccurs="unbounded"&gt;
+ *                               &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}gl_pipeline_settings"/&gt;
+ *                               &lt;element name="shader"&gt;
+ *                                 &lt;complexType&gt;
+ *                                   &lt;complexContent&gt;
+ *                                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                       &lt;sequence&gt;
+ *                                         &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                                         &lt;sequence minOccurs="0"&gt;
+ *                                           &lt;element name="compiler_target"&gt;
+ *                                             &lt;complexType&gt;
+ *                                               &lt;simpleContent&gt;
+ *                                                 &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;NMTOKEN"&gt;
+ *                                                 &lt;/extension&gt;
+ *                                               &lt;/simpleContent&gt;
+ *                                             &lt;/complexType&gt;
+ *                                           &lt;/element&gt;
+ *                                           &lt;element name="compiler_options" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *                                         &lt;/sequence&gt;
+ *                                         &lt;element name="name"&gt;
+ *                                           &lt;complexType&gt;
+ *                                             &lt;simpleContent&gt;
+ *                                               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;NCName"&gt;
+ *                                                 &lt;attribute name="source" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *                                               &lt;/extension&gt;
+ *                                             &lt;/simpleContent&gt;
+ *                                           &lt;/complexType&gt;
+ *                                         &lt;/element&gt;
+ *                                         &lt;element name="bind" maxOccurs="unbounded" minOccurs="0"&gt;
+ *                                           &lt;complexType&gt;
+ *                                             &lt;complexContent&gt;
+ *                                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                                 &lt;choice&gt;
+ *                                                   &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}cg_param_type"/&gt;
+ *                                                   &lt;element name="param"&gt;
+ *                                                     &lt;complexType&gt;
+ *                                                       &lt;complexContent&gt;
+ *                                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                                           &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *                                                         &lt;/restriction&gt;
+ *                                                       &lt;/complexContent&gt;
+ *                                                     &lt;/complexType&gt;
+ *                                                   &lt;/element&gt;
+ *                                                 &lt;/choice&gt;
+ *                                                 &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *                                               &lt;/restriction&gt;
+ *                                             &lt;/complexContent&gt;
+ *                                           &lt;/complexType&gt;
+ *                                         &lt;/element&gt;
+ *                                       &lt;/sequence&gt;
+ *                                       &lt;attribute name="stage" type="{http://www.collada.org/2005/11/COLLADASchema}cg_pipeline_stage" /&gt;
+ *                                     &lt;/restriction&gt;
+ *                                   &lt;/complexContent&gt;
+ *                                 &lt;/complexType&gt;
+ *                               &lt;/element&gt;
+ *                             &lt;/choice&gt;
+ *                             &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                           &lt;/sequence&gt;
+ *                           &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+ *                 &lt;attribute name="sid" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+ *       &lt;attribute name="platform" type="{http://www.w3.org/2001/XMLSchema}NCName" default="PC" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -220,7 +220,7 @@ public class ProfileCG {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the codeOrInclude property.
+     * This is why there is not a {@code set} method for the codeOrInclude property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -250,7 +250,7 @@ public class ProfileCG {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the imageOrNewparam property.
+     * This is why there is not a {@code set} method for the imageOrNewparam property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -280,7 +280,7 @@ public class ProfileCG {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the technique property.
+     * This is why there is not a {@code set} method for the technique property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -309,7 +309,7 @@ public class ProfileCG {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the extra property.
+     * This is why there is not a {@code set} method for the extra property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -390,104 +390,104 @@ public class ProfileCG {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}asset" minOccurs="0"/>
-     *         &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/>
-     *         &lt;choice maxOccurs="unbounded" minOccurs="0">
-     *           &lt;element name="code" type="{http://www.collada.org/2005/11/COLLADASchema}fx_code_profile"/>
-     *           &lt;element name="include" type="{http://www.collada.org/2005/11/COLLADASchema}fx_include_common"/>
-     *         &lt;/choice>
-     *         &lt;choice maxOccurs="unbounded" minOccurs="0">
-     *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}image"/>
-     *           &lt;element name="newparam" type="{http://www.collada.org/2005/11/COLLADASchema}cg_newparam"/>
-     *           &lt;element name="setparam" type="{http://www.collada.org/2005/11/COLLADASchema}cg_setparam"/>
-     *         &lt;/choice>
-     *         &lt;element name="pass" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/>
-     *                   &lt;element name="color_target" type="{http://www.collada.org/2005/11/COLLADASchema}fx_colortarget_common" maxOccurs="unbounded" minOccurs="0"/>
-     *                   &lt;element name="depth_target" type="{http://www.collada.org/2005/11/COLLADASchema}fx_depthtarget_common" maxOccurs="unbounded" minOccurs="0"/>
-     *                   &lt;element name="stencil_target" type="{http://www.collada.org/2005/11/COLLADASchema}fx_stenciltarget_common" maxOccurs="unbounded" minOccurs="0"/>
-     *                   &lt;element name="color_clear" type="{http://www.collada.org/2005/11/COLLADASchema}fx_clearcolor_common" maxOccurs="unbounded" minOccurs="0"/>
-     *                   &lt;element name="depth_clear" type="{http://www.collada.org/2005/11/COLLADASchema}fx_cleardepth_common" maxOccurs="unbounded" minOccurs="0"/>
-     *                   &lt;element name="stencil_clear" type="{http://www.collada.org/2005/11/COLLADASchema}fx_clearstencil_common" maxOccurs="unbounded" minOccurs="0"/>
-     *                   &lt;element name="draw" type="{http://www.collada.org/2005/11/COLLADASchema}fx_draw_common" minOccurs="0"/>
-     *                   &lt;choice maxOccurs="unbounded">
-     *                     &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}gl_pipeline_settings"/>
-     *                     &lt;element name="shader">
-     *                       &lt;complexType>
-     *                         &lt;complexContent>
-     *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                             &lt;sequence>
-     *                               &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/>
-     *                               &lt;sequence minOccurs="0">
-     *                                 &lt;element name="compiler_target">
-     *                                   &lt;complexType>
-     *                                     &lt;simpleContent>
-     *                                       &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>NMTOKEN">
-     *                                       &lt;/extension>
-     *                                     &lt;/simpleContent>
-     *                                   &lt;/complexType>
-     *                                 &lt;/element>
-     *                                 &lt;element name="compiler_options" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *                               &lt;/sequence>
-     *                               &lt;element name="name">
-     *                                 &lt;complexType>
-     *                                   &lt;simpleContent>
-     *                                     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>NCName">
-     *                                       &lt;attribute name="source" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-     *                                     &lt;/extension>
-     *                                   &lt;/simpleContent>
-     *                                 &lt;/complexType>
-     *                               &lt;/element>
-     *                               &lt;element name="bind" maxOccurs="unbounded" minOccurs="0">
-     *                                 &lt;complexType>
-     *                                   &lt;complexContent>
-     *                                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                                       &lt;choice>
-     *                                         &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}cg_param_type"/>
-     *                                         &lt;element name="param">
-     *                                           &lt;complexType>
-     *                                             &lt;complexContent>
-     *                                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                                                 &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-     *                                               &lt;/restriction>
-     *                                             &lt;/complexContent>
-     *                                           &lt;/complexType>
-     *                                         &lt;/element>
-     *                                       &lt;/choice>
-     *                                       &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-     *                                     &lt;/restriction>
-     *                                   &lt;/complexContent>
-     *                                 &lt;/complexType>
-     *                               &lt;/element>
-     *                             &lt;/sequence>
-     *                             &lt;attribute name="stage" type="{http://www.collada.org/2005/11/COLLADASchema}cg_pipeline_stage" />
-     *                           &lt;/restriction>
-     *                         &lt;/complexContent>
-     *                       &lt;/complexType>
-     *                     &lt;/element>
-     *                   &lt;/choice>
-     *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
-     *                 &lt;/sequence>
-     *                 &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />
-     *       &lt;attribute name="sid" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}asset" minOccurs="0"/&gt;
+     *         &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+     *           &lt;element name="code" type="{http://www.collada.org/2005/11/COLLADASchema}fx_code_profile"/&gt;
+     *           &lt;element name="include" type="{http://www.collada.org/2005/11/COLLADASchema}fx_include_common"/&gt;
+     *         &lt;/choice&gt;
+     *         &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+     *           &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}image"/&gt;
+     *           &lt;element name="newparam" type="{http://www.collada.org/2005/11/COLLADASchema}cg_newparam"/&gt;
+     *           &lt;element name="setparam" type="{http://www.collada.org/2005/11/COLLADASchema}cg_setparam"/&gt;
+     *         &lt;/choice&gt;
+     *         &lt;element name="pass" maxOccurs="unbounded"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *                   &lt;element name="color_target" type="{http://www.collada.org/2005/11/COLLADASchema}fx_colortarget_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *                   &lt;element name="depth_target" type="{http://www.collada.org/2005/11/COLLADASchema}fx_depthtarget_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *                   &lt;element name="stencil_target" type="{http://www.collada.org/2005/11/COLLADASchema}fx_stenciltarget_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *                   &lt;element name="color_clear" type="{http://www.collada.org/2005/11/COLLADASchema}fx_clearcolor_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *                   &lt;element name="depth_clear" type="{http://www.collada.org/2005/11/COLLADASchema}fx_cleardepth_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *                   &lt;element name="stencil_clear" type="{http://www.collada.org/2005/11/COLLADASchema}fx_clearstencil_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *                   &lt;element name="draw" type="{http://www.collada.org/2005/11/COLLADASchema}fx_draw_common" minOccurs="0"/&gt;
+     *                   &lt;choice maxOccurs="unbounded"&gt;
+     *                     &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}gl_pipeline_settings"/&gt;
+     *                     &lt;element name="shader"&gt;
+     *                       &lt;complexType&gt;
+     *                         &lt;complexContent&gt;
+     *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                             &lt;sequence&gt;
+     *                               &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *                               &lt;sequence minOccurs="0"&gt;
+     *                                 &lt;element name="compiler_target"&gt;
+     *                                   &lt;complexType&gt;
+     *                                     &lt;simpleContent&gt;
+     *                                       &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;NMTOKEN"&gt;
+     *                                       &lt;/extension&gt;
+     *                                     &lt;/simpleContent&gt;
+     *                                   &lt;/complexType&gt;
+     *                                 &lt;/element&gt;
+     *                                 &lt;element name="compiler_options" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+     *                               &lt;/sequence&gt;
+     *                               &lt;element name="name"&gt;
+     *                                 &lt;complexType&gt;
+     *                                   &lt;simpleContent&gt;
+     *                                     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;NCName"&gt;
+     *                                       &lt;attribute name="source" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+     *                                     &lt;/extension&gt;
+     *                                   &lt;/simpleContent&gt;
+     *                                 &lt;/complexType&gt;
+     *                               &lt;/element&gt;
+     *                               &lt;element name="bind" maxOccurs="unbounded" minOccurs="0"&gt;
+     *                                 &lt;complexType&gt;
+     *                                   &lt;complexContent&gt;
+     *                                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                                       &lt;choice&gt;
+     *                                         &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}cg_param_type"/&gt;
+     *                                         &lt;element name="param"&gt;
+     *                                           &lt;complexType&gt;
+     *                                             &lt;complexContent&gt;
+     *                                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                                                 &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+     *                                               &lt;/restriction&gt;
+     *                                             &lt;/complexContent&gt;
+     *                                           &lt;/complexType&gt;
+     *                                         &lt;/element&gt;
+     *                                       &lt;/choice&gt;
+     *                                       &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+     *                                     &lt;/restriction&gt;
+     *                                   &lt;/complexContent&gt;
+     *                                 &lt;/complexType&gt;
+     *                               &lt;/element&gt;
+     *                             &lt;/sequence&gt;
+     *                             &lt;attribute name="stage" type="{http://www.collada.org/2005/11/COLLADASchema}cg_pipeline_stage" /&gt;
+     *                           &lt;/restriction&gt;
+     *                         &lt;/complexContent&gt;
+     *                       &lt;/complexType&gt;
+     *                     &lt;/element&gt;
+     *                   &lt;/choice&gt;
+     *                   &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *                 &lt;/sequence&gt;
+     *                 &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+     *       &lt;attribute name="sid" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -562,7 +562,7 @@ public class ProfileCG {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the annotate property.
+         * This is why there is not a {@code set} method for the annotate property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -591,7 +591,7 @@ public class ProfileCG {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the codeOrInclude property.
+         * This is why there is not a {@code set} method for the codeOrInclude property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -621,7 +621,7 @@ public class ProfileCG {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the imageOrNewparamOrSetparam property.
+         * This is why there is not a {@code set} method for the imageOrNewparamOrSetparam property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -652,7 +652,7 @@ public class ProfileCG {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the pass property.
+         * This is why there is not a {@code set} method for the pass property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -681,7 +681,7 @@ public class ProfileCG {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the extra property.
+         * This is why there is not a {@code set} method for the extra property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -758,80 +758,80 @@ public class ProfileCG {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/>
-         *         &lt;element name="color_target" type="{http://www.collada.org/2005/11/COLLADASchema}fx_colortarget_common" maxOccurs="unbounded" minOccurs="0"/>
-         *         &lt;element name="depth_target" type="{http://www.collada.org/2005/11/COLLADASchema}fx_depthtarget_common" maxOccurs="unbounded" minOccurs="0"/>
-         *         &lt;element name="stencil_target" type="{http://www.collada.org/2005/11/COLLADASchema}fx_stenciltarget_common" maxOccurs="unbounded" minOccurs="0"/>
-         *         &lt;element name="color_clear" type="{http://www.collada.org/2005/11/COLLADASchema}fx_clearcolor_common" maxOccurs="unbounded" minOccurs="0"/>
-         *         &lt;element name="depth_clear" type="{http://www.collada.org/2005/11/COLLADASchema}fx_cleardepth_common" maxOccurs="unbounded" minOccurs="0"/>
-         *         &lt;element name="stencil_clear" type="{http://www.collada.org/2005/11/COLLADASchema}fx_clearstencil_common" maxOccurs="unbounded" minOccurs="0"/>
-         *         &lt;element name="draw" type="{http://www.collada.org/2005/11/COLLADASchema}fx_draw_common" minOccurs="0"/>
-         *         &lt;choice maxOccurs="unbounded">
-         *           &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}gl_pipeline_settings"/>
-         *           &lt;element name="shader">
-         *             &lt;complexType>
-         *               &lt;complexContent>
-         *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                   &lt;sequence>
-         *                     &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/>
-         *                     &lt;sequence minOccurs="0">
-         *                       &lt;element name="compiler_target">
-         *                         &lt;complexType>
-         *                           &lt;simpleContent>
-         *                             &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>NMTOKEN">
-         *                             &lt;/extension>
-         *                           &lt;/simpleContent>
-         *                         &lt;/complexType>
-         *                       &lt;/element>
-         *                       &lt;element name="compiler_options" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-         *                     &lt;/sequence>
-         *                     &lt;element name="name">
-         *                       &lt;complexType>
-         *                         &lt;simpleContent>
-         *                           &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>NCName">
-         *                             &lt;attribute name="source" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *                           &lt;/extension>
-         *                         &lt;/simpleContent>
-         *                       &lt;/complexType>
-         *                     &lt;/element>
-         *                     &lt;element name="bind" maxOccurs="unbounded" minOccurs="0">
-         *                       &lt;complexType>
-         *                         &lt;complexContent>
-         *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                             &lt;choice>
-         *                               &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}cg_param_type"/>
-         *                               &lt;element name="param">
-         *                                 &lt;complexType>
-         *                                   &lt;complexContent>
-         *                                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                                       &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *                                     &lt;/restriction>
-         *                                   &lt;/complexContent>
-         *                                 &lt;/complexType>
-         *                               &lt;/element>
-         *                             &lt;/choice>
-         *                             &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *                           &lt;/restriction>
-         *                         &lt;/complexContent>
-         *                       &lt;/complexType>
-         *                     &lt;/element>
-         *                   &lt;/sequence>
-         *                   &lt;attribute name="stage" type="{http://www.collada.org/2005/11/COLLADASchema}cg_pipeline_stage" />
-         *                 &lt;/restriction>
-         *               &lt;/complexContent>
-         *             &lt;/complexType>
-         *           &lt;/element>
-         *         &lt;/choice>
-         *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/>
-         *       &lt;/sequence>
-         *       &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+         *         &lt;element name="color_target" type="{http://www.collada.org/2005/11/COLLADASchema}fx_colortarget_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+         *         &lt;element name="depth_target" type="{http://www.collada.org/2005/11/COLLADASchema}fx_depthtarget_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+         *         &lt;element name="stencil_target" type="{http://www.collada.org/2005/11/COLLADASchema}fx_stenciltarget_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+         *         &lt;element name="color_clear" type="{http://www.collada.org/2005/11/COLLADASchema}fx_clearcolor_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+         *         &lt;element name="depth_clear" type="{http://www.collada.org/2005/11/COLLADASchema}fx_cleardepth_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+         *         &lt;element name="stencil_clear" type="{http://www.collada.org/2005/11/COLLADASchema}fx_clearstencil_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+         *         &lt;element name="draw" type="{http://www.collada.org/2005/11/COLLADASchema}fx_draw_common" minOccurs="0"/&gt;
+         *         &lt;choice maxOccurs="unbounded"&gt;
+         *           &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}gl_pipeline_settings"/&gt;
+         *           &lt;element name="shader"&gt;
+         *             &lt;complexType&gt;
+         *               &lt;complexContent&gt;
+         *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                   &lt;sequence&gt;
+         *                     &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+         *                     &lt;sequence minOccurs="0"&gt;
+         *                       &lt;element name="compiler_target"&gt;
+         *                         &lt;complexType&gt;
+         *                           &lt;simpleContent&gt;
+         *                             &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;NMTOKEN"&gt;
+         *                             &lt;/extension&gt;
+         *                           &lt;/simpleContent&gt;
+         *                         &lt;/complexType&gt;
+         *                       &lt;/element&gt;
+         *                       &lt;element name="compiler_options" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+         *                     &lt;/sequence&gt;
+         *                     &lt;element name="name"&gt;
+         *                       &lt;complexType&gt;
+         *                         &lt;simpleContent&gt;
+         *                           &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;NCName"&gt;
+         *                             &lt;attribute name="source" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *                           &lt;/extension&gt;
+         *                         &lt;/simpleContent&gt;
+         *                       &lt;/complexType&gt;
+         *                     &lt;/element&gt;
+         *                     &lt;element name="bind" maxOccurs="unbounded" minOccurs="0"&gt;
+         *                       &lt;complexType&gt;
+         *                         &lt;complexContent&gt;
+         *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                             &lt;choice&gt;
+         *                               &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}cg_param_type"/&gt;
+         *                               &lt;element name="param"&gt;
+         *                                 &lt;complexType&gt;
+         *                                   &lt;complexContent&gt;
+         *                                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                                       &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *                                     &lt;/restriction&gt;
+         *                                   &lt;/complexContent&gt;
+         *                                 &lt;/complexType&gt;
+         *                               &lt;/element&gt;
+         *                             &lt;/choice&gt;
+         *                             &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *                           &lt;/restriction&gt;
+         *                         &lt;/complexContent&gt;
+         *                       &lt;/complexType&gt;
+         *                     &lt;/element&gt;
+         *                   &lt;/sequence&gt;
+         *                   &lt;attribute name="stage" type="{http://www.collada.org/2005/11/COLLADASchema}cg_pipeline_stage" /&gt;
+         *                 &lt;/restriction&gt;
+         *               &lt;/complexContent&gt;
+         *             &lt;/complexType&gt;
+         *           &lt;/element&gt;
+         *         &lt;/choice&gt;
+         *         &lt;element ref="{http://www.collada.org/2005/11/COLLADASchema}extra" maxOccurs="unbounded" minOccurs="0"/&gt;
+         *       &lt;/sequence&gt;
+         *       &lt;attribute name="sid" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -991,7 +991,7 @@ public class ProfileCG {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the annotate property.
+             * This is why there is not a {@code set} method for the annotate property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -1020,7 +1020,7 @@ public class ProfileCG {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the colorTarget property.
+             * This is why there is not a {@code set} method for the colorTarget property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -1049,7 +1049,7 @@ public class ProfileCG {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the depthTarget property.
+             * This is why there is not a {@code set} method for the depthTarget property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -1078,7 +1078,7 @@ public class ProfileCG {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the stencilTarget property.
+             * This is why there is not a {@code set} method for the stencilTarget property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -1107,7 +1107,7 @@ public class ProfileCG {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the colorClear property.
+             * This is why there is not a {@code set} method for the colorClear property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -1136,7 +1136,7 @@ public class ProfileCG {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the depthClear property.
+             * This is why there is not a {@code set} method for the depthClear property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -1165,7 +1165,7 @@ public class ProfileCG {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the stencilClear property.
+             * This is why there is not a {@code set} method for the stencilClear property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -1218,7 +1218,7 @@ public class ProfileCG {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the alphaFuncOrBlendFuncOrBlendFuncSeparate property.
+             * This is why there is not a {@code set} method for the alphaFuncOrBlendFuncOrBlendFuncSeparate property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -1356,7 +1356,7 @@ public class ProfileCG {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the extra property.
+             * This is why there is not a {@code set} method for the extra property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
@@ -1409,34 +1409,34 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="func">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_func_type" default="ALWAYS" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="value">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_alpha_value_type" default="0.0" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="func"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_func_type" default="ALWAYS" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="value"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_alpha_value_type" default="0.0" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -1508,14 +1508,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_func_type" default="ALWAYS" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_func_type" default="ALWAYS" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -1592,14 +1592,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_alpha_value_type" default="0.0" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_alpha_value_type" default="0.0" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -1678,14 +1678,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -1762,14 +1762,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -1846,14 +1846,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 0 0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 0 0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -1876,7 +1876,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -1931,14 +1931,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -2015,14 +2015,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_equation_type" default="FUNC_ADD" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_equation_type" default="FUNC_ADD" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -2099,34 +2099,34 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="rgb">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_equation_type" default="FUNC_ADD" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="alpha">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_equation_type" default="FUNC_ADD" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="rgb"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_equation_type" default="FUNC_ADD" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="alpha"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_equation_type" default="FUNC_ADD" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -2198,14 +2198,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_equation_type" default="FUNC_ADD" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_equation_type" default="FUNC_ADD" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -2282,14 +2282,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_equation_type" default="FUNC_ADD" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_equation_type" default="FUNC_ADD" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -2368,34 +2368,34 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="src">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ONE" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="dest">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ZERO" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="src"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ONE" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="dest"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ZERO" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -2467,14 +2467,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ZERO" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ZERO" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -2551,14 +2551,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ONE" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ONE" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -2637,54 +2637,54 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="src_rgb">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ONE" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="dest_rgb">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ZERO" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="src_alpha">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ONE" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="dest_alpha">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ZERO" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="src_rgb"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ONE" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="dest_rgb"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ZERO" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="src_alpha"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ONE" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="dest_alpha"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ZERO" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -2810,14 +2810,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ZERO" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ZERO" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -2894,14 +2894,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ZERO" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ZERO" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -2978,14 +2978,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ONE" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ONE" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -3062,14 +3062,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ONE" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_blend_type" default="ONE" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -3148,14 +3148,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 0 0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 0 0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -3178,7 +3178,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3233,14 +3233,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="1" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="1" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -3317,14 +3317,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}int" default="0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}int" default="0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -3401,15 +3401,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 0 0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_CLIP_PLANES_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 0 0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_CLIP_PLANES_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -3434,7 +3434,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3513,15 +3513,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_CLIP_PLANES_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_CLIP_PLANES_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -3624,14 +3624,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -3708,14 +3708,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool4" default="true true true true" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool4" default="true true true true" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -3738,7 +3738,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -3793,34 +3793,34 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="face">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_face_type" default="FRONT_AND_BACK" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="mode">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_material_type" default="AMBIENT_AND_DIFFUSE" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="face"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_face_type" default="FRONT_AND_BACK" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="mode"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_material_type" default="AMBIENT_AND_DIFFUSE" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -3892,14 +3892,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_face_type" default="FRONT_AND_BACK" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_face_type" default="FRONT_AND_BACK" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -3976,14 +3976,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_material_type" default="AMBIENT_AND_DIFFUSE" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_material_type" default="AMBIENT_AND_DIFFUSE" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -4062,14 +4062,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="true" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="true" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -4146,14 +4146,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_face_type" default="BACK" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_face_type" default="BACK" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -4230,14 +4230,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -4314,14 +4314,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float2" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float2" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -4344,7 +4344,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -4399,14 +4399,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -4483,14 +4483,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -4567,14 +4567,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_func_type" default="ALWAYS" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_func_type" default="ALWAYS" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -4651,14 +4651,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="true" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="true" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -4735,14 +4735,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float2" default="0 1" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float2" default="0 1" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -4765,7 +4765,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -4820,14 +4820,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -4904,14 +4904,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="true" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="true" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -4988,14 +4988,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 0 0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 0 0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -5018,7 +5018,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -5073,14 +5073,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_fog_coord_src_type" default="FOG_COORDINATE" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_fog_coord_src_type" default="FOG_COORDINATE" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -5157,14 +5157,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="1" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="1" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -5241,14 +5241,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -5325,14 +5325,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="1" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="1" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -5409,14 +5409,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_fog_type" default="EXP" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_fog_type" default="EXP" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -5493,14 +5493,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -5577,14 +5577,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_front_face_type" default="CCW" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_front_face_type" default="CCW" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -5661,15 +5661,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 0 1" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 0 1" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -5694,7 +5694,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -5773,15 +5773,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="1" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="1" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -5884,15 +5884,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 0 0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 0 0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -5917,7 +5917,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -5996,15 +5996,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -6107,14 +6107,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -6191,15 +6191,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -6302,14 +6302,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0.2 0.2 0.2 1.0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0.2 0.2 0.2 1.0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -6332,7 +6332,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -6387,14 +6387,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_light_model_color_control_type" default="SINGLE_COLOR" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_light_model_color_control_type" default="SINGLE_COLOR" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -6471,14 +6471,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -6555,14 +6555,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -6639,15 +6639,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 1 0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 1 0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -6672,7 +6672,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -6751,15 +6751,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -6862,15 +6862,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 0 0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 0 0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -6895,7 +6895,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -6974,15 +6974,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="180" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="180" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -7085,15 +7085,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float3" default="0 0 -1" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float3" default="0 0 -1" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -7118,7 +7118,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -7197,15 +7197,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_LIGHTS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -7308,14 +7308,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -7392,14 +7392,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}int2" default="1 65536" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}int2" default="1 65536" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -7422,7 +7422,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -7477,14 +7477,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -7561,14 +7561,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="1" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="1" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -7645,14 +7645,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_logic_op_type" default="COPY" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_logic_op_type" default="COPY" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -7729,14 +7729,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -7813,14 +7813,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0.2 0.2 0.2 1.0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0.2 0.2 0.2 1.0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -7843,7 +7843,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -7898,14 +7898,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0.8 0.8 0.8 1.0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0.8 0.8 0.8 1.0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -7928,7 +7928,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -7983,14 +7983,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 0 1" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 0 1" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -8013,7 +8013,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -8068,14 +8068,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -8152,14 +8152,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 0 1" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" default="0 0 0 1" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -8182,7 +8182,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -8237,14 +8237,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4x4" default="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4x4" default="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -8267,7 +8267,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -8322,14 +8322,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -8406,14 +8406,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -8490,14 +8490,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float3" default="1 0 0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float3" default="1 0 0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -8520,7 +8520,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -8575,14 +8575,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="1" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="1" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -8659,14 +8659,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="1" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="1" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -8743,14 +8743,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="1" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="1" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -8827,14 +8827,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float" default="0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -8911,14 +8911,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -8995,34 +8995,34 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="face">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_face_type" default="FRONT_AND_BACK" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="mode">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_polygon_mode_type" default="FILL" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="face"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_face_type" default="FRONT_AND_BACK" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="mode"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_polygon_mode_type" default="FILL" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -9094,14 +9094,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_face_type" default="FRONT_AND_BACK" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_face_type" default="FRONT_AND_BACK" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -9178,14 +9178,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_polygon_mode_type" default="FILL" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_polygon_mode_type" default="FILL" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -9264,14 +9264,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float2" default="0 0" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float2" default="0 0" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -9294,7 +9294,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -9349,14 +9349,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -9433,14 +9433,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -9517,14 +9517,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -9601,14 +9601,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -9685,14 +9685,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -9769,14 +9769,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4x4" default="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4x4" default="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -9799,7 +9799,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -9854,14 +9854,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -9938,14 +9938,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -10022,14 +10022,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -10106,14 +10106,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -10190,14 +10190,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}int4" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}int4" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -10220,7 +10220,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -10275,14 +10275,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -10359,14 +10359,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_shade_model_type" default="SMOOTH" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_shade_model_type" default="SMOOTH" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -10443,57 +10443,57 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/>
-             *         &lt;sequence minOccurs="0">
-             *           &lt;element name="compiler_target">
-             *             &lt;complexType>
-             *               &lt;simpleContent>
-             *                 &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>NMTOKEN">
-             *                 &lt;/extension>
-             *               &lt;/simpleContent>
-             *             &lt;/complexType>
-             *           &lt;/element>
-             *           &lt;element name="compiler_options" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-             *         &lt;/sequence>
-             *         &lt;element name="name">
-             *           &lt;complexType>
-             *             &lt;simpleContent>
-             *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>NCName">
-             *                 &lt;attribute name="source" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/extension>
-             *             &lt;/simpleContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="bind" maxOccurs="unbounded" minOccurs="0">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;choice>
-             *                   &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}cg_param_type"/>
-             *                   &lt;element name="param">
-             *                     &lt;complexType>
-             *                       &lt;complexContent>
-             *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                           &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *                         &lt;/restriction>
-             *                       &lt;/complexContent>
-             *                     &lt;/complexType>
-             *                   &lt;/element>
-             *                 &lt;/choice>
-             *                 &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *       &lt;/sequence>
-             *       &lt;attribute name="stage" type="{http://www.collada.org/2005/11/COLLADASchema}cg_pipeline_stage" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="annotate" type="{http://www.collada.org/2005/11/COLLADASchema}fx_annotate_common" maxOccurs="unbounded" minOccurs="0"/&gt;
+             *         &lt;sequence minOccurs="0"&gt;
+             *           &lt;element name="compiler_target"&gt;
+             *             &lt;complexType&gt;
+             *               &lt;simpleContent&gt;
+             *                 &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;NMTOKEN"&gt;
+             *                 &lt;/extension&gt;
+             *               &lt;/simpleContent&gt;
+             *             &lt;/complexType&gt;
+             *           &lt;/element&gt;
+             *           &lt;element name="compiler_options" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+             *         &lt;/sequence&gt;
+             *         &lt;element name="name"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;simpleContent&gt;
+             *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;NCName"&gt;
+             *                 &lt;attribute name="source" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/extension&gt;
+             *             &lt;/simpleContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="bind" maxOccurs="unbounded" minOccurs="0"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;choice&gt;
+             *                   &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}cg_param_type"/&gt;
+             *                   &lt;element name="param"&gt;
+             *                     &lt;complexType&gt;
+             *                       &lt;complexContent&gt;
+             *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                           &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *                         &lt;/restriction&gt;
+             *                       &lt;/complexContent&gt;
+             *                     &lt;/complexType&gt;
+             *                   &lt;/element&gt;
+             *                 &lt;/choice&gt;
+             *                 &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *       &lt;/sequence&gt;
+             *       &lt;attribute name="stage" type="{http://www.collada.org/2005/11/COLLADASchema}cg_pipeline_stage" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -10526,7 +10526,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the annotate property.
+                 * This is why there is not a {@code set} method for the annotate property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -10627,7 +10627,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the bind property.
+                 * This is why there is not a {@code set} method for the bind property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -10680,25 +10680,25 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;choice>
-                 *         &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}cg_param_type"/>
-                 *         &lt;element name="param">
-                 *           &lt;complexType>
-                 *             &lt;complexContent>
-                 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *                 &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *               &lt;/restriction>
-                 *             &lt;/complexContent>
-                 *           &lt;/complexType>
-                 *         &lt;/element>
-                 *       &lt;/choice>
-                 *       &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;choice&gt;
+                 *         &lt;group ref="{http://www.collada.org/2005/11/COLLADASchema}cg_param_type"/&gt;
+                 *         &lt;element name="param"&gt;
+                 *           &lt;complexType&gt;
+                 *             &lt;complexContent&gt;
+                 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *                 &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *               &lt;/restriction&gt;
+                 *             &lt;/complexContent&gt;
+                 *           &lt;/complexType&gt;
+                 *         &lt;/element&gt;
+                 *       &lt;/choice&gt;
+                 *       &lt;attribute name="symbol" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -11287,7 +11287,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the bool2 property.
+                     * This is why there is not a {@code set} method for the bool2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11316,7 +11316,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the bool3 property.
+                     * This is why there is not a {@code set} method for the bool3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11345,7 +11345,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the bool4 property.
+                     * This is why there is not a {@code set} method for the bool4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11374,7 +11374,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the bool1X1 property.
+                     * This is why there is not a {@code set} method for the bool1X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11403,7 +11403,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the bool1X2 property.
+                     * This is why there is not a {@code set} method for the bool1X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11432,7 +11432,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the bool1X3 property.
+                     * This is why there is not a {@code set} method for the bool1X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11461,7 +11461,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the bool1X4 property.
+                     * This is why there is not a {@code set} method for the bool1X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11490,7 +11490,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the bool2X1 property.
+                     * This is why there is not a {@code set} method for the bool2X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11519,7 +11519,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the bool2X2 property.
+                     * This is why there is not a {@code set} method for the bool2X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11548,7 +11548,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the bool2X3 property.
+                     * This is why there is not a {@code set} method for the bool2X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11577,7 +11577,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the bool2X4 property.
+                     * This is why there is not a {@code set} method for the bool2X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11606,7 +11606,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the bool3X1 property.
+                     * This is why there is not a {@code set} method for the bool3X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11635,7 +11635,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the bool3X2 property.
+                     * This is why there is not a {@code set} method for the bool3X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11664,7 +11664,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the bool3X3 property.
+                     * This is why there is not a {@code set} method for the bool3X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11693,7 +11693,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the bool3X4 property.
+                     * This is why there is not a {@code set} method for the bool3X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11722,7 +11722,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the bool4X1 property.
+                     * This is why there is not a {@code set} method for the bool4X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11751,7 +11751,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the bool4X2 property.
+                     * This is why there is not a {@code set} method for the bool4X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11780,7 +11780,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the bool4X3 property.
+                     * This is why there is not a {@code set} method for the bool4X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11809,7 +11809,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the bool4X4 property.
+                     * This is why there is not a {@code set} method for the bool4X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11886,7 +11886,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the float2 property.
+                     * This is why there is not a {@code set} method for the float2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11915,7 +11915,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the float3 property.
+                     * This is why there is not a {@code set} method for the float3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11944,7 +11944,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the float4 property.
+                     * This is why there is not a {@code set} method for the float4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -11973,7 +11973,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the float1X1 property.
+                     * This is why there is not a {@code set} method for the float1X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12002,7 +12002,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the float1X2 property.
+                     * This is why there is not a {@code set} method for the float1X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12031,7 +12031,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the float1X3 property.
+                     * This is why there is not a {@code set} method for the float1X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12060,7 +12060,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the float1X4 property.
+                     * This is why there is not a {@code set} method for the float1X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12089,7 +12089,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the float2X1 property.
+                     * This is why there is not a {@code set} method for the float2X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12118,7 +12118,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the float2X2 property.
+                     * This is why there is not a {@code set} method for the float2X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12147,7 +12147,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the float2X3 property.
+                     * This is why there is not a {@code set} method for the float2X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12176,7 +12176,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the float2X4 property.
+                     * This is why there is not a {@code set} method for the float2X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12205,7 +12205,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the float3X1 property.
+                     * This is why there is not a {@code set} method for the float3X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12234,7 +12234,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the float3X2 property.
+                     * This is why there is not a {@code set} method for the float3X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12263,7 +12263,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the float3X3 property.
+                     * This is why there is not a {@code set} method for the float3X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12292,7 +12292,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the float3X4 property.
+                     * This is why there is not a {@code set} method for the float3X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12321,7 +12321,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the float4X1 property.
+                     * This is why there is not a {@code set} method for the float4X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12350,7 +12350,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the float4X2 property.
+                     * This is why there is not a {@code set} method for the float4X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12379,7 +12379,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the float4X3 property.
+                     * This is why there is not a {@code set} method for the float4X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12408,7 +12408,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the float4X4 property.
+                     * This is why there is not a {@code set} method for the float4X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12485,7 +12485,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the int2 property.
+                     * This is why there is not a {@code set} method for the int2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12514,7 +12514,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the int3 property.
+                     * This is why there is not a {@code set} method for the int3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12543,7 +12543,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the int4 property.
+                     * This is why there is not a {@code set} method for the int4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12572,7 +12572,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the int1X1 property.
+                     * This is why there is not a {@code set} method for the int1X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12601,7 +12601,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the int1X2 property.
+                     * This is why there is not a {@code set} method for the int1X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12630,7 +12630,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the int1X3 property.
+                     * This is why there is not a {@code set} method for the int1X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12659,7 +12659,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the int1X4 property.
+                     * This is why there is not a {@code set} method for the int1X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12688,7 +12688,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the int2X1 property.
+                     * This is why there is not a {@code set} method for the int2X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12717,7 +12717,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the int2X2 property.
+                     * This is why there is not a {@code set} method for the int2X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12746,7 +12746,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the int2X3 property.
+                     * This is why there is not a {@code set} method for the int2X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12775,7 +12775,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the int2X4 property.
+                     * This is why there is not a {@code set} method for the int2X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12804,7 +12804,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the int3X1 property.
+                     * This is why there is not a {@code set} method for the int3X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12833,7 +12833,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the int3X2 property.
+                     * This is why there is not a {@code set} method for the int3X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12862,7 +12862,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the int3X3 property.
+                     * This is why there is not a {@code set} method for the int3X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12891,7 +12891,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the int3X4 property.
+                     * This is why there is not a {@code set} method for the int3X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12920,7 +12920,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the int4X1 property.
+                     * This is why there is not a {@code set} method for the int4X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12949,7 +12949,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the int4X2 property.
+                     * This is why there is not a {@code set} method for the int4X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -12978,7 +12978,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the int4X3 property.
+                     * This is why there is not a {@code set} method for the int4X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13007,7 +13007,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the int4X4 property.
+                     * This is why there is not a {@code set} method for the int4X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13084,7 +13084,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the half2 property.
+                     * This is why there is not a {@code set} method for the half2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13113,7 +13113,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the half3 property.
+                     * This is why there is not a {@code set} method for the half3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13142,7 +13142,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the half4 property.
+                     * This is why there is not a {@code set} method for the half4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13171,7 +13171,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the half1X1 property.
+                     * This is why there is not a {@code set} method for the half1X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13200,7 +13200,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the half1X2 property.
+                     * This is why there is not a {@code set} method for the half1X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13229,7 +13229,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the half1X3 property.
+                     * This is why there is not a {@code set} method for the half1X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13258,7 +13258,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the half1X4 property.
+                     * This is why there is not a {@code set} method for the half1X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13287,7 +13287,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the half2X1 property.
+                     * This is why there is not a {@code set} method for the half2X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13316,7 +13316,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the half2X2 property.
+                     * This is why there is not a {@code set} method for the half2X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13345,7 +13345,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the half2X3 property.
+                     * This is why there is not a {@code set} method for the half2X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13374,7 +13374,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the half2X4 property.
+                     * This is why there is not a {@code set} method for the half2X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13403,7 +13403,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the half3X1 property.
+                     * This is why there is not a {@code set} method for the half3X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13432,7 +13432,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the half3X2 property.
+                     * This is why there is not a {@code set} method for the half3X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13461,7 +13461,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the half3X3 property.
+                     * This is why there is not a {@code set} method for the half3X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13490,7 +13490,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the half3X4 property.
+                     * This is why there is not a {@code set} method for the half3X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13519,7 +13519,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the half4X1 property.
+                     * This is why there is not a {@code set} method for the half4X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13548,7 +13548,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the half4X2 property.
+                     * This is why there is not a {@code set} method for the half4X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13577,7 +13577,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the half4X3 property.
+                     * This is why there is not a {@code set} method for the half4X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13606,7 +13606,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the half4X4 property.
+                     * This is why there is not a {@code set} method for the half4X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13683,7 +13683,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the fixed2 property.
+                     * This is why there is not a {@code set} method for the fixed2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13712,7 +13712,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the fixed3 property.
+                     * This is why there is not a {@code set} method for the fixed3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13741,7 +13741,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the fixed4 property.
+                     * This is why there is not a {@code set} method for the fixed4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13770,7 +13770,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the fixed1X1 property.
+                     * This is why there is not a {@code set} method for the fixed1X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13799,7 +13799,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the fixed1X2 property.
+                     * This is why there is not a {@code set} method for the fixed1X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13828,7 +13828,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the fixed1X3 property.
+                     * This is why there is not a {@code set} method for the fixed1X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13857,7 +13857,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the fixed1X4 property.
+                     * This is why there is not a {@code set} method for the fixed1X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13886,7 +13886,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the fixed2X1 property.
+                     * This is why there is not a {@code set} method for the fixed2X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13915,7 +13915,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the fixed2X2 property.
+                     * This is why there is not a {@code set} method for the fixed2X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13944,7 +13944,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the fixed2X3 property.
+                     * This is why there is not a {@code set} method for the fixed2X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -13973,7 +13973,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the fixed2X4 property.
+                     * This is why there is not a {@code set} method for the fixed2X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -14002,7 +14002,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the fixed3X1 property.
+                     * This is why there is not a {@code set} method for the fixed3X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -14031,7 +14031,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the fixed3X2 property.
+                     * This is why there is not a {@code set} method for the fixed3X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -14060,7 +14060,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the fixed3X3 property.
+                     * This is why there is not a {@code set} method for the fixed3X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -14089,7 +14089,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the fixed3X4 property.
+                     * This is why there is not a {@code set} method for the fixed3X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -14118,7 +14118,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the fixed4X1 property.
+                     * This is why there is not a {@code set} method for the fixed4X1 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -14147,7 +14147,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the fixed4X2 property.
+                     * This is why there is not a {@code set} method for the fixed4X2 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -14176,7 +14176,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the fixed4X3 property.
+                     * This is why there is not a {@code set} method for the fixed4X3 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -14205,7 +14205,7 @@ public class ProfileCG {
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the fixed4X4 property.
+                     * This is why there is not a {@code set} method for the fixed4X4 property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
@@ -14498,13 +14498,13 @@ public class ProfileCG {
                      * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
-                     * &lt;complexType>
-                     *   &lt;complexContent>
-                     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                     *       &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                     *     &lt;/restriction>
-                     *   &lt;/complexContent>
-                     * &lt;/complexType>
+                     * &lt;complexType&gt;
+                     *   &lt;complexContent&gt;
+                     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                     *       &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                     *     &lt;/restriction&gt;
+                     *   &lt;/complexContent&gt;
+                     * &lt;/complexType&gt;
                      * </pre>
                      * 
                      * 
@@ -14553,12 +14553,12 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;simpleContent>
-                 *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>NMTOKEN">
-                 *     &lt;/extension>
-                 *   &lt;/simpleContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;simpleContent&gt;
+                 *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;NMTOKEN"&gt;
+                 *     &lt;/extension&gt;
+                 *   &lt;/simpleContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -14607,13 +14607,13 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;simpleContent>
-                 *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>NCName">
-                 *       &lt;attribute name="source" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/extension>
-                 *   &lt;/simpleContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;simpleContent&gt;
+                 *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;NCName"&gt;
+                 *       &lt;attribute name="source" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/extension&gt;
+                 *   &lt;/simpleContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -14692,44 +14692,44 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="func">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_func_type" default="ALWAYS" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="ref">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="0" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="mask">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="func"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_func_type" default="ALWAYS" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="ref"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="0" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="mask"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -14828,14 +14828,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_func_type" default="ALWAYS" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_func_type" default="ALWAYS" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -14912,14 +14912,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -14997,14 +14997,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="0" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="0" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -15084,54 +15084,54 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="front">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_func_type" default="ALWAYS" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="back">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_func_type" default="ALWAYS" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="ref">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="0" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="mask">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="front"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_func_type" default="ALWAYS" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="back"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_func_type" default="ALWAYS" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="ref"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="0" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="mask"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -15257,14 +15257,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_func_type" default="ALWAYS" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_func_type" default="ALWAYS" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -15341,14 +15341,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_func_type" default="ALWAYS" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_func_type" default="ALWAYS" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -15425,14 +15425,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -15510,14 +15510,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="0" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="0" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -15597,14 +15597,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}int" default="4294967295" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}int" default="4294967295" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -15681,34 +15681,34 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="face">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_face_type" default="FRONT_AND_BACK" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="mask">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="face"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_face_type" default="FRONT_AND_BACK" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="mask"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -15780,14 +15780,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_face_type" default="FRONT_AND_BACK" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_face_type" default="FRONT_AND_BACK" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -15864,14 +15864,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" default="255" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -15951,44 +15951,44 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="fail">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="zfail">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="zpass">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="fail"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="zfail"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="zpass"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -16087,14 +16087,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -16171,14 +16171,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -16255,14 +16255,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -16341,54 +16341,54 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="face">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_face_type" default="FRONT_AND_BACK" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="fail">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="zfail">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="zpass">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" />
-             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="face"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_face_type" default="FRONT_AND_BACK" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="fail"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="zfail"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="zpass"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" /&gt;
+             *                 &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -16514,14 +16514,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_face_type" default="FRONT_AND_BACK" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_face_type" default="FRONT_AND_BACK" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -16598,14 +16598,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -16682,14 +16682,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -16766,14 +16766,14 @@ public class ProfileCG {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" />
-                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_stencil_op_type" default="KEEP" /&gt;
+                 *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -16852,14 +16852,14 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -16936,17 +16936,17 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;choice>
-             *         &lt;element name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_sampler1D"/>
-             *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/>
-             *       &lt;/choice>
-             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;choice&gt;
+             *         &lt;element name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_sampler1D"/&gt;
+             *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/&gt;
+             *       &lt;/choice&gt;
+             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -17046,15 +17046,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -17157,17 +17157,17 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;choice>
-             *         &lt;element name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_sampler2D"/>
-             *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/>
-             *       &lt;/choice>
-             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;choice&gt;
+             *         &lt;element name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_sampler2D"/&gt;
+             *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/&gt;
+             *       &lt;/choice&gt;
+             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -17267,15 +17267,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -17378,17 +17378,17 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;choice>
-             *         &lt;element name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_sampler3D"/>
-             *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/>
-             *       &lt;/choice>
-             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;choice&gt;
+             *         &lt;element name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_sampler3D"/&gt;
+             *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/&gt;
+             *       &lt;/choice&gt;
+             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -17488,15 +17488,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -17599,17 +17599,17 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;choice>
-             *         &lt;element name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_samplerCUBE"/>
-             *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/>
-             *       &lt;/choice>
-             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;choice&gt;
+             *         &lt;element name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_samplerCUBE"/&gt;
+             *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/&gt;
+             *       &lt;/choice&gt;
+             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -17709,15 +17709,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -17820,17 +17820,17 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;choice>
-             *         &lt;element name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_samplerDEPTH"/>
-             *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/>
-             *       &lt;/choice>
-             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;choice&gt;
+             *         &lt;element name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_samplerDEPTH"/&gt;
+             *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/&gt;
+             *       &lt;/choice&gt;
+             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -17930,15 +17930,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -18041,15 +18041,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}float4" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -18074,7 +18074,7 @@ public class ProfileCG {
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the value property.
+                 * This is why there is not a {@code set} method for the value property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
@@ -18153,15 +18153,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}string" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}string" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -18260,17 +18260,17 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;choice>
-             *         &lt;element name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_samplerRECT"/>
-             *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/>
-             *       &lt;/choice>
-             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;choice&gt;
+             *         &lt;element name="value" type="{http://www.collada.org/2005/11/COLLADASchema}gl_samplerRECT"/&gt;
+             *         &lt;element name="param" type="{http://www.w3.org/2001/XMLSchema}NCName"/&gt;
+             *       &lt;/choice&gt;
+             *       &lt;attribute name="index" use="required" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -18370,15 +18370,15 @@ public class ProfileCG {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" />
-             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" />
-             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="value" type="{http://www.collada.org/2005/11/COLLADASchema}bool" default="false" /&gt;
+             *       &lt;attribute name="param" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+             *       &lt;attribute name="index" type="{http://www.collada.org/2005/11/COLLADASchema}GL_MAX_TEXTURE_IMAGE_UNITS_index" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 

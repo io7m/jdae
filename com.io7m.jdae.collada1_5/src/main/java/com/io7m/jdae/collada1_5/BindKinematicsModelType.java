@@ -23,13 +23,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="bind_kinematics_model_type">
- *   &lt;complexContent>
- *     &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}common_sidref_or_param_type">
- *       &lt;attribute name="node" type="{http://www.w3.org/2001/XMLSchema}token" />
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="bind_kinematics_model_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.collada.org/2008/03/COLLADASchema}common_sidref_or_param_type"&gt;
+ *       &lt;attribute name="node" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

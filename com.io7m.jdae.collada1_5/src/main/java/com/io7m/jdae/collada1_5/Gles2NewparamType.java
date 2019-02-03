@@ -34,19 +34,19 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="gles2_newparam_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="annotate" type="{http://www.collada.org/2008/03/COLLADASchema}fx_annotate_type" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="semantic" type="{http://www.w3.org/2001/XMLSchema}NCName" minOccurs="0"/>
- *         &lt;element name="modifier" type="{http://www.collada.org/2008/03/COLLADASchema}fx_modifier_enum" minOccurs="0"/>
- *         &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}gles2_value_group"/>
- *       &lt;/sequence>
- *       &lt;attribute name="sid" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}sid_type" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="gles2_newparam_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="annotate" type="{http://www.collada.org/2008/03/COLLADASchema}fx_annotate_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="semantic" type="{http://www.w3.org/2001/XMLSchema}NCName" minOccurs="0"/&gt;
+ *         &lt;element name="modifier" type="{http://www.collada.org/2008/03/COLLADASchema}fx_modifier_enum" minOccurs="0"/&gt;
+ *         &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}gles2_value_group"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="sid" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}sid_type" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -163,7 +163,7 @@ public class Gles2NewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the annotate property.
+     * This is why there is not a {@code set} method for the annotate property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -264,7 +264,7 @@ public class Gles2NewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the bvec2 property.
+     * This is why there is not a {@code set} method for the bvec2 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -293,7 +293,7 @@ public class Gles2NewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the bvec3 property.
+     * This is why there is not a {@code set} method for the bvec3 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -322,7 +322,7 @@ public class Gles2NewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the bvec4 property.
+     * This is why there is not a {@code set} method for the bvec4 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -375,7 +375,7 @@ public class Gles2NewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the vec2 property.
+     * This is why there is not a {@code set} method for the vec2 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -404,7 +404,7 @@ public class Gles2NewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the vec3 property.
+     * This is why there is not a {@code set} method for the vec3 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -433,7 +433,7 @@ public class Gles2NewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the vec4 property.
+     * This is why there is not a {@code set} method for the vec4 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -462,7 +462,7 @@ public class Gles2NewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the mat2 property.
+     * This is why there is not a {@code set} method for the mat2 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -491,7 +491,7 @@ public class Gles2NewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the mat3 property.
+     * This is why there is not a {@code set} method for the mat3 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -520,7 +520,7 @@ public class Gles2NewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the mat4 property.
+     * This is why there is not a {@code set} method for the mat4 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -573,7 +573,7 @@ public class Gles2NewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the ivec2 property.
+     * This is why there is not a {@code set} method for the ivec2 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -602,7 +602,7 @@ public class Gles2NewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the ivec3 property.
+     * This is why there is not a {@code set} method for the ivec3 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -631,7 +631,7 @@ public class Gles2NewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the ivec4 property.
+     * This is why there is not a {@code set} method for the ivec4 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -852,16 +852,16 @@ public class Gles2NewparamType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}gles2_value_group" maxOccurs="unbounded"/>
-     *       &lt;/sequence>
-     *       &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}gles2_value_group" maxOccurs="unbounded"/&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="length" use="required" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -908,7 +908,7 @@ public class Gles2NewparamType {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the gles2ValueGroup property.
+         * This is why there is not a {@code set} method for the gles2ValueGroup property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -936,7 +936,7 @@ public class Gles2NewparamType {
          * {@link JAXBElement }{@code <}{@link FxSamplerDEPTHType }{@code >}
          * {@link JAXBElement }{@code <}{@link List }{@code <}{@link Long }{@code >}{@code >}
          * {@link JAXBElement }{@code <}{@link Double }{@code >}
-         * {@link JAXBElement }{@code <}{@link Gles2NewparamType.Array }{@code >}
+         * {@link JAXBElement }{@code <} {@code >}
          * {@link JAXBElement }{@code <}{@link List }{@code <}{@link Double }{@code >}{@code >}
          * {@link JAXBElement }{@code <}{@link FxSampler3DType }{@code >}
          * {@link JAXBElement }{@code <}{@link Long }{@code >}
@@ -984,27 +984,27 @@ public class Gles2NewparamType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="setparam" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}gles2_value_group" maxOccurs="unbounded" minOccurs="0"/>
-     *                 &lt;/sequence>
-     *                 &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *       &lt;attribute name="typename" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="setparam" maxOccurs="unbounded" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}gles2_value_group" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *                 &lt;/sequence&gt;
+     *                 &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="typename" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1028,7 +1028,7 @@ public class Gles2NewparamType {
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the setparam property.
+         * This is why there is not a {@code set} method for the setparam property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
@@ -1081,16 +1081,16 @@ public class Gles2NewparamType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}gles2_value_group" maxOccurs="unbounded" minOccurs="0"/>
-         *       &lt;/sequence>
-         *       &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}gles2_value_group" maxOccurs="unbounded" minOccurs="0"/&gt;
+         *       &lt;/sequence&gt;
+         *       &lt;attribute name="ref" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -1138,7 +1138,7 @@ public class Gles2NewparamType {
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the gles2ValueGroup property.
+             * This is why there is not a {@code set} method for the gles2ValueGroup property.
              * 
              * <p>
              * For example, to add a new item, do as follows:

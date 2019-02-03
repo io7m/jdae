@@ -23,19 +23,19 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="kinematics_newparam_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;choice>
- *         &lt;element name="float" type="{http://www.collada.org/2008/03/COLLADASchema}float_type"/>
- *         &lt;element name="int" type="{http://www.collada.org/2008/03/COLLADASchema}int_type"/>
- *         &lt;element name="SIDREF" type="{http://www.collada.org/2008/03/COLLADASchema}sidref_type"/>
- *         &lt;element name="bool" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *       &lt;/choice>
- *       &lt;attribute name="sid" type="{http://www.collada.org/2008/03/COLLADASchema}sid_type" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="kinematics_newparam_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;choice&gt;
+ *         &lt;element name="float" type="{http://www.collada.org/2008/03/COLLADASchema}float_type"/&gt;
+ *         &lt;element name="int" type="{http://www.collada.org/2008/03/COLLADASchema}int_type"/&gt;
+ *         &lt;element name="SIDREF" type="{http://www.collada.org/2008/03/COLLADASchema}sidref_type"/&gt;
+ *         &lt;element name="bool" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *       &lt;/choice&gt;
+ *       &lt;attribute name="sid" type="{http://www.collada.org/2008/03/COLLADASchema}sid_type" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

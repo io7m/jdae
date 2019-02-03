@@ -17,16 +17,16 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for fx_surface_format_hint_option_enum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="fx_surface_format_hint_option_enum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="SRGB_GAMMA"/>
- *     &lt;enumeration value="NORMALIZED3"/>
- *     &lt;enumeration value="NORMALIZED4"/>
- *     &lt;enumeration value="COMPRESSABLE"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="fx_surface_format_hint_option_enum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="SRGB_GAMMA"/&gt;
+ *     &lt;enumeration value="NORMALIZED3"/&gt;
+ *     &lt;enumeration value="NORMALIZED4"/&gt;
+ *     &lt;enumeration value="COMPRESSABLE"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

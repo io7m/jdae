@@ -24,17 +24,17 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="bind_joint_axis_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="axis" type="{http://www.collada.org/2008/03/COLLADASchema}common_sidref_or_param_type"/>
- *         &lt;element name="value" type="{http://www.collada.org/2008/03/COLLADASchema}common_float_or_param_type"/>
- *       &lt;/sequence>
- *       &lt;attribute name="target" type="{http://www.w3.org/2001/XMLSchema}token" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="bind_joint_axis_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="axis" type="{http://www.collada.org/2008/03/COLLADASchema}common_sidref_or_param_type"/&gt;
+ *         &lt;element name="value" type="{http://www.collada.org/2008/03/COLLADASchema}common_float_or_param_type"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="target" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

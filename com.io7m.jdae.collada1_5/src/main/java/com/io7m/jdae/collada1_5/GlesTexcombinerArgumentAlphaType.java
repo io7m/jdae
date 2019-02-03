@@ -23,15 +23,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="gles_texcombiner_argument_alpha_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;attribute name="source" type="{http://www.collada.org/2008/03/COLLADASchema}gles_texcombiner_source_enum" />
- *       &lt;attribute name="operand" type="{http://www.collada.org/2008/03/COLLADASchema}gles_texcombiner_operand_alpha_enum" default="SRC_ALPHA" />
- *       &lt;attribute name="sampler" type="{http://www.w3.org/2001/XMLSchema}NCName" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="gles_texcombiner_argument_alpha_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;attribute name="source" type="{http://www.collada.org/2008/03/COLLADASchema}gles_texcombiner_source_enum" /&gt;
+ *       &lt;attribute name="operand" type="{http://www.collada.org/2008/03/COLLADASchema}gles_texcombiner_operand_alpha_enum" default="SRC_ALPHA" /&gt;
+ *       &lt;attribute name="sampler" type="{http://www.w3.org/2001/XMLSchema}NCName" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

@@ -32,16 +32,16 @@ import javax.xml.namespace.QName;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="domainofapplication.type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}domainofapplication.content"/>
- *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}Definition.attrib"/>
- *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}Common.attrib"/>
- *       &lt;anyAttribute processContents='skip' namespace='##other'/>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="domainofapplication.type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}domainofapplication.content"/&gt;
+ *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}Definition.attrib"/&gt;
+ *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}Common.attrib"/&gt;
+ *       &lt;anyAttribute processContents='skip' namespace='##other'/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -1112,7 +1112,7 @@ public class DomainofapplicationType {
      * 
      * @return
      *     possible object is
-     *     {@link DomainofapplicationType }
+     *
      *     
      */
     public DomainofapplicationType getDomainofapplication() {
@@ -1124,7 +1124,7 @@ public class DomainofapplicationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link DomainofapplicationType }
+     *
      *     
      */
     public void setDomainofapplication(DomainofapplicationType value) {
@@ -4450,7 +4450,7 @@ public class DomainofapplicationType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the clazz property.
+     * This is why there is not a {@code set} method for the clazz property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

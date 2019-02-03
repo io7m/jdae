@@ -16,14 +16,14 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for glsl_pipeline_stage.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="glsl_pipeline_stage">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="VERTEXPROGRAM"/>
- *     &lt;enumeration value="FRAGMENTPROGRAM"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="glsl_pipeline_stage"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="VERTEXPROGRAM"/&gt;
+ *     &lt;enumeration value="FRAGMENTPROGRAM"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

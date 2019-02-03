@@ -16,16 +16,16 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for gles_texcombiner_source_enum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="gles_texcombiner_source_enum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *     &lt;enumeration value="TEXTURE"/>
- *     &lt;enumeration value="CONSTANT"/>
- *     &lt;enumeration value="PRIMARY"/>
- *     &lt;enumeration value="PREVIOUS"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="gles_texcombiner_source_enum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
+ *     &lt;enumeration value="TEXTURE"/&gt;
+ *     &lt;enumeration value="CONSTANT"/&gt;
+ *     &lt;enumeration value="PRIMARY"/&gt;
+ *     &lt;enumeration value="PREVIOUS"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

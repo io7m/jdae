@@ -16,27 +16,27 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for gl_blend_enum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="gl_blend_enum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="ZERO"/>
- *     &lt;enumeration value="ONE"/>
- *     &lt;enumeration value="SRC_COLOR"/>
- *     &lt;enumeration value="ONE_MINUS_SRC_COLOR"/>
- *     &lt;enumeration value="DEST_COLOR"/>
- *     &lt;enumeration value="ONE_MINUS_DEST_COLOR"/>
- *     &lt;enumeration value="SRC_ALPHA"/>
- *     &lt;enumeration value="ONE_MINUS_SRC_ALPHA"/>
- *     &lt;enumeration value="DST_ALPHA"/>
- *     &lt;enumeration value="ONE_MINUS_DST_ALPHA"/>
- *     &lt;enumeration value="CONSTANT_COLOR"/>
- *     &lt;enumeration value="ONE_MINUS_CONSTANT_COLOR"/>
- *     &lt;enumeration value="CONSTANT_ALPHA"/>
- *     &lt;enumeration value="ONE_MINUS_CONSTANT_ALPHA"/>
- *     &lt;enumeration value="SRC_ALPHA_SATURATE"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="gl_blend_enum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="ZERO"/&gt;
+ *     &lt;enumeration value="ONE"/&gt;
+ *     &lt;enumeration value="SRC_COLOR"/&gt;
+ *     &lt;enumeration value="ONE_MINUS_SRC_COLOR"/&gt;
+ *     &lt;enumeration value="DEST_COLOR"/&gt;
+ *     &lt;enumeration value="ONE_MINUS_DEST_COLOR"/&gt;
+ *     &lt;enumeration value="SRC_ALPHA"/&gt;
+ *     &lt;enumeration value="ONE_MINUS_SRC_ALPHA"/&gt;
+ *     &lt;enumeration value="DST_ALPHA"/&gt;
+ *     &lt;enumeration value="ONE_MINUS_DST_ALPHA"/&gt;
+ *     &lt;enumeration value="CONSTANT_COLOR"/&gt;
+ *     &lt;enumeration value="ONE_MINUS_CONSTANT_COLOR"/&gt;
+ *     &lt;enumeration value="CONSTANT_ALPHA"/&gt;
+ *     &lt;enumeration value="ONE_MINUS_CONSTANT_ALPHA"/&gt;
+ *     &lt;enumeration value="SRC_ALPHA_SATURATE"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

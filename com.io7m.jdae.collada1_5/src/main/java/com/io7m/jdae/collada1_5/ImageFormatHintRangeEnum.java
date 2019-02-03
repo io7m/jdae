@@ -16,17 +16,17 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for image_format_hint_range_enum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="image_format_hint_range_enum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="SNORM"/>
- *     &lt;enumeration value="UNORM"/>
- *     &lt;enumeration value="SINT"/>
- *     &lt;enumeration value="UINT"/>
- *     &lt;enumeration value="FLOAT"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="image_format_hint_range_enum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="SNORM"/&gt;
+ *     &lt;enumeration value="UNORM"/&gt;
+ *     &lt;enumeration value="SINT"/&gt;
+ *     &lt;enumeration value="UINT"/&gt;
+ *     &lt;enumeration value="FLOAT"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

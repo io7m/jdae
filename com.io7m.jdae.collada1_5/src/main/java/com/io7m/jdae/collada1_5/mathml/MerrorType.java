@@ -34,14 +34,14 @@ import javax.xml.namespace.QName;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="merror.type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}merror.content" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}merror.attlist"/>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="merror.type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;group ref="{http://www.w3.org/1998/Math/MathML}merror.content" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;attGroup ref="{http://www.w3.org/1998/Math/MathML}merror.attlist"/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -248,7 +248,7 @@ public class MerrorType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the merrorContent property.
+     * This is why there is not a {@code set} method for the merrorContent property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -293,7 +293,7 @@ public class MerrorType {
      * {@link JAXBElement }{@code <}{@link ConstantType }{@code >}
      * {@link JAXBElement }{@code <}{@link CurlType }{@code >}
      * {@link JAXBElement }{@code <}{@link ElementaryFunctionsType }{@code >}
-     * {@link JAXBElement }{@code <}{@link MerrorType }{@code >}
+     * {@link JAXBElement }{@code <} {@code >}
      * {@link JAXBElement }{@code <}{@link ArithType }{@code >}
      * {@link JAXBElement }{@code <}{@link ConstantType }{@code >}
      * {@link JAXBElement }{@code <}{@link PartialdiffType }{@code >}
@@ -442,7 +442,7 @@ public class MerrorType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the clazz property.
+     * This is why there is not a {@code set} method for the clazz property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

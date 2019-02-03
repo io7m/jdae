@@ -16,20 +16,20 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for gl_func_enum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="gl_func_enum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="NEVER"/>
- *     &lt;enumeration value="LESS"/>
- *     &lt;enumeration value="LEQUAL"/>
- *     &lt;enumeration value="EQUAL"/>
- *     &lt;enumeration value="GREATER"/>
- *     &lt;enumeration value="NOTEQUAL"/>
- *     &lt;enumeration value="GEQUAL"/>
- *     &lt;enumeration value="ALWAYS"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="gl_func_enum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="NEVER"/&gt;
+ *     &lt;enumeration value="LESS"/&gt;
+ *     &lt;enumeration value="LEQUAL"/&gt;
+ *     &lt;enumeration value="EQUAL"/&gt;
+ *     &lt;enumeration value="GREATER"/&gt;
+ *     &lt;enumeration value="NOTEQUAL"/&gt;
+ *     &lt;enumeration value="GEQUAL"/&gt;
+ *     &lt;enumeration value="ALWAYS"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

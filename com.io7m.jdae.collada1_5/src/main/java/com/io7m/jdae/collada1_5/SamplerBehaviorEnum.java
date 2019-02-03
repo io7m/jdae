@@ -16,18 +16,18 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for sampler_behavior_enum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="sampler_behavior_enum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="CONSTANT"/>
- *     &lt;enumeration value="CYCLE"/>
- *     &lt;enumeration value="CYCLE_RELATIVE"/>
- *     &lt;enumeration value="GRADIENT"/>
- *     &lt;enumeration value="OSCILLATE"/>
- *     &lt;enumeration value="UNDEFINED"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="sampler_behavior_enum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="CONSTANT"/&gt;
+ *     &lt;enumeration value="CYCLE"/&gt;
+ *     &lt;enumeration value="CYCLE_RELATIVE"/&gt;
+ *     &lt;enumeration value="GRADIENT"/&gt;
+ *     &lt;enumeration value="OSCILLATE"/&gt;
+ *     &lt;enumeration value="UNDEFINED"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

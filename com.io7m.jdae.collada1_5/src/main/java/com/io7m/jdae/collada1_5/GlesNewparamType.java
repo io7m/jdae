@@ -31,19 +31,19 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="gles_newparam_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="annotate" type="{http://www.collada.org/2008/03/COLLADASchema}fx_annotate_type" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="semantic" type="{http://www.w3.org/2001/XMLSchema}NCName" minOccurs="0"/>
- *         &lt;element name="modifier" type="{http://www.collada.org/2008/03/COLLADASchema}fx_modifier_enum" minOccurs="0"/>
- *         &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}gles_param_group"/>
- *       &lt;/sequence>
- *       &lt;attribute name="sid" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}sid_type" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="gles_newparam_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="annotate" type="{http://www.collada.org/2008/03/COLLADASchema}fx_annotate_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="semantic" type="{http://www.w3.org/2001/XMLSchema}NCName" minOccurs="0"/&gt;
+ *         &lt;element name="modifier" type="{http://www.collada.org/2008/03/COLLADASchema}fx_modifier_enum" minOccurs="0"/&gt;
+ *         &lt;group ref="{http://www.collada.org/2008/03/COLLADASchema}gles_param_group"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="sid" use="required" type="{http://www.collada.org/2008/03/COLLADASchema}sid_type" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -210,7 +210,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the annotate property.
+     * This is why there is not a {@code set} method for the annotate property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -311,7 +311,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the bool2 property.
+     * This is why there is not a {@code set} method for the bool2 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -340,7 +340,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the bool3 property.
+     * This is why there is not a {@code set} method for the bool3 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -369,7 +369,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the bool4 property.
+     * This is why there is not a {@code set} method for the bool4 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -422,7 +422,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the int2 property.
+     * This is why there is not a {@code set} method for the int2 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -451,7 +451,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the int3 property.
+     * This is why there is not a {@code set} method for the int3 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -480,7 +480,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the int4 property.
+     * This is why there is not a {@code set} method for the int4 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -533,7 +533,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float2 property.
+     * This is why there is not a {@code set} method for the float2 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -562,7 +562,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float3 property.
+     * This is why there is not a {@code set} method for the float3 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -591,7 +591,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float4 property.
+     * This is why there is not a {@code set} method for the float4 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -644,7 +644,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float1X2 property.
+     * This is why there is not a {@code set} method for the float1X2 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -673,7 +673,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float1X3 property.
+     * This is why there is not a {@code set} method for the float1X3 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -702,7 +702,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float1X4 property.
+     * This is why there is not a {@code set} method for the float1X4 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -731,7 +731,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float2X1 property.
+     * This is why there is not a {@code set} method for the float2X1 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -760,7 +760,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float2X2 property.
+     * This is why there is not a {@code set} method for the float2X2 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -789,7 +789,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float2X3 property.
+     * This is why there is not a {@code set} method for the float2X3 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -818,7 +818,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float2X4 property.
+     * This is why there is not a {@code set} method for the float2X4 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -847,7 +847,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float3X1 property.
+     * This is why there is not a {@code set} method for the float3X1 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -876,7 +876,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float3X2 property.
+     * This is why there is not a {@code set} method for the float3X2 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -905,7 +905,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float3X3 property.
+     * This is why there is not a {@code set} method for the float3X3 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -934,7 +934,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float3X4 property.
+     * This is why there is not a {@code set} method for the float3X4 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -963,7 +963,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float4X1 property.
+     * This is why there is not a {@code set} method for the float4X1 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -992,7 +992,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float4X2 property.
+     * This is why there is not a {@code set} method for the float4X2 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -1021,7 +1021,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float4X3 property.
+     * This is why there is not a {@code set} method for the float4X3 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -1050,7 +1050,7 @@ public class GlesNewparamType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the float4X4 property.
+     * This is why there is not a {@code set} method for the float4X4 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

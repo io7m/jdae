@@ -17,15 +17,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for centering.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="centering">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="left"/>
- *     &lt;enumeration value="center"/>
- *     &lt;enumeration value="right"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="centering"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="left"/&gt;
+ *     &lt;enumeration value="center"/&gt;
+ *     &lt;enumeration value="right"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

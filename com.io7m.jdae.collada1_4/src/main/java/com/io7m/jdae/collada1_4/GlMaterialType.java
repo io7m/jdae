@@ -16,17 +16,17 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for gl_material_type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ *
  * <pre>
- * &lt;simpleType name="gl_material_type">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="EMISSION"/>
- *     &lt;enumeration value="AMBIENT"/>
- *     &lt;enumeration value="DIFFUSE"/>
- *     &lt;enumeration value="SPECULAR"/>
- *     &lt;enumeration value="AMBIENT_AND_DIFFUSE"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="gl_material_type"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="EMISSION"/&gt;
+ *     &lt;enumeration value="AMBIENT"/&gt;
+ *     &lt;enumeration value="DIFFUSE"/&gt;
+ *     &lt;enumeration value="SPECULAR"/&gt;
+ *     &lt;enumeration value="AMBIENT_AND_DIFFUSE"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

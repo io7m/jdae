@@ -24,26 +24,26 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="brep_type">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="curves" type="{http://www.collada.org/2008/03/COLLADASchema}curves_type" minOccurs="0"/>
- *         &lt;element name="surface_curves" type="{http://www.collada.org/2008/03/COLLADASchema}surface_curves_type" minOccurs="0"/>
- *         &lt;element name="surfaces" type="{http://www.collada.org/2008/03/COLLADASchema}surfaces_type" minOccurs="0"/>
- *         &lt;element name="source" type="{http://www.collada.org/2008/03/COLLADASchema}source_type" maxOccurs="unbounded"/>
- *         &lt;element name="vertices" type="{http://www.collada.org/2008/03/COLLADASchema}vertices_type"/>
- *         &lt;element name="edges" type="{http://www.collada.org/2008/03/COLLADASchema}edges_type" minOccurs="0"/>
- *         &lt;element name="wires" type="{http://www.collada.org/2008/03/COLLADASchema}wires_type" minOccurs="0"/>
- *         &lt;element name="faces" type="{http://www.collada.org/2008/03/COLLADASchema}faces_type" minOccurs="0"/>
- *         &lt;element name="pcurves" type="{http://www.collada.org/2008/03/COLLADASchema}pcurves_type" minOccurs="0"/>
- *         &lt;element name="shells" type="{http://www.collada.org/2008/03/COLLADASchema}shells_type" minOccurs="0"/>
- *         &lt;element name="solids" type="{http://www.collada.org/2008/03/COLLADASchema}solids_type" minOccurs="0"/>
- *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="brep_type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="curves" type="{http://www.collada.org/2008/03/COLLADASchema}curves_type" minOccurs="0"/&gt;
+ *         &lt;element name="surface_curves" type="{http://www.collada.org/2008/03/COLLADASchema}surface_curves_type" minOccurs="0"/&gt;
+ *         &lt;element name="surfaces" type="{http://www.collada.org/2008/03/COLLADASchema}surfaces_type" minOccurs="0"/&gt;
+ *         &lt;element name="source" type="{http://www.collada.org/2008/03/COLLADASchema}source_type" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="vertices" type="{http://www.collada.org/2008/03/COLLADASchema}vertices_type"/&gt;
+ *         &lt;element name="edges" type="{http://www.collada.org/2008/03/COLLADASchema}edges_type" minOccurs="0"/&gt;
+ *         &lt;element name="wires" type="{http://www.collada.org/2008/03/COLLADASchema}wires_type" minOccurs="0"/&gt;
+ *         &lt;element name="faces" type="{http://www.collada.org/2008/03/COLLADASchema}faces_type" minOccurs="0"/&gt;
+ *         &lt;element name="pcurves" type="{http://www.collada.org/2008/03/COLLADASchema}pcurves_type" minOccurs="0"/&gt;
+ *         &lt;element name="shells" type="{http://www.collada.org/2008/03/COLLADASchema}shells_type" minOccurs="0"/&gt;
+ *         &lt;element name="solids" type="{http://www.collada.org/2008/03/COLLADASchema}solids_type" minOccurs="0"/&gt;
+ *         &lt;element name="extra" type="{http://www.collada.org/2008/03/COLLADASchema}extra_type" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -160,7 +160,7 @@ public class BrepType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the source property.
+     * This is why there is not a {@code set} method for the source property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
@@ -357,7 +357,7 @@ public class BrepType {
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the extra property.
+     * This is why there is not a {@code set} method for the extra property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
