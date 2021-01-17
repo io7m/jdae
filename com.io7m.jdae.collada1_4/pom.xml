@@ -18,7 +18,7 @@
   <url>http://io7m.github.io/jdae/</url>
 
   <properties>
-    <maven.checkstyle.skip>true</maven.checkstyle.skip>
+    <checkstyle.skip>true</checkstyle.skip>
   </properties>
 
   <dependencies>
