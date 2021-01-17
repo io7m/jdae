@@ -23,7 +23,15 @@
     <developerConnection>${project.parent.scm.developerConnection}</developerConnection>
   </scm>
 
+  <properties>
+    <checkstyle.skip>true</checkstyle.skip>
+  </properties>
+
   <dependencies>
+    <dependency>
+      <groupId>javax.xml.bind</groupId>
+      <artifactId>jaxb-api</artifactId>
+    </dependency>
   </dependencies>
 
   <!-- Disable javadoc linting on Java 8+ -->

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
   <parent>
@@ -29,8 +28,23 @@
 
   <dependencies>
     <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>com.io7m.jdae.collada1_4</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>com.io7m.jdae.collada1_5</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
       <groupId>com.io7m.jnull</groupId>
       <artifactId>com.io7m.jnull.core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.io7m.primogenitor</groupId>
+      <artifactId>com.io7m.primogenitor.support</artifactId>
     </dependency>
   </dependencies>
 
@@ -94,54 +108,6 @@
         </executions>
       </plugin>
 
-      <!-- Javadoc handling -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <executions>
-          <!-- Produce javadoc jar for Central -->
-          <execution>
-            <id>attach-javadocs</id>
-            <phase>package</phase>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-            <configuration>
-              <bottom><![CDATA[Copyright &#169; {currentYear} &lt;code@io7m.com&gt; http://io7m.com]]></bottom>
-              <archive>
-                <manifestEntries>
-                  <Specification-Title>${project.name}</Specification-Title>
-                  <Specification-Version>${project.version}</Specification-Version>
-                  <Specification-Vendor>io7m.com</Specification-Vendor>
-                  <Implementation-Title>${project.name}</Implementation-Title>
-                  <Implementation-Version>${project.version}</Implementation-Version>
-                  <Implementation-Vendor>io7m.com</Implementation-Vendor>
-                  <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
-                  <Built-By>io7m</Built-By>
-                </manifestEntries>
-              </archive>
-            </configuration>
-          </execution>
-          <!-- Produce aggregate dependency javadocs -->
-          <execution>
-            <id>javadoc-aggregate</id>
-            <phase>package</phase>
-            <goals>
-              <goal>javadoc-no-fork</goal>
-            </goals>
-            <configuration>
-              <bottom><![CDATA[Copyright &#169; {currentYear} &lt;code@io7m.com&gt; http://io7m.com]]></bottom>
-              <outputDirectory>${project.build.directory}/apidocs</outputDirectory>
-              <includeDependencySources>true</includeDependencySources>
-              <includeTransitiveDependencySources>true</includeTransitiveDependencySources>
-              <dependencySourceIncludes>
-                <dependencySourceSet>com.io7m.jdae*</dependencySourceSet>
-              </dependencySourceIncludes>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
       <!-- Produce documentation archive -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -181,7 +147,9 @@
             <configuration>
               <verbose>true</verbose>
               <fileset>
-                <directory>${project.build.directory}/${project.name}-${project.version}.zip/${project.name}-${project.version}/</directory>
+                <directory>
+                  ${project.build.directory}/${project.name}-${project.version}.zip/${project.name}-${project.version}/
+                </directory>
                 <outputDirectory>${project.parent.build.directory}/staging/documentation/</outputDirectory>
               </fileset>
             </configuration>

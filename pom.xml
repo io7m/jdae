@@ -9,7 +9,7 @@
   <parent>
     <groupId>com.io7m.primogenitor</groupId>
     <artifactId>com.io7m.primogenitor</artifactId>
-    <version>1.0.2</version>
+    <version>6.2.0</version>
   </parent>
 
   <groupId>com.io7m.jdae</groupId>
@@ -29,10 +29,6 @@
   </modules>
 
   <properties>
-    <siteReposDirectory>com/io7m/jdae</siteReposDirectory>
-    <siteDocumentationDirectory>com/io7m/jdae/com.io7m.jdae.documentation</siteDocumentationDirectory>
-    <io7m.checkstyle.artifact>com.io7m.jdae.checkstyle</io7m.checkstyle.artifact>
-    <io7m.checkstyle.path>/com/io7m/jdae/checkstyle/checkstyle.xml</io7m.checkstyle.path>
     <io7m.api.previousVersion>0.1.2</io7m.api.previousVersion>
   </properties>
 
@@ -92,6 +88,16 @@
         <version>[1.0.0, 2.0.0)</version>
       </dependency>
 
+      <dependency>
+        <groupId>javax.xml.bind</groupId>
+        <artifactId>jaxb-api</artifactId>
+        <version>2.4.0-b180830.0359</version>
+      </dependency>
+      <dependency>
+        <groupId>com.io7m.primogenitor</groupId>
+        <artifactId>com.io7m.primogenitor.support</artifactId>
+        <version>6.2.0</version>
+      </dependency>
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
