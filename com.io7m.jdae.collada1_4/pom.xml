@@ -17,6 +17,10 @@
   <description>COLLADA for Java (COLLADA 1.4)</description>
   <url>http://io7m.github.io/jdae/</url>
 
+  <properties>
+    <maven.checkstyle.skip>true</maven.checkstyle.skip>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>javax.xml.bind</groupId>
