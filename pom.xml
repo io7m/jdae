@@ -30,6 +30,7 @@
 
   <properties>
     <io7m.api.previousVersion>0.1.2</io7m.api.previousVersion>
+    <io7m.java.targetJavaVersion>21</io7m.java.targetJavaVersion>
   </properties>
 
   <licenses>
